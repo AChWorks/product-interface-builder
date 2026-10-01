@@ -8,7 +8,7 @@ The Skill is intended to own **user-facing interface quality**: visual direction
 
 **Foundation / planning complete; implementation not started.**
 
-The canonical project definition is [PROJECT-SPEC.md](PROJECT-SPEC.md). Future work must recover from repository and GitHub state rather than chat history.
+The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). Future work must recover from repository and GitHub state rather than chat history.
 
 ## Ecosystem role
 
@@ -34,4 +34,4 @@ Directly imported or adapted third-party material must be traceable in [THIRD_PA
 
 ## Next work
 
-Implementation work is tracked in GitHub Issues. Do not start by reconstructing requirements from chat; begin with `PROJECT-SPEC.md` and the current open Issues.
+Implementation work is tracked in GitHub Issues. Do not start by reconstructing requirements from chat; begin with `docs/PROJECT-SPEC.md` and the current open Issues.
