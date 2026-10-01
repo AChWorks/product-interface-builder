@@ -8,7 +8,7 @@ This file is the canonical owner of durable project intent, scope, boundaries, s
 
 ## 1. Outcome
 
-Build a reusable ChatGPT Skill that materially improves the quality of user-facing product interfaces across **web, mobile, and desktop** while remaining compact, composable, and useful both standalone and alongside other AChWorks Skills.
+Build a reusable, provider-neutral AI Skill that materially improves the quality of user-facing product interfaces across **web, mobile, and desktop** while remaining compact, composable, portable across compatible AI-agent environments, and useful both standalone and alongside other AChWorks Skills.
 
 The Skill should help an AI:
 
@@ -148,7 +148,41 @@ The Skill is intentionally multi-source. It must synthesize a coherent AChWorks 
 - Any direct copy or derivative must record exact provenance and applicable license obligations in `THIRD_PARTY_NOTICES.md`.
 - When actual upstream content is imported, pin its source commit/release rather than relying only on a moving branch name.
 
-## 7. Skill architecture requirements
+## 7. Provider neutrality and portability
+
+Provider neutrality is a product requirement, not an optional packaging detail.
+
+The canonical Skill must:
+
+- avoid depending on a specific AI vendor, model name, hosted product, or agent harness for its identity or core behavior;
+- keep core instructions, references, knowledge, and deterministic scripts portable;
+- use capability-based language and routing instead of vendor-specific tool names when the underlying capability is generic;
+- isolate provider-specific metadata, installation helpers, adapters, or manifests so they can be added/removed without changing canonical behavior;
+- maintain one behavioral source of truth rather than divergent provider-specific copies;
+- degrade gracefully when an environment lacks optional capabilities such as browser rendering, screenshots, shell execution, image inspection, connectors, or persistent workspace state;
+- preserve the same ownership and quality principles even when the exact runtime/tool surface differs;
+- prefer portable durable formats such as Markdown, YAML, JSON, JSON Schema, and ordinary Git history where practical.
+
+A provider-specific adapter may exist when needed for discovery, packaging, installation, UI metadata, or tool wiring. Such an adapter is not the authority for the Skill's core behavior.
+
+The first release must validate the canonical Skill in at least two independent compatible AI-agent environments from different vendors or harness families, without maintaining separate rulebooks.
+
+## 8. Koinon alignment
+
+Product Interface Builder is an independent AChWorks component aligned with Koinon's technology-agnostic coordination model.
+
+Rules:
+
+- this repository remains authoritative for product intent, Skill behavior, implementation, Issues, PRs, CI, releases, and provider adapters;
+- root `achworks.yaml` provides stable discovery metadata and points to this repository rather than duplicating mutable state;
+- Koinon remains a governance/discovery/contract layer, not a runtime dependency;
+- consume applicable Koinon capabilities/contracts, including ecosystem governance, capability discovery, cross-project engineering standards, and validation/evidence guidance;
+- do not copy Koinon live work state into this repository;
+- do not make AChrix or any other Foundation a dependency unless future evidence shows an actual fit;
+- cross-repository coordination never widens mutation authority;
+- provider neutrality and portable durable formats should remain consistent with Koinon's technology-neutral model.
+
+## 9. Skill architecture requirements
 
 Implementation must follow progressive loading:
 
@@ -175,7 +209,7 @@ Likely domain separation includes:
 
 The exact file tree is an implementation decision and may change if a smaller structure proves sufficient.
 
-## 8. Durable project design state
+## 10. Durable project design state
 
 The Skill may create or update durable product/design artifacts only for substantial continuing work where doing so prevents material re-discovery or inconsistency.
 
@@ -189,7 +223,7 @@ Rules:
 
 Exact artifact names/formats are deferred to implementation/evaluation; interoperability with existing repository conventions is more important than imposing a universal filename.
 
-## 9. Quality principles
+## 11. Quality principles
 
 The Skill should:
 
@@ -204,7 +238,7 @@ The Skill should:
 - prefer rendering/screenshot inspection when available before declaring material visual work finished;
 - distinguish static code review from proof of rendered correctness.
 
-## 10. Persian / RTL requirements
+## 12. Persian / RTL requirements
 
 Persian/RTL is a first-class conditional layer.
 
@@ -221,7 +255,7 @@ When applicable, the Skill must reason about:
 
 Do not assume every Persian-language product uses every Iranian-local convention; derive product locale and requirements from current evidence.
 
-## 11. Non-goals
+## 13. Non-goals
 
 v0.1 is not intended to:
 
@@ -236,7 +270,7 @@ v0.1 is not intended to:
 - create design-system documents for trivial work;
 - turn every UI change into a long checklist or mandatory ceremony.
 
-## 12. Third-party and licensing policy
+## 14. Third-party and licensing policy
 
 Foundation phase vendors **no third-party code or copyrighted Skill text**.
 
@@ -249,13 +283,13 @@ Before any future direct source import:
 5. retain required notices;
 6. keep incompatible or unclear material out until resolved.
 
-The final repository license is intentionally not selected by this foundation spec. It must be decided before distributing derivative third-party material and must remain compatible with the actual import strategy.
+The repository license is **MIT**. This does not replace or erase third-party obligations: any directly copied or derivative material must retain every applicable upstream license, NOTICE, attribution, and modified-file requirement. Material whose terms cannot be cleanly satisfied alongside this repository must remain external or be excluded.
 
-## 13. v0.1 completion criteria
+## 15. v0.1 completion criteria
 
 v0.1 is complete only when all of the following are true:
 
-- a valid installable ChatGPT Skill package exists;
+- a valid installable provider-neutral Skill exists, with any provider-specific packaging isolated as adapters;
 - `SKILL.md` has clear triggers, scope, routing, and progressive loading;
 - core interface workflow covers new design, modification, redesign, and review;
 - English/LTR/global use is first-class;
@@ -267,23 +301,26 @@ v0.1 is complete only when all of the following are true:
 - composition behavior with `github-project-orchestrator` and `wp-native-builder` is specified and regression-tested;
 - source provenance and third-party notices are complete for all imported material;
 - evaluation scenarios demonstrate no authority takeover, no unnecessary specialist invocation, no duplicated ownership, and no locale leakage;
-- packaging/validation succeeds;
+- canonical packaging/validation succeeds and representative portability checks pass in at least two independent compatible AI-agent environments from different vendors or harness families;
 - repository documentation is sufficient for a fresh Master to continue without chat history;
 - a first release is created only after the above criteria pass.
 
-## 14. Current locked decisions
+## 16. Current locked decisions
 
 - Name: `product-interface-builder`
 - Repository: `AChWorks/product-interface-builder`
-- Product type: reusable ChatGPT Skill
+- Product type: reusable provider-neutral AI Skill
 - Scope: user-facing product interface design/UX/visual quality across web, mobile, desktop
 - Persian/RTL: first-class conditional capability
 - Source model: multi-source synthesis, not a renamed fork
 - Core reference set: Anthropic frontend-design, UI UX Pro Max, Impeccable, VibeFarsi, Vercel review guidance
 - Composition: complementary specialist alongside GitHub Project Orchestrator and WP Native Builder
+- Portability: canonical core is vendor-neutral; provider-specific metadata/tool wiring is adapter-only
+- Ecosystem alignment: root `achworks.yaml` aligned with Koinon discovery/governance model; Koinon is not a runtime dependency
+- Repository license: MIT; third-party obligations remain independently enforceable
 - Implementation status: not started
 
-## 15. Deferred implementation decisions
+## 17. Deferred implementation decisions
 
 The implementation Master may decide these when evidence is available, without reopening project intent:
 
@@ -295,11 +332,9 @@ The implementation Master may decide these when evidence is available, without r
 - whether live-browser iteration tooling belongs in v0.1 or later;
 - exact packaging automation and CI shape.
 
-The following is a material owner/legal decision and must be resolved before derivative distribution:
+Third-party attribution/import mechanics remain implementation decisions, but they must preserve the locked MIT repository license and every applicable upstream obligation.
 
-- final repository license and attribution strategy if third-party derivative material is included.
-
-## 16. Recovery / next-session rule
+## 18. Recovery / next-session rule
 
 A fresh Master must:
 

@@ -1,0 +1,38 @@
+schemaVersion: achworks.dev/v1alpha1
+kind: Component
+
+metadata:
+  name: product-interface-builder
+  title: Product Interface Builder
+  description: Provider-neutral AI Skill for product interface design, UX, visual systems, localization, and cross-platform interface quality.
+
+spec:
+  type: ai-design-skill
+  lifecycle: active
+  system: achworks-engineering
+  ownership: AChWorks
+
+  capabilities:
+    provides:
+      - product-interface-design
+      - user-experience-design
+      - visual-design-systems
+      - interface-quality-review
+      - rtl-persian-interface-design
+      - cross-platform-interface-guidance
+    consumes:
+      - ecosystem-governance
+      - capability-catalog
+      - cross-project-engineering-standards
+      - validation-evidence-contract
+
+  documentation:
+    path: docs/
+
+  source:
+    repository: AChWorks/product-interface-builder
+    url: https://github.com/AChWorks/product-interface-builder
+
+  extensions:
+    achworks:
+      koinon: AChWorks/koinon
