@@ -165,7 +165,7 @@ The canonical Skill must:
 
 A provider-specific adapter may exist when needed for discovery, packaging, installation, UI metadata, or tool wiring. Such an adapter is not the authority for the Skill's core behavior.
 
-The first release must validate the canonical Skill in at least one OpenAI/ChatGPT-compatible environment and at least one non-OpenAI compatible AI-agent environment, without maintaining separate rulebooks.
+The first release must validate the canonical Skill in at least two independent compatible AI-agent environments from different vendors or harness families, without maintaining separate rulebooks.
 
 ## 8. Koinon alignment
 
@@ -301,7 +301,7 @@ v0.1 is complete only when all of the following are true:
 - composition behavior with `github-project-orchestrator` and `wp-native-builder` is specified and regression-tested;
 - source provenance and third-party notices are complete for all imported material;
 - evaluation scenarios demonstrate no authority takeover, no unnecessary specialist invocation, no duplicated ownership, and no locale leakage;
-- canonical packaging/validation succeeds and representative portability checks pass in at least one OpenAI-compatible and one non-OpenAI compatible AI-agent environment;
+- canonical packaging/validation succeeds and representative portability checks pass in at least two independent compatible AI-agent environments from different vendors or harness families;
 - repository documentation is sufficient for a fresh Master to continue without chat history;
 - a first release is created only after the above criteria pass.
 
