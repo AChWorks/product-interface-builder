@@ -1,6 +1,6 @@
 # Third-Party Sources and Notices
 
-This repository is intended to synthesize multiple open-source design/UX sources.
+This repository is licensed under MIT and is intended to synthesize multiple open-source design/UX sources. The repository-level MIT license does not supersede third-party license, NOTICE, attribution, or modified-file obligations for material copied or adapted from upstream sources.
 
 **Foundation state:** no third-party code, datasets, components, or copyrighted Skill prose has been vendored into this repository yet.
 
