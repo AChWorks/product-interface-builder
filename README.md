@@ -1,70 +1,37 @@
 # Product Interface Builder
 
-A reusable, provider-neutral AI Skill for designing, building, reviewing, and refining product interfaces across web, mobile, and desktop.
+A reusable, provider-neutral AI Skill for designing, building, reviewing, and refining user-facing product interfaces across web, mobile, and desktop.
 
-The Skill owns **user-facing interface quality**: visual direction, UX, design systems, responsive behavior, accessibility, interaction, motion, typography, color, localization, and rendered interface review.
+It focuses on visual direction, UX, design systems, responsive/adaptive behavior, accessibility, interaction, motion, interface copy, localization, Persian/RTL, and interface-quality review.
 
-## Provider neutrality
+## Design model
 
-The canonical Skill must not depend on one AI vendor, model family, or agent harness for its identity or core behavior.
+Product Interface Builder is an **AChWorks-owned synthesis**, not a fork or wrapper around another design Skill.
 
-- Keep core instructions, references, knowledge, and scripts provider-neutral.
-- Isolate provider-specific metadata or installation adapters from canonical behavior.
-- Prefer capability-based routing (for example: browser/render access, filesystem access, shell access, image/screenshot inspection) over vendor-specific tool names.
-- Allow graceful degradation when a runtime lacks an optional capability.
-- Avoid maintaining separate behavioral rulebooks per provider.
+The project studies several design/UX sources, extracts ideas that fit our requirements, resolves overlap, and rewrites the useful knowledge into one local behavior model. Upstream command names, chapter structures, workflows, catalogs, provider assumptions, and taxonomies are not the architecture of this Skill.
 
-Provider adapters may exist where a platform requires its own packaging or metadata, but they must not become the source of truth for the Skill.
+See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source corpus and provenance policy.
 
-## Status
+## Structure
 
-**v0.1 implementation in progress.**
+- [SKILL.md](SKILL.md) — compact control plane and routing.
+- [references/design-core.md](references/design-core.md) — product-grounded interface design reasoning.
+- [references/persian-rtl.md](references/persian-rtl.md) — conditional Persian/RTL behavior.
+- [references/platforms.md](references/platforms.md) — web, mobile/native, and desktop differences.
+- [references/review.md](references/review.md) — proportional interface review and finish guidance.
+- [references/composition.md](references/composition.md) — bounded composition with project/platform specialists.
+- [agents/openai.yaml](agents/openai.yaml) — optional provider UI/discovery metadata; not a behavioral source of truth.
 
-The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). The source synthesis policy is [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md). The provider-neutral control kernel lives in [SKILL.md](SKILL.md), with direct progressive-loading references under `references/`.
+## Ecosystem boundaries
 
-Future work must recover from repository and GitHub state rather than chat history.
+Product Interface Builder owns user-facing interface intent and quality. It composes with, rather than replaces, project-management and platform-specific specialists such as GitHub Project Orchestrator and WP Native Builder.
 
-## AChWorks / Koinon alignment
+Koinon provides AChWorks discovery/governance contracts through [achworks.yaml](achworks.yaml); it is not a runtime dependency of the Skill.
 
-This repository participates in the AChWorks ecosystem through the root [`achworks.yaml`](achworks.yaml) descriptor.
+## Project truth
 
-- This repository owns its Skill implementation, roadmap, releases, and design-domain behavior.
-- Koinon owns cross-project governance/discovery/contracts and remains a coordination layer, not a runtime dependency.
-- Product Interface Builder consumes applicable Koinon governance/contract guidance without duplicating Koinon's live state.
-- Cross-repository mutation still requires explicit authorization for each exact repository.
-
-## Ecosystem role
-
-Product Interface Builder is designed to compose with, not replace:
-
-- `github-project-orchestrator` — project framing, GitHub lifecycle, Workers, review/integration, CI, release, and continuity.
-- `wp-native-builder` — WordPress ownership/mechanism decisions, Gutenberg safety, WooCommerce, themes/plugins, and WordPress-native implementation.
-
-When composed, Product Interface Builder owns **what the user-facing experience should be and how its quality is evaluated**. The surrounding specialist or Master retains its own execution authority.
-
-## Source strategy
-
-The project synthesizes useful ideas from multiple sources rather than cloning one upstream Skill:
-
-- Anthropic `frontend-design` — visual taste, intentional art direction, anti-generic design, self-critique.
-- `ui-ux-pro-max` — design intelligence, structured catalogs, product/style/typography/palette guidance, cross-stack ideas.
-- Impeccable — product/design separation, shaping, critique, audit, polish, hardening, and visual iteration concepts.
-- VibeFarsi — Persian/RTL, Persian typography and UI copy, Iranian interface conventions, Jalali/numeric/local patterns.
-- Vercel Web Interface Guidelines — review/audit input for web interface quality.
-- LottieFiles motion-design guidance — optional specialist input when motion needs deeper treatment.
-
-The goal is to study those sources, keep the parts that fit our requirements, resolve overlap into one coherent internal rule set, and author Product Interface Builder as our own Skill.
-
-Directly imported or adapted third-party material must be traceable in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+[docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md) owns durable project intent and release criteria. GitHub Issues/PRs own current work and implementation state. Chat history is not a source of project truth.
 
 ## License
 
-Product Interface Builder is licensed under the [MIT License](LICENSE). Third-party material retains its own applicable notice/license obligations as recorded in `THIRD_PARTY_NOTICES.md`.
-
-## Skill structure
-
-The canonical runtime behavior is the root `SKILL.md` plus the relevant direct `references/`. `agents/openai.yaml` is optional provider/UI metadata and must not duplicate behavioral rules.
-
-## Next work
-
-Implementation work is tracked in GitHub Issues. Do not reconstruct requirements from chat; begin with `docs/PROJECT-SPEC.md`, `docs/SOURCE-STRATEGY.md`, and the current open Issues.
+Original Product Interface Builder material is licensed under the [MIT License](LICENSE). No third-party code, datasets, components, scripts, templates, or copyrighted Skill prose are currently vendored or adapted in this repository. If that changes, provenance and applicable upstream notice/license obligations must be recorded before integration.
