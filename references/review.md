@@ -1,4 +1,4 @@
-# Interface Review and Finish Loop
+# Interface Review
 
 Use for explicit interface review requests and for proportional self-review of material visual work.
 
