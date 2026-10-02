@@ -56,6 +56,45 @@ Do not default to whichever visual treatment is currently fashionable. Common pa
 
 Spend distinctiveness selectively. One memorable compositional, typographic, imagery, or interaction idea is usually stronger than many unrelated flourishes.
 
+### Choose the surface posture
+
+Decide what success means **on this surface**, not what category the whole product belongs to.
+
+- **Task/operation:** the user needs to complete work, scan status, compare data, or repeat actions efficiently. Familiarity, consistency, state clarity, density, and native expectations usually outrank spectacle.
+- **Reading/learning:** the user needs to understand material. Typography, information structure, source fidelity, comfortable measure, and wayfinding carry more weight than component novelty.
+- **Decision/persuasion:** the user needs to understand value, trust the offer, and decide or act. Real proof/content, clear sequencing, and a distinctive identity can carry more visual weight.
+- **Experience/showcase:** the user is primarily exploring or appreciating the work itself. The interface can recede while sequencing, imagery, and selective interaction lead.
+
+Choose the posture per surface. A productivity product can have a persuasive marketing page and a highly operational dashboard. Do not force one visual register across both.
+
+For task-heavy interfaces, express domain character through typography, color, imagery, language, and precise details rather than literally costuming the UI as a terminal, control panel, or physical instrument unless that metaphor improves the task.
+
+### Keep design dials independent
+
+Treat these as separate decisions:
+
+- **distinctiveness:** conventional ↔ highly characteristic;
+- **density:** spacious ↔ information-dense;
+- **motion intensity:** quiet ↔ expressive.
+
+Do not assume bold design requires more animation, dense tools must look conservative, or spacious pages must be minimal. Set each axis from the surface's task, audience, and brand evidence.
+
+### Guard against generic defaults
+
+When the brief leaves room for invention, challenge choices that could be pasted into many unrelated products unchanged.
+
+Common warning signs include:
+- every section becoming the same rounded card;
+- one radius/shadow treatment applied to every level of hierarchy;
+- decorative gradients or glows with no connection to product content;
+- repetitive eyebrow or all-caps micro-labels above every heading;
+- arbitrary numbering that does not represent real sequence or structure;
+- default emphasis on a single headline word just to create visual interest;
+- decorative arrows appended to every link or action;
+- monospace used as generic decoration for ordinary labels or metadata.
+
+These patterns are not banned. Use them when the brief, content, or information structure actually earns them.
+
 ## 3. Shape hierarchy before decoration
 
 For each surface, make the intended reading/action order apparent.
