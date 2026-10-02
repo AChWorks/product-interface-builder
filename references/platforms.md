@@ -110,6 +110,8 @@ If iOS and Android conventions materially differ, follow the actual target. A sh
 
 Desktop interfaces should use the capabilities of windows, keyboard, pointer precision, and dense workflows when the product benefits.
 
+Native desktop targets are not interchangeable. When macOS, Windows, Linux/desktop-environment, or a cross-platform desktop framework materially changes menu placement, window chrome, standard commands/shortcuts, document/file behavior, accessibility, or lifecycle expectations, follow the actual target's current platform/framework authority instead of treating generic desktop guidance as exact behavior.
+
 ### Application windows and layout
 - Handle resize rather than assuming one fixed canvas.
 - Define sensible minimum/maximum content widths and panel behavior.
