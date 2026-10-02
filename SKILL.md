@@ -50,13 +50,10 @@ References are one level deep from this file. Apply routes cumulatively only whe
 | permission/consent/privacy disclosure, destructive or high-consequence choice presentation, user-agency risk, or potentially deceptive/obstructive interface behavior | [references/trust-agency.md](references/trust-agency.md) | Own user-facing understanding/control only; route policy, security, privacy enforcement, and legal compliance to their owners. |
 | explicit or materially required reusable design-system architecture: token layers, component contracts, themes/modes, extension rules, or system-wide migration/deprecation | [references/design-systems.md](references/design-systems.md) | Use only when continuing reuse earns system-level decisions; local UI changes should reuse current system truth instead. |
 | generative/predictive AI materially mediates user-facing content, recommendations, decisions, actions, uncertainty, or feedback/control | [references/ai-mediated.md](references/ai-mediated.md) | Set truthful expectations, preserve correction/override and consequential-action control, and route model/backend/risk-policy decisions to their owners. |
+| simultaneous/multi-user editing, shared-resource state, presence/ownership/locks/history, stale state, or conflict/overwrite choices | [references/collaboration-concurrency.md](references/collaboration-concurrency.md) | Own user-facing shared-state/conflict understanding only; backend concurrency, storage, permissions, and sync algorithms stay with their owners. |
+| resize/multiwindow/restore/foldable/large-screen context or pointer/touch/keyboard/pen transitions materially change interface composition | [references/adaptive-contexts.md](references/adaptive-contexts.md) | Adapt from available space/input/current platform state while preserving task context; retrieve exact target-platform behavior when material. |
 | another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Builder bounded to interface decisions and review. |
 
-The following is a conditional decision domain in the product architecture that does not yet have a direct owner in the current bundle: collaborative/concurrent/adaptive contexts.
-
-- Load a dedicated direct reference for one of these domains only when the installed bundle provides that owner **and** the task materially triggers it.
-- Until a dedicated owner exists in the current bundle, use only the applicable existing core/platform/locale/review guidance plus current authoritative external material when required; do not invent a hidden rule set or load an unrelated reference as a substitute.
-- When a new direct owner is added, route to it here rather than duplicating its detailed rules in this control plane.
 
 ## 4. Use current authority only when exact behavior matters
 
