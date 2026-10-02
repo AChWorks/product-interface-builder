@@ -52,6 +52,8 @@ Before choosing a style, identify the strongest product-specific inputs availabl
 
 Turn those inputs into a short direction, not a mood-board dump. A useful direction explains what should feel distinctive and what should remain quiet.
 
+Treat content as part of the interface material. Prefer real copy, data, imagery, and examples when available. When exploratory work needs realistic volume but factual content is unavailable, use clearly representative/synthetic material to exercise hierarchy, wrapping, density, and states; never let placeholder content masquerade as a real claim, customer, metric, or product fact.
+
 Do not default to whichever visual treatment is currently fashionable. Common patterns are valid when justified by the product; they are weak when selected merely because they are easy to generate.
 
 Allocate visual emphasis according to hierarchy. Use a small number of deliberate identity cues that reinforce the product; competing gestures weaken both hierarchy and character.
@@ -103,6 +105,16 @@ Use:
 Structural devices such as cards, borders, dividers, labels, badges, numbering, or containers should encode grouping, state, sequence, or affordance. Do not add them merely to make a screen look designed.
 
 Avoid chopping every idea into equal cards. Equal visual weight implies equal importance.
+
+### Remove competition before adding structure
+
+When a surface feels busy or unclear, simplify the decision model before decorating it.
+
+- Remove or merge redundant labels, repeated explanations, and duplicate actions.
+- Keep one clearly dominant action in a decision area unless the task genuinely has co-equal outcomes.
+- Use progressive disclosure for secondary complexity that users do not need yet.
+- Prefer inline or in-context interaction before introducing interruption/modal behavior.
+- Do not add a card, border, heading, or background merely to compensate for weak grouping.
 
 ## 4. Compose layout and density deliberately
 
@@ -200,19 +212,25 @@ Treat copy as part of the interaction, not filler around the visual design.
 - Error, empty, permission, and blocked states should explain the next useful step when one exists.
 - Keep instructions close to the control or decision they explain.
 - Preserve technical identifiers or domain terms when translating or simplifying them would reduce accuracy.
+- Write complete messages that can be translated and reordered; avoid assembling user-facing sentences from fragments.
+- Keep variables, counts, and dynamic values structurally separate from surrounding copy so pluralization/localization can change their order.
+- Let copy expand instead of abbreviating it merely to protect a brittle layout.
 - Do not invent proof, metrics, testimonials, guarantees, capabilities, or business facts to make a layout feel complete.
 
 Locale-specific register and Persian wording belong to the locale reference.
 
 ### Data presentation
 
-Choose tables, lists, cards, charts, summaries, or detail views based on the comparison and action users need.
+Choose tables, lists, cards, charts, summaries, or detail views from the question users need answered.
 
-- Tables are strong for aligned comparison and dense scanning.
+- Tables are strong for exact values, aligned comparison, dense scanning, sorting, and accessible fallback.
 - Lists are strong for repeated entities with a dominant reading order.
-- Charts are strong for patterns, change, distribution, and relationships—not for displaying exact values that a table would communicate better.
-- Pair visual encodings with labels/legends or direct annotations where users need exact meaning.
-- Avoid ornamental charts.
+- Use bars for comparing discrete magnitudes, lines for change over time, distribution plots for spread/outliers, and scatter-style views for relationships between continuous variables.
+- Use part-to-whole charts only when there are few categories and rough proportion is the actual question; switch to bars/tables when precise comparison matters.
+- Do not add a gauge, map, funnel, network, or decorative visualization unless the underlying structure really matches that form.
+- For dense or interactive charts, provide direct labels or an equivalent table/summary when users need exact meaning or non-visual access.
+- Encode important distinctions with more than hue alone when possible.
+- Avoid ornamental charts and unnecessary animation of data.
 
 ## 9. Design the non-ideal states
 
@@ -231,6 +249,17 @@ When material to the flow, account for:
 - very long content and localization expansion.
 
 Each state should help the user understand what happened and what they can do next. Do not use mood, apology, or decorative emptiness instead of direction.
+
+### First use and onboarding
+
+When users need orientation:
+
+- get them to a meaningful product action as early as possible;
+- teach features in the context where they become useful rather than front-loading a tour;
+- let experienced users skip explanatory guidance when no safety/setup requirement prevents it;
+- make empty states explain what belongs there and the next useful action;
+- use working examples or realistic previews when they teach the product better than prose;
+- do not block ordinary product access merely to force completion of an educational sequence.
 
 ## 10. Use design systems proportionally
 
