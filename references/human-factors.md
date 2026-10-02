@@ -99,7 +99,7 @@ A visually coherent screen can still be usability-uncertain when these questions
 
 ## 7. Separate hypotheses from evidence
 
-Use evidence only for the claim it can support.
+Use evidence only for the claim it can support. [review.md](review.md) owns how static, rendered, measured, and assistive interface-review evidence is obtained and judged; this section owns only what those evidence types do or do not justify about usability confidence.
 
 | Evidence type | What it can support | What it does not prove by itself |
 |---|---|---|
