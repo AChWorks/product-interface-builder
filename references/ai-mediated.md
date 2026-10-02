@@ -153,7 +153,7 @@ If the interface asks users to provide sensitive/contextual data, share history/
 - distinguish temporary task context from durable memory/history when that difference exists;
 - do not invent privacy guarantees, retention periods, model-training exclusions, encryption claims, or third-party data behavior.
 
-Product Interface Builder owns how known choices are presented. Privacy/data/security policy and enforcement remain outside this Skill.
+Product Interface Designer owns how known choices are presented. Privacy/data/security policy and enforcement remain outside this Skill.
 
 ## 10. Keep interface guidance separate from AI risk policy
 
