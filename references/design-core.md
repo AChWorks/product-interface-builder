@@ -2,6 +2,10 @@
 
 Use this reference for new interface work, targeted visual/UX modification, and redesign. It owns cross-locale product-interface reasoning. Locale, platform, and detailed review rules stay in their dedicated references.
 
+## Contents
+
+[Change type](#1-classify-the-change-before-designing) · [Direction](#2-ground-visual-direction-in-the-product) · [Hierarchy](#3-shape-hierarchy-before-decoration) · [Layout](#4-compose-layout-and-density-deliberately) · [Typography](#5-treat-typography-as-interface-structure) · [Color](#6-build-color-from-roles) · [Visual language](#7-keep-shape-depth-imagery-and-icons-coherent) · [Controls/copy/data](#8-design-controls-around-tasks-and-states) · [Edge states/onboarding](#9-design-the-non-ideal-states) · [Design systems](#10-use-design-systems-proportionally) · [Coherence check](#11-check-coherence-before-adding-detail)
+
 ## 1. Classify the change before designing
 
 ### New interface
@@ -135,7 +139,7 @@ Responsive recomposition and platform-specific layout behavior are owned by the 
 Typography communicates hierarchy, personality, density, and scanning behavior.
 
 - Start from the project's actual typefaces when modifying an existing product.
-- For new work, choose type for the content, script coverage, platform, performance constraints, and intended character.
+- For new work, choose type for the content, script coverage, platform, performance constraints, and intended character. Verify current availability/licensing and the actual weights/scripts the project can ship rather than trusting a static font shortlist.
 - Use a small intentional type scale and a small set of weights.
 - Distinguish levels by a combination of size, weight, line height, width, spacing, and placement rather than arbitrary one-off values.
 - Keep body text comfortably readable and line lengths appropriate to the content.
