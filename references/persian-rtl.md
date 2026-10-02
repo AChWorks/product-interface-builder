@@ -4,6 +4,10 @@ Load this reference only when Persian, RTL composition, bidirectional content, o
 
 Do not collapse language, direction, locale, calendar, currency, digit style, and regional product conventions into one switch. Evidence for one does not automatically activate the others.
 
+## Contents
+
+[Locale dimensions](#1-resolve-the-active-locale-dimensions) · [RTL/bidi structure](#2-build-direction-and-bidi-into-structure) · [Persian text](#3-treat-persian-text-as-a-real-writing-system) · [Display vs stored values](#4-separate-user-facing-formatting-from-stored-values) · [Component recomposition](#5-recompose-components-for-rtl-do-not-merely-mirror-them) · [Iran-specific behavior](#6-treat-iranian-local-conventions-as-optional-product-requirements) · [Non-leakage](#7-non-leakage)
+
 ## 1. Resolve the active locale dimensions
 
 Establish only the dimensions the product actually requires:
