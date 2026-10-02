@@ -198,26 +198,4 @@ All are valid if authority, source-of-truth, evidence, and ownership boundaries 
 
 Provider adapters may make discovery/invocation easier, but must never redefine these contracts.
 
-## 12. v0.1 scenario checks
-
-A composition passes when:
-
-### Standalone UI
-Product Interface Builder can complete ordinary design/review without requiring another AChWorks Skill.
-
-### Master + interface task
-The Master keeps project/GitHub/integration authority while Product Interface Builder returns bounded design/UX decisions and evidence.
-
-### WordPress UI
-Product Interface Builder defines the intended user-facing result; WP Native Builder chooses the WordPress-native owner/mechanism.
-
-### Three-way WordPress project
-The Master coordinates, Product Interface Builder owns visual/UX intent/review, and WP Native Builder owns WordPress mechanism. No role duplicates the other's durable state.
-
-### Missing capability/specialist
-The work degrades to the strongest available evidence/output without fabricated execution or forced dependency.
-
-### Cross-runtime
-The same role/ownership semantics remain valid even when the runtime uses a different agent/Skill invocation mechanism.
-
-If a scenario requires modifying a neighboring Skill, record that need in the owning project/repository and obtain separate mutation scope. Do not change it from this project.
+If composition reveals that a neighboring Skill needs a lasting change, record that need in the owning project/repository and obtain separate mutation scope. Do not change it from this project.
