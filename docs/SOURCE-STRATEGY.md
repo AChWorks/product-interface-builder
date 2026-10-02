@@ -50,6 +50,21 @@ Because there is currently no direct third-party import, a separate `THIRD_PARTY
 - Do not reproduce Anthropic's distinctive anti-template example lists as our own checklist.
 
 
+## Authority outside the synthesis corpus
+
+The six audited projects are the **design/UX synthesis corpus**, not a replacement for current authoritative standards or platform documentation.
+
+When a task depends on a version-sensitive or normative requirement, use the current official source as execution evidence when available, for example:
+
+- W3C/WCAG and ARIA Authoring Practices for web accessibility requirements;
+- Apple Human Interface Guidelines and current Apple platform documentation for iOS/iPadOS behavior;
+- current Android/Material/platform documentation for Android behavior;
+- current browser/platform/API documentation for implementation-sensitive behavior.
+
+Do not vendor those documentation sets wholesale into this Skill. Product Interface Builder should retain durable design principles and routing guidance; exact requirements that may change should be checked against their authoritative current owner when they materially affect the task.
+
+If current authoritative platform/standards guidance conflicts with a generalized rule in this Skill, the authoritative requirement wins.
+
 ## v0.1 source-depth coverage audit
 
 The final source audit classified approximately **977 KB** of material as potentially design-relevant after obvious runtime/tooling/bulk-data exclusions. This is a review scope, not a package-size target. The point is to account for useful capabilities, not to compress every source line into the runtime.
