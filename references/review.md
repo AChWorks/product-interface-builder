@@ -209,7 +209,7 @@ Use motion primarily to:
 - direct attention to a meaningful transition;
 - express product character without obstructing the task.
 
-When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune timing and easing to the actual change instead of importing preset tables or archetypes.
+When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
 
 Review:
 - purpose: would removing the motion reduce understanding or intended character?
