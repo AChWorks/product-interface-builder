@@ -109,7 +109,7 @@ A missing optional capability should narrow evidence, not make ordinary design r
 
 When implementation is requested and authorized, do not stop at advice when available capabilities can safely implement the interface. Reuse the project's established owner/mechanism, stack, components, and durable design truth; make the smallest coherent change that satisfies the interface intent, and create new persistent design artifacts only when substantial continuing work warrants them.
 
-If implementation would require choosing an unestablished application framework, durable platform architecture, backend/data contract, or another specialist's mechanism, return that decision to the project/platform owner rather than silently making it for the sake of UI execution. In standalone work, continue with the interface decision, prototype, or implementation-ready guidance until that ownership fact is resolved.
+If durable product implementation would require choosing an unestablished application framework, durable platform architecture, backend/data contract, or another specialist's mechanism, return that decision to the project/platform owner rather than silently making it for the sake of UI execution. For an explicitly disposable/reversible prototype where the mechanism does not create a durable product architecture commitment, choose the smallest available mechanism that can express the interface and label it as prototype implementation rather than product architecture. In standalone durable work, continue with the interface decision, prototype, or implementation-ready guidance until the ownership fact is resolved.
 
 Do not introduce a framework, library, dependency, or global design-system change merely to express a local visual preference.
 
