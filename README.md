@@ -18,9 +18,9 @@ Provider adapters may exist where a platform requires its own packaging or metad
 
 ## Status
 
-**Foundation / planning complete; implementation not started.**
+**v0.1 implementation in progress.**
 
-The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). Future work must recover from repository and GitHub state rather than chat history.
+The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). The provider-neutral control kernel lives in [SKILL.md](SKILL.md), with direct progressive-loading references under `references/`. Future work must recover from repository and GitHub state rather than chat history.
 
 ## AChWorks / Koinon alignment
 
