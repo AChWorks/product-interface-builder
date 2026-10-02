@@ -1,12 +1,12 @@
-# Product Interface Builder — Project Specification
+# Product Interface Designer — Project Specification
 
 Status: **v0.1 RELEASED · v0.2 DIRECTION ACCEPTED**
 
-Repository: `AChWorks/product-interface-builder`
+Repository: `AChWorks/product-interface-designer`
 
 This file owns durable product intent, scope, boundaries, and architecture constraints. GitHub Issues/PRs own live work and release planning. Source provenance is owned by `docs/SOURCE-STRATEGY.md`; instruction-authoring/composition structure is owned by `docs/INSTRUCTION-ARCHITECTURE.md`.
 
-First public release: **v0.1**, tagged at `1de9c1042f850f20c7279375c9860347c9a13d76`.
+First public release: **v0.1**, tagged at `1de9c1042f850f20c7279375c9860347c9a13d76` under the former **Product Interface Builder** / `AChWorks/product-interface-builder` identity. The v0.1 tag, release notes, and asset remain historical records; the canonical identity from v0.2 onward is **Product Interface Designer** / `AChWorks/product-interface-designer`.
 
 ## 1. Outcome
 
@@ -49,7 +49,7 @@ Pure backend, infrastructure, database, deployment, business strategy, product-m
 
 ## 3. Ownership boundaries
 
-Product Interface Builder owns the **user-facing interface decision**:
+Product Interface Designer owns the **user-facing interface decision**:
 
 - information/action hierarchy;
 - interaction and navigation intent;
@@ -76,21 +76,21 @@ Standalone use remains supported; missing neighboring Skills must not create fak
 
 ## 4. Composition model
 
-Product Interface Builder is a **specialist consulted for interface decisions**.
+Product Interface Designer is a **specialist consulted for interface decisions**.
 
 When invoked by a project Master or implementation specialist:
 
 1. the caller retains its own project/repository/execution authority;
-2. Product Interface Builder receives the smallest sufficient product/task/platform/locale/design context;
-3. Product Interface Builder returns concrete interface intent, constraints, evidence expectations, and any material unresolved assumption;
+2. Product Interface Designer receives the smallest sufficient product/task/platform/locale/design context;
+3. Product Interface Designer returns concrete interface intent, constraints, evidence expectations, and any material unresolved assumption;
 4. the caller or appropriate platform specialist executes/integrates the work;
-5. Product Interface Builder may review the resulting interface when material, but does not take over project orchestration.
+5. Product Interface Designer may review the resulting interface when material, but does not take over project orchestration.
 
 Specific boundaries:
 
-- **GitHub Project Orchestrator:** owns scope, dependencies, repository mutation, coordination, integration, release, and continuity; invokes Product Interface Builder for material UI/UX decisions or review.
-- **WP Native Builder:** Product Interface Builder owns user-facing design/UX intent; WP Native Builder owns WordPress/Gutenberg/theme/plugin/WooCommerce mechanism and lifecycle safety.
-- **ACh Idea Advisor:** owns materially unresolved product/outcome/reuse/placement decisions; Product Interface Builder should not hide an unresolved product decision inside interface design.
+- **GitHub Project Orchestrator:** owns scope, dependencies, repository mutation, coordination, integration, release, and continuity; invokes Product Interface Designer for material UI/UX decisions or review.
+- **WP Native Builder:** Product Interface Designer owns user-facing design/UX intent; WP Native Builder owns WordPress/Gutenberg/theme/plugin/WooCommerce mechanism and lifecycle safety.
+- **ACh Idea Advisor:** owns materially unresolved product/outcome/reuse/placement decisions; Product Interface Designer should not hide an unresolved product decision inside interface design.
 
 Detailed composition/return-shape rules live in `docs/INSTRUCTION-ARCHITECTURE.md` and the runtime composition reference.
 
@@ -172,7 +172,7 @@ The repository aligns with Koinon through `achworks.yaml`. Koinon is a governanc
 
 Repository license: **MIT**.
 
-The project contains original Product Interface Builder instructions and currently vendors/adapts no third-party code, datasets, components, scripts, templates, or copyrighted Skill prose.
+The project contains original Product Interface Designer instructions and currently vendors/adapts no third-party code, datasets, components, scripts, templates, or copyrighted Skill prose.
 
 Conceptual references may inform original synthesis without becoming runtime dependencies. Future direct copy/translation/transformation/adaptation of third-party material requires exact provenance and license/NOTICE/attribution handling before integration.
 
@@ -200,8 +200,8 @@ Live sequencing and completion state belong in GitHub Issues/Roadmap, not this s
 
 ## 12. Locked decisions
 
-- Name: `product-interface-builder`
-- Repository: `AChWorks/product-interface-builder`
+- Name: `product-interface-designer`
+- Repository: `AChWorks/product-interface-designer`
 - Scope: product interface design/UX/interaction/visual quality across web, mobile, desktop
 - Role: interface decision specialist; not project manager or platform mechanism owner
 - Persian/RTL: first-class conditional specialization
