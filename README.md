@@ -4,7 +4,6 @@ A reusable, provider-neutral AI Skill for designing, reviewing, refining, and gu
 
 It focuses on visual direction, UX, design systems, responsive/adaptive behavior, accessibility, interaction, motion, interface copy, localization, Persian/RTL, and interface-quality review.
 
-Former identity: **Product Interface Builder** / `AChWorks/product-interface-builder` for the historical v0.1 release. The canonical identity from v0.2 onward is **Product Interface Designer** / `AChWorks/product-interface-designer`.
 
 ## Design model
 
