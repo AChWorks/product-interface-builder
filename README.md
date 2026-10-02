@@ -1,12 +1,14 @@
-# Product Interface Builder
+# Product Interface Designer
 
-A reusable, provider-neutral AI Skill for designing, building, reviewing, and refining user-facing product interfaces across web, mobile, and desktop.
+A reusable, provider-neutral AI Skill for designing, reviewing, refining, and guiding implementation of user-facing product interfaces across web, mobile, and desktop.
 
 It focuses on visual direction, UX, design systems, responsive/adaptive behavior, accessibility, interaction, motion, interface copy, localization, Persian/RTL, and interface-quality review.
 
+Former identity: **Product Interface Builder** / `AChWorks/product-interface-builder` for the historical v0.1 release. The canonical identity from v0.2 onward is **Product Interface Designer** / `AChWorks/product-interface-designer`.
+
 ## Design model
 
-Product Interface Builder is an **AChWorks-owned synthesis**, not a fork or wrapper around another design Skill.
+Product Interface Designer is an **AChWorks-owned synthesis**, not a fork or wrapper around another design Skill.
 
 The project studies several design/UX sources, extracts ideas that fit our requirements, resolves overlap, and rewrites the useful knowledge into one local behavior model. Upstream command names, chapter structures, workflows, catalogs, provider assumptions, and taxonomies are not the architecture of this Skill.
 
@@ -25,7 +27,7 @@ See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source co
 
 ## Ecosystem boundaries
 
-Product Interface Builder owns user-facing interface intent and quality. It composes with, rather than replaces, project-management and platform-specific specialists such as GitHub Project Orchestrator and WP Native Builder.
+Product Interface Designer owns user-facing interface intent and quality. It composes with, rather than replaces, project-management and platform-specific specialists such as GitHub Project Orchestrator and WP Native Builder.
 
 Koinon provides AChWorks discovery/governance contracts through [achworks.yaml](achworks.yaml); it is not a runtime dependency of the Skill.
 
@@ -35,4 +37,4 @@ Koinon provides AChWorks discovery/governance contracts through [achworks.yaml](
 
 ## License
 
-Original Product Interface Builder material is licensed under the [MIT License](LICENSE). No third-party code, datasets, components, scripts, templates, or copyrighted Skill prose are currently vendored or adapted in this repository. If that changes, provenance and applicable upstream notice/license obligations must be recorded before integration.
+Original Product Interface Designer material is licensed under the [MIT License](LICENSE). No third-party code, datasets, components, scripts, templates, or copyrighted Skill prose are currently vendored or adapted in this repository. If that changes, provenance and applicable upstream notice/license obligations must be recorded before integration.
