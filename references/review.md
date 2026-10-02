@@ -209,9 +209,7 @@ Use motion primarily to:
 - direct attention to a meaningful transition;
 - express product character without obstructing the task.
 
-
 When motion is material, keep a small coherent motion vocabulary instead of inventing a new personality for every component. Distinguish at most a few roles such as direct input feedback, ordinary spatial/state transition, and a rare expressive moment. Tune them to the product and platform rather than importing preset timing tables.
-
 
 Review:
 - purpose: would removing the motion reduce understanding or intended character?
