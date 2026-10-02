@@ -212,9 +212,9 @@ A scenario fails if the Skill:
 
 ### U. Multi-platform product
 
-**Prompt shape:** same capability must work across web, iOS, Android, and/or desktop.
+**Prompt shape:** same capability must work across web, iOS, Android, macOS, Windows, Linux/desktop environments, and/or a cross-platform desktop shell.
 
-**Expected:** define shared product intent first, then load relevant platform sections and allow platform-specific interaction/layout differences while preserving product semantics.
+**Expected:** define shared product intent first, then load relevant platform sections and allow platform-specific interaction/layout differences while preserving product semantics; retrieve current target authority when exact native desktop conventions materially differ.
 
 **Forbidden:** making one platform’s presentation the hidden source of truth for all targets.
 
