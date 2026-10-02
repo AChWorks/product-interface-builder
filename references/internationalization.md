@@ -143,7 +143,7 @@ Does the decision depend on an exact locale/platform rule?
   └─ yes -> retrieve current product/platform/Unicode CLDR/Unicode/W3C or other
             authoritative domain data for the actual locale and target
             -> apply that exact requirement
-            -> keep Product Interface Builder focused on the interface result
+            -> keep Product Interface Designer focused on the interface result
 ```
 
 Prefer maintained locale-aware APIs/libraries backed by current authoritative data. Do not freeze large locale tables, date/number patterns, plural rules, collation rules, or bidi algorithms into this Skill.
