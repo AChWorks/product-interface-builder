@@ -200,6 +200,19 @@ Detailed input semantics, focus, keyboard/touch behavior, and accessibility chec
 
 Navigation should reflect the product's information architecture and user mental model. Keep location, return path, and destination meaning predictable. Do not add navigation levels simply to fit a component pattern.
 
+### Interface copy
+
+Treat copy as part of the interaction, not filler around the visual design.
+
+- Use the product's established nouns and verbs consistently.
+- Prefer labels that name the actual action or destination over generic words such as "Continue" when a specific label is available.
+- Error, empty, permission, and blocked states should explain the next useful step when one exists.
+- Keep instructions close to the control or decision they explain.
+- Preserve technical identifiers or domain terms when translating or simplifying them would reduce accuracy.
+- Do not invent proof, metrics, testimonials, guarantees, capabilities, or business facts to make a layout feel complete.
+
+Locale-specific register and Persian wording belong to the locale reference.
+
 ### Data presentation
 
 Choose tables, lists, cards, charts, summaries, or detail views based on the comparison and action users need.
