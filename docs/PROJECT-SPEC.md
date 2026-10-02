@@ -1,6 +1,6 @@
 # Product Interface Designer — Project Specification
 
-Status: **v0.1 RELEASED · v0.2 DIRECTION ACCEPTED**
+Status: **v0.1 RELEASED · v0.2 RELEASE CANDIDATE**
 
 Repository: `AChWorks/product-interface-designer`
 
@@ -182,21 +182,21 @@ Conceptual references may inform original synthesis without becoming runtime dep
 
 v0.1 established the provider-neutral control plane, core design reasoning, Persian/RTL specialization, platform routing, review behavior, composition boundaries, source-independent synthesis model, and canonical packaging.
 
-### Accepted post-v0.1 direction
+### v0.2 release candidate
 
-The next evolution should close independently identified gaps without reintroducing source-shaped structure:
+v0.2 implements the accepted post-v0.1 direction without reintroducing source-shaped structure:
 
-- AI-legible control-plane/decision architecture;
-- correct mandatory-constraint precedence;
-- human factors and usability-evidence reasoning;
-- information architecture, findability, and complex interaction patterns;
-- trust/privacy/consent and anti-deceptive-design behavior;
-- general internationalization/localization architecture;
-- stronger design-system decision support;
-- conditional AI-mediated/collaborative/adaptive interface guidance;
-- sharper composition contracts with AChWorks project/platform/advisory Skills.
+- explicit AI-legible precedence/routing and current-authority gates;
+- formal consulted-specialist composition and interface-decision packets;
+- human-factors/usability-evidence reasoning;
+- information architecture, findability, and complex interaction guidance;
+- trust/privacy/consent/user-agency and anti-deceptive-interface guidance;
+- general internationalization/localization with Persian/RTL as a specialization;
+- proportional design-system decision support;
+- conditional AI-mediated interface guidance;
+- conditional collaboration/concurrency and adaptive-context guidance.
 
-Live sequencing and completion state belong in GitHub Issues/Roadmap, not this specification.
+The v0.2 release also adopts the canonical **Product Interface Designer** identity. Live release state remains owned by GitHub Issues/Releases until publication is verified.
 
 ## 12. Locked decisions
 
