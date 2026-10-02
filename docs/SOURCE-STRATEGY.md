@@ -11,7 +11,7 @@ The repository remains MIT-licensed. For the v0.1 baseline established by this a
 ## Decision rules
 
 1. Treat upstream projects as evidence and design references, not parallel rulebooks.
-2. Convert useful concepts into original, project-owned principles and tests.
+2. Convert useful concepts into original, project-owned principles and guidance.
 3. Give each concern one canonical local owner; do not preserve upstream file structures merely because they exist.
 4. Do not import an upstream catalog just because it is available. An import must materially improve quality or repeatability enough to justify package size, context cost, maintenance, provenance, and update burden.
 5. A future direct copy, translation, transformation, or derivative import must be reviewed separately before it lands:
@@ -21,7 +21,7 @@ The repository remains MIT-licensed. For the v0.1 baseline established by this a
    - record local derivative paths in `THIRD_PARTY_NOTICES.md`;
    - retain the upstream license/notice where required;
    - exclude the material when scope or licensing remains unclear.
-6. Provider-specific upstream packaging is never copied into canonical behavior merely to support a particular harness.
+6. Provider-specific upstream packaging is not part of canonical behavior; keep only source ideas that improve Product Interface Builder itself.
 
 ## Audited source map
 
@@ -82,6 +82,6 @@ Pinned revisions above are the evidence baseline for v0.1 design. They are not r
 - direct material will actually be imported;
 - a materially different upstream capability is being adopted;
 - a licensing/provenance fact changes;
-- an evaluation exposes a gap that current synthesis cannot resolve.
+- future design or implementation work exposes a gap that current synthesis cannot resolve.
 
 Do not update pins merely to chase upstream movement.
