@@ -30,7 +30,7 @@ Use browser-native behavior as a strength.
 ### Input
 Support keyboard as well as pointer where the flow permits it. Hover may enrich but must not be the sole way to discover or operate required actions.
 
-Forms should cooperate with browser autofill, password managers, input modes, validation feedback, and paste rather than fighting them.
+Forms should cooperate with browser autofill, password managers, input modes, validation feedback, and paste rather than fighting them. Do not disable browser zoom to hide layout/input problems; on mobile Safari, keep text inputs comfortably large (commonly 16 CSS px or more) so focus does not trigger unwanted zoom.
 
 ### Layout
 Design for the real viewport range the product supports:
@@ -74,8 +74,33 @@ Use native accessibility semantics/labels through the actual UI framework.
 ### Software keyboard and forms
 Account for keyboard appearance, viewport reduction, field scrolling, submit/next actions, autofill/OTP/password-manager integration, and content that must remain visible while typing.
 
+### iOS
+
+When the target is iOS/iPadOS and the product expects native behavior:
+
+- keep controls and content clear of safe-area/system UI;
+- preserve system back/navigation gestures and use platform navigation patterns rather than web-style history chrome;
+- support Dynamic Type/text scaling without hiding primary actions;
+- prefer semantic system colors/materials and established native controls when they satisfy the product need;
+- keep interactive targets comfortably usable (44 pt is the common minimum reference);
+- use the platform's established icon/navigation language when product identity does not require a justified exception;
+- honor Reduce Motion and avoid custom transitions that fight the navigation model.
+
+### Android
+
+When the target is Android and the product expects native behavior:
+
+- respect system Back/predictive-back behavior and edge-to-edge/window insets;
+- adapt top-level navigation to available window size rather than shipping one phone pattern unchanged to larger screens;
+- support scalable text and system accessibility/font settings;
+- prefer semantic theme roles and established Material/native controls when they fit the product;
+- keep touch targets comfortably usable (48 dp is the common minimum reference);
+- preserve IME/keyboard visibility and inset behavior during forms;
+- honor the system's reduced/removed-animation preference.
+
 ### Platform distinction
-If iOS and Android conventions materially differ, follow the actual target or explicitly design a shared product convention that does not break either platform. Do not invent a pseudo-native hybrid by default.
+
+If iOS and Android conventions materially differ, follow the actual target. A shared product convention is valid only when it preserves the important navigation, input, accessibility, and lifecycle expectations of each platform. Do not invent a pseudo-native hybrid by default.
 
 ## 4. Desktop
 
