@@ -267,33 +267,16 @@ When users need orientation:
 
 ## 10. Use design systems proportionally
 
-A design system is a means of consistency, not a mandatory deliverable.
+A design system is a means of continuing reuse, not a mandatory deliverable.
 
-### Reuse first
+For ordinary interface work:
 
-If authoritative tokens/components/patterns exist, use them. Extend them only when the new need cannot be expressed cleanly.
+- reuse authoritative existing tokens/components/patterns;
+- make the smallest coherent extension needed by the current product;
+- keep one-off exceptions local rather than promoting them into global rules;
+- do not create a new token taxonomy, component library, documentation site, or governance process merely because the surface needs visual consistency.
 
-### Establish only what earns reuse
-
-For new or substantial work, define the smallest shared system that prevents repeated arbitrary decisions, commonly:
-
-- semantic color roles;
-- typography scale;
-- spacing/density rhythm;
-- radius/border/elevation language;
-- layout/container conventions;
-- control/state patterns;
-- motion principles when motion is material.
-
-Prefer relationships and semantic roles over a giant token catalog.
-
-### Local exceptions
-
-A surface-specific exception may be justified, but it should not silently become a global token or pattern. Keep the exception local unless repeated evidence shows it belongs in the shared system.
-
-### Durable artifacts
-
-Persist design decisions only when continuing work benefits from recovery across sessions/people/tools. Reuse the project's existing design source of truth when one exists. Do not manufacture a MASTER/design-system document for a trivial change.
+When the work explicitly concerns or materially requires reusable token architecture, component contracts, themes/modes, extension rules, or system-wide change/deprecation, that deeper decision domain is owned by [design-systems.md](design-systems.md) and routed directly from `SKILL.md`.
 
 ## 11. Check coherence before adding detail
 
