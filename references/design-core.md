@@ -54,7 +54,7 @@ Turn those inputs into a short direction, not a mood-board dump. A useful direct
 
 Do not default to whichever visual treatment is currently fashionable. Common patterns are valid when justified by the product; they are weak when selected merely because they are easy to generate.
 
-Spend distinctiveness selectively. One memorable compositional, typographic, imagery, or interaction idea is usually stronger than many unrelated flourishes.
+Allocate visual emphasis according to hierarchy. Use a small number of deliberate identity cues that reinforce the product; competing gestures weaken both hierarchy and character.
 
 ### Set priorities from the user job
 
@@ -262,9 +262,9 @@ A surface-specific exception may be justified, but it should not silently become
 
 Persist design decisions only when continuing work benefits from recovery across sessions/people/tools. Reuse the project's existing design source of truth when one exists. Do not manufacture a MASTER/design-system document for a trivial change.
 
-## 11. Self-critique before polishing
+## 11. Check coherence before adding detail
 
-Before adding more visual detail, check:
+Before adding more detail, check:
 
 - Does the direction clearly relate to this product and content?
 - Is the primary task obvious?
