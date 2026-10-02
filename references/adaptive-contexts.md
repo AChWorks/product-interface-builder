@@ -102,4 +102,4 @@ Durable adaptive principles belong here. Exact behavior for:
 
 must come from current official platform/browser authority when it materially affects implementation.
 
-Product Interface Builder defines the intended adaptive experience. The platform/implementation owner chooses the supported mechanism and validates it on the actual target.
+Product Interface Designer defines the intended adaptive experience. The platform/implementation owner chooses the supported mechanism and validates it on the actual target.
