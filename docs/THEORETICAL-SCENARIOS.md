@@ -8,7 +8,7 @@ The purpose is to test whether the Skill would make the right **routing, ownersh
 
 ## Contents
 
-[Evaluation dimensions](#evaluation-dimensions) · [A–F: build/change/reference](#a-new-dashboard--build-and-implement) · [G–J: decisions/scope](#g-missing-material-product-behavior) · [K–O: locale/standards/IA/systems](#k-rtl-without-persian) · [P–U: AI/collaboration/adaptive/review/trust/platform](#p-ai-mediated-product-interface) · [V–X: composition](#v-github-project-orchestrator-composition) · [Y–Z: capability/discovery boundaries](#y-missing-renderexternal-authority-capabilities) · [Regression rule](#regression-rule)
+[Evaluation dimensions](#evaluation-dimensions) · [A–F: build/change/reference](#a-new-dashboard--build-and-implement) · [G–J: decisions/scope](#g-missing-material-product-behavior) · [K–O: locale/standards/IA/systems](#k-rtl-without-persian) · [P–U: AI/collaboration/adaptive/review/trust/platform](#p-ai-mediated-product-interface) · [V–X: composition](#v-github-project-orchestrator-composition) · [Y–Z: capability/discovery boundaries](#y-missing-renderexternal-authority-capabilities) · [AA–AD: feedback/content/prototype/multimodal](#aa-feedback-channel-and-interruption) · [Regression rule](#regression-rule)
 
 For a semantic change, inspect every scenario whose trigger, owner, evidence assumption, or forbidden behavior could change. Representation-only edits need only the scenarios whose semantics they touch.
 
@@ -257,6 +257,40 @@ A scenario fails if the Skill:
 **Expected:** Product Interface Designer does not trigger merely because typography, color, or visual design is involved.
 
 **Forbidden:** expanding product-interface ownership into standalone branding, illustration, print, or social-graphic design.
+
+### AA. Feedback channel and interruption
+
+**Prompt shape:** the product needs to communicate a routine save success, a recoverable validation problem, an ongoing cross-surface outage, a critical destructive-risk warning, and a useful event that may complete while the user is away.
+
+**Expected:** use design-core to choose the least disruptive surface that still preserves the needed significance, persistence, scope, actionability, and context. Keep routine/recoverable feedback in context when practical; use persistent surface-level messaging for ongoing conditions; reserve blocking interruption for genuinely immediate understanding/action; use out-of-app/system notification only when the information remains timely and valuable away from the product. Route exact system-notification behavior to the target platform.
+
+**Forbidden:** using toast/modal/system notification as a default style choice; hiding material recovery in a transient message; interrupting routine success merely to show activity.
+
+### AB. Interface copy/content design
+
+**Prompt shape:** a form or error flow is technically correct but uses internal terminology, long explanatory text, generic action labels, or blame-oriented copy.
+
+**Expected:** use design-core interface-copy ownership; prefer user/domain language, front-load decision/action-relevant information, remove filler, use specific action/destination labels, simplify the interface before adding prose that only teaches ordinary controls, and keep tone calm/clear in high-stress or consequential states. Preserve authoritative domain terms where simplification would reduce accuracy.
+
+**Forbidden:** creating a separate content-strategy workflow for ordinary UI copy; using humor/personality that obscures consequence; fixing unclear interaction primarily by adding more explanatory text.
+
+### AC. Prototype fidelity matches the uncertainty
+
+**Prompt shape 1:** test information architecture and task sequence before visual direction is settled.
+**Prompt shape 2:** test typography/density/reference fidelity.
+**Prompt shape 3:** test focus/keyboard behavior, motion, responsive transition, or assistive/device interaction.
+
+**Expected:** use human-factors guidance to choose the smallest prototype fidelity that makes the actual question observable: rough/minimally interactive for structural questions, sufficient visual fidelity for visual/content questions, and sufficient functional/platform fidelity for behavior questions. Add realistic content/state complexity only when it can change the answer.
+
+**Forbidden:** treating high-fidelity polish as stronger usability evidence by itself; spending effort on visual detail that cannot answer the research/design question; relying on a static mock to validate interaction behavior.
+
+### AD. Multimodal platform feedback
+
+**Prompt shape:** a native/cross-platform interaction could use haptic or audio feedback for confirmation, alignment, success, error, or another state.
+
+**Expected:** load platform guidance when the capability is real and material. Use haptic/audio as supplementary reinforcement, not decoration; preserve essential meaning through another suitable channel; respect user/system preferences and retrieve current target-platform guidance for exact capabilities/patterns.
+
+**Forbidden:** requiring haptics/audio on unsupported targets; making them the sole carrier of essential outcome/state; hard-coding vendor waveform/API details into this Skill.
 
 ## Regression rule
 

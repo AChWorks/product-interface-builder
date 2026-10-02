@@ -154,8 +154,10 @@ Canonical Skill behavior must not freeze fast-changing normative/platform detail
 When exact requirements materially affect a task, current official authorities outrank generalized Skill guidance, including as applicable:
 
 - W3C/WCAG and ARIA Authoring Practices;
-- Apple Human Interface Guidelines/current platform documentation;
-- Android/Material/current platform documentation;
+- Apple Human Interface Guidelines/current Apple platform documentation;
+- Android/Material/current Android platform documentation;
+- Microsoft/current Windows app design and platform documentation;
+- Unicode/CLDR/W3C internationalization guidance for exact locale/script/bidi behavior;
 - browser/platform API documentation;
 - applicable legal/regulatory/product policy owned outside this Skill.
 

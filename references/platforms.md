@@ -17,6 +17,7 @@ Across web, mobile/native, and desktop:
 - adapt composition, density, navigation, input, and feedback instead of blindly scaling the same screen;
 - distinguish pointer, touch, keyboard, gamepad/remote, pen, and assistive input where relevant;
 - respect safe areas, text scaling, localization expansion, high contrast, reduced motion, and platform accessibility settings when supported;
+- when the actual platform/product supports haptic or audio feedback, use it to reinforce meaningful user input or state rather than as decoration; keep essential meaning available through another suitable channel, respect user/system preferences such as mute/reduced haptics, and use current target-platform authority for exact capabilities or patterns;
 - prefer the project's existing platform component system before adding another UI framework.
 
 A cross-platform product may share semantics without sharing identical component markup.

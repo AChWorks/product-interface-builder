@@ -4,7 +4,7 @@ Use this reference for new interface work, targeted visual/UX modification, and 
 
 ## Contents
 
-[Change type](#1-classify-the-change-before-designing) · [Direction](#2-ground-visual-direction-in-the-product) · [References/fidelity](#treat-references-by-requested-fidelity) · [Hierarchy](#3-shape-hierarchy-before-decoration) · [Layout](#4-compose-layout-and-density-deliberately) · [Typography](#5-treat-typography-as-interface-structure) · [Color](#6-build-color-from-roles) · [Visual language](#7-keep-shape-depth-imagery-and-icons-coherent) · [Controls/copy/data](#8-design-controls-around-tasks-and-states) · [Edge states/onboarding](#9-design-the-non-ideal-states) · [Design systems](#10-use-design-systems-proportionally) · [Coherence check](#11-check-coherence-before-adding-detail)
+[Change type](#1-classify-the-change-before-designing) · [Direction](#2-ground-visual-direction-in-the-product) · [References/fidelity](#treat-references-by-requested-fidelity) · [Hierarchy](#3-shape-hierarchy-before-decoration) · [Layout](#4-compose-layout-and-density-deliberately) · [Typography](#5-treat-typography-as-interface-structure) · [Color](#6-build-color-from-roles) · [Visual language](#7-keep-shape-depth-imagery-and-icons-coherent) · [Controls/copy/data](#8-design-controls-around-tasks-and-states) · [Feedback/interruption](#choose-feedback-and-interruption-by-significance) · [Edge states/onboarding](#9-design-the-non-ideal-states) · [Design systems](#10-use-design-systems-proportionally) · [Coherence check](#11-check-coherence-before-adding-detail)
 
 ## 1. Classify the change before designing
 
@@ -203,6 +203,23 @@ Controls should say what happens and expose the state users need to make a decis
 - Distinguish primary, secondary, tertiary, and destructive actions by actual priority.
 - Do not create multiple visually dominant actions in one decision area without reason.
 
+### Choose feedback and interruption by significance
+
+Choose the feedback surface from what the user needs to know or do, not from a preferred component.
+
+Consider together:
+- **significance/urgency** — how costly it is to miss or delay the information;
+- **persistence** — whether the information must remain available after the moment passes;
+- **scope** — whether it applies to one control/object, the current surface, the product session, or activity outside the app;
+- **actionability** — whether the user must act now, can act later, or only needs confirmation;
+- **context/interruption cost** — whether leaving or blocking the current task would create more harm than the message prevents.
+
+Prefer feedback close to the affected object or task when users can act on it in context. Use transient feedback only when losing the message is harmless and no later reference is needed. Use persistent surface-level messaging when an ongoing condition materially affects the current work. Interrupt with an alert/modal-style decision only when immediate understanding or action is important enough to justify blocking the current context. Use an out-of-app/system notification only when the information remains timely and valuable while the user is away from the product.
+
+Do not escalate routine success, low-value updates, or recoverable background state into repeated interruptions merely to make system activity visible. Do not hide a material failure in a transient message that can disappear before recovery.
+
+Exact notification surfaces, permission behavior, platform delivery rules, and protected system UI belong to current target-platform authority. When the feedback also involves consent, destructive/high-consequence choice, or deceptive pressure, [trust-agency.md](trust-agency.md) owns those agency constraints.
+
 ### Forms
 
 - Group fields by user task, not backend schema.
@@ -221,10 +238,13 @@ Navigation should reflect the product's information architecture and user mental
 
 Treat copy as part of the interaction, not filler around the visual design.
 
-- Use the product's established nouns and verbs consistently.
+- Use the product's established nouns and verbs consistently, and prefer the language users need for the task over internal implementation or organizational terminology.
 - Prefer labels that name the actual action or destination over generic words such as "Continue" when a specific label is available.
-- Error, empty, permission, and blocked states should explain the next useful step when one exists.
+- Put the decision-relevant or action-relevant information first; remove filler, ceremonial wording, and repeated explanation that does not change the user's next action.
+- If substantial explanatory copy is needed mainly to teach users how ordinary controls/layout work, simplify the interface before adding more instructions.
+- Error, empty, permission, and blocked states should explain the next useful step when one exists without blaming the user for the system's wording, validation model, or failure.
 - Keep instructions close to the control or decision they explain.
+- Match tone to the consequence and context. Keep high-stress, failure, destructive, financial, privacy-sensitive, or support-critical moments calm and unambiguous; do not use personality or humor where it can obscure the action or consequence.
 - Preserve technical identifiers or domain terms when translating or simplifying them would reduce accuracy.
 - Write complete messages that can be translated and reordered; avoid assembling user-facing sentences from fragments.
 - Keep variables, counts, and dynamic values structurally separate from surrounding copy so pluralization/localization can change their order.

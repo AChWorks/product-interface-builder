@@ -6,7 +6,7 @@ This file owns human-factors reasoning and usability-evidence confidence. Detail
 
 ## Contents
 
-[Trigger](#1-decide-whether-human-factors-depth-is-needed) · [Mental models](#2-fit-the-users-mental-model) · [Memory/load](#3-reduce-unnecessary-memory-and-attention-load) · [Control/recovery](#4-make-control-and-recovery-visible) · [Help/disclosure](#5-use-help-and-progressive-disclosure-to-reduce-burden) · [Task outcome](#6-design-for-task-completion-not-interface-polish) · [Evidence](#7-separate-hypotheses-from-evidence) · [Uncertainty](#8-handle-usability-uncertainty-proportionally)
+[Trigger](#1-decide-whether-human-factors-depth-is-needed) · [Mental models](#2-fit-the-users-mental-model) · [Memory/load](#3-reduce-unnecessary-memory-and-attention-load) · [Control/recovery](#4-make-control-and-recovery-visible) · [Help/disclosure](#5-use-help-and-progressive-disclosure-to-reduce-burden) · [Task outcome](#6-design-for-task-completion-not-interface-polish) · [Evidence](#7-separate-hypotheses-from-evidence) · [Prototype fidelity](#match-prototype-fidelity-to-the-question) · [Uncertainty](#8-handle-usability-uncertainty-proportionally)
 
 ## 1. Decide whether human-factors depth is needed
 
@@ -116,6 +116,16 @@ Never say an interface was user-tested, validated with users, or proven usable u
 Do not treat preference polling as equivalent to observing task behavior when the decision is about task completion.
 
 ## 8. Handle usability uncertainty proportionally
+
+### Match prototype fidelity to the question
+
+Prototype fidelity is an evidence choice, not a quality score. Use the smallest fidelity that makes the decision-sensitive uncertainty observable.
+
+- For information architecture, sequencing, labeling, or broad task-flow questions, a rough wireflow or minimally interactive prototype may provide stronger signal than polished visual detail.
+- For hierarchy, density, typography, copy wrapping, brand expression, or reference-fidelity questions, include enough visual fidelity for those properties to be judged.
+- For interaction timing, focus/keyboard behavior, motion, responsive/adaptive transitions, device/input behavior, or assistive-technology questions, use enough functional/platform fidelity to exercise the behavior rather than relying on a static mock.
+- Add realistic content/state complexity when it can change the answer; do not add polish that cannot.
+- Do not treat high visual fidelity as stronger usability evidence by itself. A polished prototype remains a hypothesis until the relevant task/user evidence exists.
 
 Use this decision flow:
 
