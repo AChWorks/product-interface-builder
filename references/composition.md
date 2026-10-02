@@ -65,7 +65,7 @@ One concern has one active decision owner. Another Skill may supply evidence, co
 
 When GitHub Project Orchestrator is active, it frames the accepted work and keeps all project/repository/integration/release authority. Product Interface Builder receives only the interface question/context it needs and returns the packet in section 4.
 
-Product Interface Builder may implement UI changes only when the Master explicitly assigns/authorizes that implementation within the current repository/mutation boundary. Even then, project integration and release return to the Master.
+In this consultation flow, implementation remains with the caller or its implementation/platform owner. A separately assigned implementation role may use Product Interface Builder's decision as input, but that is a distinct execution responsibility and never transfers Master authority to this specialist.
 
 ### WP Native Builder
 
