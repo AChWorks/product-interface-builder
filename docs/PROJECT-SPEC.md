@@ -1,6 +1,6 @@
 # Product Interface Builder — Project Specification
 
-Status: **FOUNDATION_LOCKED / IMPLEMENTATION_NOT_STARTED**
+Status: **FOUNDATION_LOCKED / V0.1_IMPLEMENTATION_IN_PROGRESS**
 
 Repository: `AChWorks/product-interface-builder`
 
@@ -318,7 +318,7 @@ v0.1 is complete only when all of the following are true:
 - Portability: canonical core is vendor-neutral; provider-specific metadata/tool wiring is adapter-only
 - Ecosystem alignment: root `achworks.yaml` aligned with Koinon discovery/governance model; Koinon is not a runtime dependency
 - Repository license: MIT; third-party obligations remain independently enforceable
-- Implementation status: not started
+- Implementation status: v0.1 implementation in progress
 
 ## 17. Deferred implementation decisions
 
