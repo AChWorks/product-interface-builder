@@ -49,6 +49,35 @@ Because there is currently no direct third-party import, a separate `THIRD_PARTY
 - Do not import LottieFiles timing tables, archetype tables, or recipes as canonical presets.
 - Do not reproduce Anthropic's distinctive anti-template example lists as our own checklist.
 
+
+## v0.1 source-depth coverage audit
+
+The final source audit classified approximately **977 KB** of material as potentially design-relevant after obvious runtime/tooling/bulk-data exclusions. This is a review scope, not a package-size target. The point is to account for useful capabilities, not to compress every source line into the runtime.
+
+| Source | Material considered in depth | What v0.1 keeps | What v0.1 intentionally does not carry |
+|---|---|---|---|
+| Anthropic `frontend-design` | the complete design Skill | subject/brief grounding, deliberate visual direction, anti-generic relevance checks, typography/content intentionality, restraint, self-review | its distinctive example blacklist or wording as our own checklist |
+| UI UX Pro Max | ~51 KB guidance plus ~508 KB core design/UX datasets; larger font/icon, stack, script/test datasets were separately classified | requirement analysis, broad UX/accessibility categories, design-system proportionality, chart/data questions, platform/stack awareness as routing input | product-type → style/palette/font prescriptions, bulk font/icon catalogs, framework datasets, search scripts, or static catalogs that would become stale/generic defaults |
+| Impeccable | ~257 KB of design-oriented references selected from a ~2.17 MB Skill package | preserve-vs-redesign reasoning, content/craft discipline, simplification, copy clarity, onboarding, hardening, adaptation, native-platform principles, critique/review, purposeful motion | command/mode taxonomy, provider outputs, browser overlay/live tooling, detectors, persistence schema, generated design-doc workflow, binaries/scripts |
+| VibeFarsi | ~61 KB of interface-relevant Persian/RTL/copy/calendar/validation/craft material | direction/bidi, Persian typography/orthography, copy register, display-vs-machine formatting, conditional calendar/currency/local UI concerns | payment/S3/OTP/SEO provider workflows, validation algorithms as design rules, unconditional Iran-specific defaults |
+| Vercel Web Interface Guidelines | complete ~34 KB guideline set | browser semantics, focus/keyboard, forms, deep-link/state behavior, loading/hydration resilience, responsive/safe-area/accessibility/performance review signals | Vercel-specific brand/style preferences and implementation trivia that does not generalize |
+| LottieFiles motion-design | complete ~57 KB motion Skill | purpose, continuity, feedback, context/frequency, choreography, easing awareness, interruption, performance, reduced motion | personality/archetype taxonomies, rigid duration/easing tables, canned recipes, universal layer/ratio formulas |
+
+### Coverage rule
+
+Coverage is measured by **capability and design question**, not by source chapters or byte count. A source concept is considered covered when Product Interface Builder can make the underlying decision reliably from a local owner. It does not require retaining the source's name, command, taxonomy, dataset, example, or file structure.
+
+During this audit, the following under-covered capabilities were promoted into the canonical references without adding new source-shaped files:
+
+- native iOS/Android interface expectations;
+- first-use/onboarding behavior;
+- simplification before decoration;
+- translation-safe interface copy;
+- stronger data-visualization selection/accessibility rules;
+- Persian orthography/register details;
+- repeated-interaction and spatial-origin motion reasoning;
+- safe use of clearly synthetic mock content.
+
 ## Direct-import policy
 
 Before any future direct copy, translation, transformation, or derivative import:

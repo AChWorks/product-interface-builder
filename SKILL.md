@@ -77,7 +77,7 @@ Do not introduce a framework, library, dependency, or global design-system chang
 
 For material visual work, obtain rendered evidence when the environment supports it and correct clear defects before completion. Static source inspection is useful evidence but is not proof of rendered correctness.
 
-Never fabricate product claims, testimonials, metrics, certifications, guarantees, user data, or brand assets.
+Never present invented product claims, testimonials, customers, metrics, certifications, guarantees, user data, or brand assets as real. Clearly representative/synthetic content is acceptable for a mockup only when it cannot be mistaken for factual product evidence.
 
 ## 6. Preserve standalone and composed behavior
 

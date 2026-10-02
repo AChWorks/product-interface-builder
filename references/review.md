@@ -4,6 +4,10 @@ Use for explicit interface review requests and for proportional self-review of m
 
 This reference owns review evidence, visual QA, responsive/adaptive checks, accessibility, interaction states, motion review, and obvious interface-performance risks. It does not replace platform- or locale-specific guidance.
 
+## Contents
+
+[Scope](#1-scale-the-review-to-the-change) · [Evidence](#2-keep-evidence-levels-distinct) · [Intent](#3-recover-the-intended-result-before-judging) · [Static pass](#4-static-review-pass) · [Rendered pass](#5-rendered-visual-pass) · [Responsive](#6-responsive-and-adaptive-review) · [Accessibility](#7-accessibility-review) · [Interaction states](#8-interaction-state-review) · [Motion](#9-motion-review) · [Loading](#10-loading-and-transition-quality) · [UI performance](#11-obvious-interface-performance-risks) · [Correction](#12-correct-before-declaring-completion) · [Reporting](#13-report-high-signal-findings)
+
 ## 1. Scale the review to the change
 
 ### Trivial/local change
@@ -114,7 +118,7 @@ Check:
 - text/control/state distinctions remain visible in the actual theme;
 - focus, hover, active, selected, disabled, success/warning/destructive states are distinguishable;
 - color is not the only carrier of critical meaning;
-- dark/light variants remain coherent when both are supported.
+- dark/light variants remain coherent when both are supported; treat them as designed schemes rather than mechanically inverting colors.
 
 ### Overflow and reflow
 - no unintended horizontal scroll;
@@ -209,7 +213,7 @@ Use motion primarily to:
 - direct attention to a meaningful transition;
 - express product character without obstructing the task.
 
-When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
+When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune expressiveness to frequency: an interaction repeated all day should remain calm on the hundredth use, while a rare meaningful milestone can carry more character. Reuse recognizable motion for the same interaction meaning, and let movement originate from the control/state relationship users are tracking. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
 
 Review:
 - purpose: would removing the motion reduce understanding or intended character?
