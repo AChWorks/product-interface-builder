@@ -55,7 +55,7 @@ Directional icons and spatial transitions should follow actual start/end meaning
 
 ## 3. Treat Persian text as a real writing system
 
-Use typefaces that genuinely support the required Persian/Arabic glyphs and weights.
+Use typefaces that genuinely support the required Persian/Arabic glyphs and weights. Confirm the project has the right to ship any commercial Persian font; do not redistribute font files through this Skill.
 
 - Preserve joined-script shaping; arbitrary letter spacing can break or degrade Persian text.
 - Give Persian copy enough line height for its glyph shapes and diacritics.
@@ -67,11 +67,14 @@ Use typefaces that genuinely support the required Persian/Arabic glyphs and weig
 Preserve meaningful text behavior:
 
 - retain correct ZWNJ (نیم‌فاصله);
+- author Persian copy with Persian ی and ک rather than Arabic ي and ك unless source data intentionally preserves another form;
+- use Persian punctuation and spacing conventions in Persian prose (for example «گیومه»، «،»، «؛»، «؟»);
 - avoid raw-character truncation that can cut joined text badly; prefer layout-aware clamping;
 - do not apply Latin-only casing conventions to Persian;
-- keep established terminology/glossaries authoritative.
+- keep established terminology/glossaries authoritative;
+- normalize alternate character/digit forms only where search/validation needs it; do not silently rewrite authoritative display content.
 
-For interface copy, use one consistent product register (formal, neutral conversational, or another established voice). Prefer familiar product language over literal translation of implementation terms. Keep errors/empty states actionable and technical identifiers untranslated when translation would reduce clarity.
+For interface copy, use one consistent product register (formal, neutral conversational, or another established voice). Do not mix formal and colloquial verb forms accidentally across one flow. Prefer familiar product language over literal translation of implementation terms. Keep errors/empty states actionable and technical identifiers untranslated when translation would reduce clarity.
 
 ## 4. Separate user-facing formatting from stored values
 
