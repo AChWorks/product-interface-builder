@@ -1,6 +1,6 @@
 # Product Interface Designer — Project Specification
 
-Status: **v0.1 RELEASED · v0.2 RELEASE CANDIDATE**
+Status: **v0.2 RELEASED**
 
 Repository: `AChWorks/product-interface-designer`
 
@@ -182,7 +182,11 @@ Conceptual references may inform original synthesis without becoming runtime dep
 
 v0.1 established the provider-neutral control plane, core design reasoning, Persian/RTL specialization, platform routing, review behavior, composition boundaries, source-independent synthesis model, and canonical packaging.
 
-### v0.2 release candidate
+### v0.2
+
+Released as **Product Interface Designer v0.2** on tag `v0.2` at `c2eede9372549897b7ed59ba011a69e2e7fd7723`.
+
+Canonical runtime asset: `product-interface-designer-v0.2.zip` — SHA-256 `36d9fd415f02f579d974aee3325fce3d2d04680df2ca02c8029339e861d54698` (61,092 bytes).
 
 v0.2 implements the accepted post-v0.1 direction without reintroducing source-shaped structure:
 
@@ -196,7 +200,7 @@ v0.2 implements the accepted post-v0.1 direction without reintroducing source-sh
 - conditional AI-mediated interface guidance;
 - conditional collaboration/concurrency and adaptive-context guidance.
 
-The v0.2 release also adopts the canonical **Product Interface Designer** identity. Live release state remains owned by GitHub Issues/Releases until publication is verified.
+The v0.2 release adopts the canonical **Product Interface Designer** identity. The historical v0.1 tag/release/asset remain under the former Product Interface Builder identity; they were not rewritten during the rename.
 
 ## 12. Locked decisions
 
