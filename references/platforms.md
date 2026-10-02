@@ -4,6 +4,10 @@ Load only the section matching the known target platform. Determine platform fro
 
 Preserve product identity across platforms while respecting each platform's interaction model, navigation expectations, input methods, accessibility model, layout/window behavior, and lifecycle constraints.
 
+## Contents
+
+[Shared rules](#1-shared-cross-platform-rules) · [Web](#2-web) · [Mobile/native](#3-mobile--native) · [Desktop](#4-desktop) · [Multiple targets](#5-multiple-targets) · [Unknown target](#6-unknown-target)
+
 ## 1. Shared cross-platform rules
 
 Across web, mobile/native, and desktop:
