@@ -1,6 +1,6 @@
 # Composition and Authority
 
-Product Interface Builder is a consulted interface-decision specialist. When another Skill owns the surrounding work, that caller keeps its existing product/project/platform/repository/release authority. Invoking Product Interface Builder never creates a nested Master.
+Product Interface Designer is a consulted interface-decision specialist. When another Skill owns the surrounding work, that caller keeps its existing product/project/platform/repository/release authority. Invoking Product Interface Designer never creates a nested Master.
 
 ## Contents
 
@@ -8,21 +8,21 @@ Product Interface Builder is a consulted interface-decision specialist. When ano
 
 ## 1. Composed flow
 
-Use this control shape when Product Interface Builder is consulted by another Skill:
+Use this control shape when Product Interface Designer is consulted by another Skill:
 
 ```text
 CALLER retains accepted outcome + its authority
   -> passes only decision-relevant interface context
-  -> Product Interface Builder makes/reviews the interface decision
+  -> Product Interface Designer makes/reviews the interface decision
   -> returns the interface-decision packet
   -> caller/platform owner resumes implementation/integration
   -> if material rendered/interface review is needed:
-         Product Interface Builder reviews the result
+         Product Interface Designer reviews the result
          -> returns findings/intent corrections
          -> caller resumes control
 ```
 
-Product Interface Builder must not:
+Product Interface Designer must not:
 
 - reprioritize the caller's project or create a competing roadmap;
 - widen repository/mutation scope;
@@ -52,7 +52,7 @@ If a material fact is missing and can be recovered safely from current authorita
 
 | Concern | Owner |
 |---|---|
-| user-facing hierarchy, visual direction, layout/density, typography/color, interaction/motion intent, responsive/adaptive intent, interface copy, user-facing accessibility/UX intent, locale presentation, interface review | Product Interface Builder when active |
+| user-facing hierarchy, visual direction, layout/density, typography/color, interaction/motion intent, responsive/adaptive intent, interface copy, user-facing accessibility/UX intent, locale presentation, interface review | Product Interface Designer when active |
 | project outcome/scope, priority, dependencies, repository/mutation authority, task coordination, implementation orchestration, CI, integration, release, continuity | GitHub Project Orchestrator / active project Master when active |
 | platform-specific implementation mechanism and lifecycle constraints | active platform specialist/owner |
 | WordPress owner/mechanism selection, Gutenberg/block safety, templates/patterns, theme/plugin APIs, WooCommerce lifecycle, WordPress publication mechanics | WP Native Builder when active |
@@ -63,22 +63,22 @@ One concern has one active decision owner. Another Skill may supply evidence, co
 
 ### GitHub Project Orchestrator
 
-When GitHub Project Orchestrator is active, it frames the accepted work and keeps all project/repository/integration/release authority. Product Interface Builder receives only the interface question/context it needs and returns the packet in section 4.
+When GitHub Project Orchestrator is active, it frames the accepted work and keeps all project/repository/integration/release authority. Product Interface Designer receives only the interface question/context it needs and returns the packet in section 4.
 
-In this consultation flow, implementation remains with the caller or its implementation/platform owner. A separately assigned implementation role may use Product Interface Builder's decision as input, but that is a distinct execution responsibility and never transfers Master authority to this specialist.
+In this consultation flow, implementation remains with the caller or its implementation/platform owner. A separately assigned implementation role may use Product Interface Designer's decision as input, but that is a distinct execution responsibility and never transfers Master authority to this specialist.
 
 ### WP Native Builder
 
 For WordPress work:
 
-- Product Interface Builder owns the intended user-facing result: hierarchy, composition, interaction/state intent, visual direction, responsive/locale/accessibility intent, and material interface critique.
+- Product Interface Designer owns the intended user-facing result: hierarchy, composition, interaction/state intent, visual direction, responsive/locale/accessibility intent, and material interface critique.
 - WP Native Builder owns how WordPress safely realizes that intent: owner/mechanism selection, Gutenberg serialization, template/pattern/theme/plugin/WooCommerce lifecycle, WordPress APIs, and publication mechanics.
 
-The WordPress mechanism may adapt while preserving interface intent. Product Interface Builder must not prescribe brittle WordPress internals to force a presentation preference.
+The WordPress mechanism may adapt while preserving interface intent. Product Interface Designer must not prescribe brittle WordPress internals to force a presentation preference.
 
 ### ACh Idea Advisor
 
-Product Interface Builder may explore interface implications once the product outcome is sufficiently defined.
+Product Interface Designer may explore interface implications once the product outcome is sufficiently defined.
 
 If the interface work exposes a still-material question about:
 
@@ -109,7 +109,7 @@ For review work, **Decision** may instead be a concise set of material findings 
 
 ## 5. Return control and escalate to the right owner
 
-After returning the packet, control returns to the caller/platform owner. Product Interface Builder does not remain the workflow coordinator merely because later implementation should preserve its intent.
+After returning the packet, control returns to the caller/platform owner. Product Interface Designer does not remain the workflow coordinator merely because later implementation should preserve its intent.
 
 Escalate rather than assume when an unresolved choice materially changes:
 
@@ -122,23 +122,23 @@ Escalate rather than assume when an unresolved choice materially changes:
 | legal/compliance policy | the responsible policy/legal owner/current authority |
 | another durable contract | that contract's authoritative owner |
 
-Ordinary reversible interface judgment stays inside Product Interface Builder when enough product truth exists.
+Ordinary reversible interface judgment stays inside Product Interface Designer when enough product truth exists.
 
 ## 6. Shared concerns
 
 Split overlapping concerns by decision type instead of applying parallel mandatory checklists:
 
-- **Accessibility:** Product Interface Builder owns user-facing outcome/critique; the platform owner realizes the correct semantics/mechanism.
-- **Responsive/adaptive behavior:** Product Interface Builder owns intended recomposition and priority; the platform owner implements it safely.
-- **Visual/interface review:** Product Interface Builder owns interface/UX judgment when active; platform validation must not create a competing art direction.
-- **Performance:** Product Interface Builder may constrain obvious interface/perceived-performance cost; system/backend capacity and architecture stay with their engineering owner.
-- **Trust/privacy:** Product Interface Builder may own user-facing disclosure/control/consent presentation when in scope; underlying security/privacy policy and enforcement stay with their owners.
+- **Accessibility:** Product Interface Designer owns user-facing outcome/critique; the platform owner realizes the correct semantics/mechanism.
+- **Responsive/adaptive behavior:** Product Interface Designer owns intended recomposition and priority; the platform owner implements it safely.
+- **Visual/interface review:** Product Interface Designer owns interface/UX judgment when active; platform validation must not create a competing art direction.
+- **Performance:** Product Interface Designer may constrain obvious interface/perceived-performance cost; system/backend capacity and architecture stay with their engineering owner.
+- **Trust/privacy:** Product Interface Designer may own user-facing disclosure/control/consent presentation when in scope; underlying security/privacy policy and enforcement stay with their owners.
 
 Do not duplicate generic design rules inside per-Skill composition paths.
 
 ## 7. Standalone use and durable state
 
-Without another specialist, Product Interface Builder may:
+Without another specialist, Product Interface Designer may:
 
 - recover available product/design truth;
 - design or review the requested interface;
