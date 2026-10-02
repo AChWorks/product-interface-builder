@@ -41,7 +41,8 @@ References are one level deep from this file. Apply routes cumulatively only whe
 | Trigger | Direct owner | Routing rule |
 |---|---|---|
 | new interface, targeted UI/UX modification, redesign, visual hierarchy, controls, copy, data presentation, non-ideal states, or ordinary design-system reuse | [references/design-core.md](references/design-core.md) | Core cross-locale interface reasoning. |
-| Persian, RTL, bidirectional content, or Iranian-local behavior | [references/persian-rtl.md](references/persian-rtl.md) | Load only for the active language/direction/locale surface; do not generalize Persian rules to all RTL contexts. |
+| multiple languages/scripts/locales, localization/translation, RTL/bidi generally, or locale-sensitive numbers/dates/time zones/currency/units/collation | [references/internationalization.md](references/internationalization.md) | Keep language, script, direction, locale, region, calendar, numbering system, currency, and time zone separate; use current locale/platform authority for exact behavior. |
+| Persian language/script/typography/orthography or Iranian-local product behavior | [references/persian-rtl.md](references/persian-rtl.md) | Load as a Persian/Iran specialization alongside general internationalization when relevant; never infer Persian/Iran from RTL alone. |
 | behavior materially differs across web, mobile/native, or desktop | [references/platforms.md](references/platforms.md) | Load the target platform section only; do not load all platform variants by default. |
 | interface review, refinement, or material visual work that can be checked against rendered/interaction evidence | [references/review.md](references/review.md) | Keep review proportional; static inspection is not rendered proof. |
 | novel/complex/high-consequence interaction, cognitive burden, learnability, recovery, or uncertainty about whether users can actually complete the task | [references/human-factors.md](references/human-factors.md) | Separate interface hypothesis from usability evidence; do not add research ceremony to ordinary work. |
@@ -49,7 +50,7 @@ References are one level deep from this file. Apply routes cumulatively only whe
 | permission/consent/privacy disclosure, destructive or high-consequence choice presentation, user-agency risk, or potentially deceptive/obstructive interface behavior | [references/trust-agency.md](references/trust-agency.md) | Own user-facing understanding/control only; route policy, security, privacy enforcement, and legal compliance to their owners. |
 | another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Builder bounded to interface decisions and review. |
 
-The following are conditional decision domains in the product architecture that do not yet have direct owners in the current bundle: general internationalization, substantial design-system architecture, AI-mediated interfaces, and collaborative/concurrent/adaptive contexts.
+The following are conditional decision domains in the product architecture that do not yet have direct owners in the current bundle: substantial design-system architecture, AI-mediated interfaces, and collaborative/concurrent/adaptive contexts.
 
 - Load a dedicated direct reference for one of these domains only when the installed bundle provides that owner **and** the task materially triggers it.
 - Until a dedicated owner exists in the current bundle, use only the applicable existing core/platform/locale/review guidance plus current authoritative external material when required; do not invent a hidden rule set or load an unrelated reference as a substitute.
