@@ -8,7 +8,7 @@ This file is the canonical owner of durable project intent, scope, boundaries, s
 
 ## 1. Outcome
 
-Build a reusable, provider-neutral AI Skill that materially improves the quality of user-facing product interfaces across **web, mobile, and desktop** while remaining compact, composable, portable across compatible AI-agent environments, and useful both standalone and alongside other AChWorks Skills.
+Build a reusable, provider-neutral AI Skill that materially improves the quality of user-facing product interfaces across **web, mobile, and desktop** while remaining compact, composable, and useful both standalone and alongside other AChWorks Skills.
 
 The Skill should help an AI:
 
@@ -165,7 +165,6 @@ The canonical Skill must:
 
 A provider-specific adapter may exist when needed for discovery, packaging, installation, UI metadata, or tool wiring. Such an adapter is not the authority for the Skill's core behavior.
 
-The first release must validate the canonical Skill in at least two independent compatible AI-agent environments from different vendors or harness families, without maintaining separate rulebooks.
 
 ## 8. Koinon alignment
 
@@ -221,7 +220,7 @@ Rules:
 - page/surface overrides must not silently rewrite global design-system truth;
 - trivial or one-off interface changes must not manufacture persistent design artifacts.
 
-Exact artifact names/formats are deferred to implementation/evaluation; interoperability with existing repository conventions is more important than imposing a universal filename.
+Exact artifact names/formats are deferred to implementation; interoperability with existing repository conventions is more important than imposing a universal filename.
 
 ## 11. Quality principles
 
@@ -298,12 +297,11 @@ v0.1 is complete only when all of the following are true:
 - design-system preservation/creation behavior is proportional and recoverable;
 - material visual work includes a self-review/render-review path when capability exists;
 - accessibility, responsive behavior, interaction states, UI copy, and motion are represented without universal checklist bloat;
-- composition behavior with `github-project-orchestrator` and `wp-native-builder` is specified and regression-tested;
+- composition behavior with `github-project-orchestrator` and `wp-native-builder` is specified without duplicating their authority;
 - source provenance and third-party notices are complete for all imported material;
-- evaluation scenarios demonstrate no authority takeover, no unnecessary specialist invocation, no duplicated ownership, and no locale leakage;
-- canonical packaging/validation succeeds and representative portability checks pass in at least two independent compatible AI-agent environments from different vendors or harness families;
+- the resulting rule set is coherent, avoids duplicated ownership, keeps locale-specific behavior conditional, and reflects the selected source ideas only where they fit Product Interface Builder's own requirements;
 - repository documentation is sufficient for a fresh Master to continue without chat history;
-- a first release is created only after the above criteria pass.
+- the Skill is packaged/released only after the implementation and documentation are internally coherent and complete.
 
 ## 16. Current locked decisions
 
@@ -330,7 +328,7 @@ The implementation Master may decide these when evidence is available, without r
 - which deterministic validators/detectors justify scripts;
 - exact durable design-artifact naming;
 - whether live-browser iteration tooling belongs in v0.1 or later;
-- exact packaging automation and CI shape.
+- exact packaging shape.
 
 Third-party attribution/import mechanics remain implementation decisions, but they must preserve the locked MIT repository license and every applicable upstream obligation.
 
