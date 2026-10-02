@@ -4,16 +4,16 @@ Status: **LOCKED FOR v0.1**
 
 Audit snapshot: 2026-10-02
 
-This file records the source corpus, provenance, licensing evidence, and synthesis rules used to create Product Interface Builder. It is **not** a second behavioral rulebook and does not define the runtime file structure.
+This file records the source corpus, provenance, licensing evidence, and synthesis rules used to create Product Interface Designer. It is **not** a second behavioral rulebook and does not define the runtime file structure.
 
 ## Synthesis standard
 
-Product Interface Builder should read like one book written for our own purpose after studying several good books on the same subject.
+Product Interface Designer should read like one book written for our own purpose after studying several good books on the same subject.
 
 Apply these rules:
 
 1. **Use sources as inputs, not templates.** Do not preserve an upstream chapter order, command set, mode taxonomy, workflow, file tree, provider adapter, or naming scheme merely because it exists upstream.
-2. **Organize locally by our responsibilities.** A useful idea is rewritten into the Product Interface Builder concern that owns it; source identity does not determine its destination.
+2. **Organize locally by our responsibilities.** A useful idea is rewritten into the Product Interface Designer concern that owns it; source identity does not determine its destination.
 3. **Do not create one-to-one translations of source taxonomies.** If a source has four modes, ten commands, three dials, or a checklist, those structures are not imported by default.
 4. **Prefer convergence over imitation.** Strong local rules should ideally be supported by our product requirements, general interface practice, or more than one source—not only by a distinctive upstream mechanism.
 5. **Keep source-specific machinery out unless independently justified.** Catalogs, scripts, binaries, detectors, generated provider copies, presets, and mandatory source workflows require their own local value case.
@@ -43,7 +43,7 @@ Because there is currently no direct third-party import, a separate `THIRD_PARTY
 ### Source-specific boundaries
 
 - Do not vendor UI UX Pro Max catalogs/search implementation merely because they exist.
-- Do not import Impeccable command/mode taxonomy, provider-generated copies, binaries, scripts, detectors, or persistence workflow as Product Interface Builder architecture.
+- Do not import Impeccable command/mode taxonomy, provider-generated copies, binaries, scripts, detectors, or persistence workflow as Product Interface Designer architecture.
 - Do not directly copy/adapt VibeFarsi `registry/skills` material unless a license grant covering those exact paths is established first.
 - Do not promote Vercel-specific brand preferences to universal rules.
 - Do not import LottieFiles timing tables, archetype tables, or recipes as canonical presets.
@@ -61,7 +61,7 @@ When a task depends on a version-sensitive or normative requirement, use the cur
 - current Android/Material/platform documentation for Android behavior;
 - current browser/platform/API documentation for implementation-sensitive behavior.
 
-Do not vendor those documentation sets wholesale into this Skill. Product Interface Builder should retain durable design principles and routing guidance; exact requirements that may change should be checked against their authoritative current owner when they materially affect the task.
+Do not vendor those documentation sets wholesale into this Skill. Product Interface Designer should retain durable design principles and routing guidance; exact requirements that may change should be checked against their authoritative current owner when they materially affect the task.
 
 If current authoritative platform/standards guidance conflicts with a generalized rule in this Skill, the authoritative requirement wins.
 
@@ -80,7 +80,7 @@ The final source audit classified approximately **977 KB** of material as potent
 
 ### Coverage rule
 
-Coverage is measured by **capability and design question**, not by source chapters or byte count. A source concept is considered covered when Product Interface Builder can make the underlying decision reliably from a local owner. It does not require retaining the source's name, command, taxonomy, dataset, example, or file structure.
+Coverage is measured by **capability and design question**, not by source chapters or byte count. A source concept is considered covered when Product Interface Designer can make the underlying decision reliably from a local owner. It does not require retaining the source's name, command, taxonomy, dataset, example, or file structure.
 
 During this audit, the following under-covered capabilities were promoted into the canonical references without adding new source-shaped files:
 
