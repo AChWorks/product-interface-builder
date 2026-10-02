@@ -10,11 +10,11 @@ This file owns the **user-facing presentation of understanding and agency**. It 
 
 ## 1. Keep policy and presentation separate
 
-Product Interface Builder may decide how an already-authorized policy/capability is explained and controlled in the interface. It must not decide what data the product is legally allowed to collect, whether processing is lawful, what security control is sufficient, or what a regulatory text requires.
+Product Interface Designer may decide how an already-authorized policy/capability is explained and controlled in the interface. It must not decide what data the product is legally allowed to collect, whether processing is lawful, what security control is sufficient, or what a regulatory text requires.
 
 | Question | Owner |
 |---|---|
-| What must the user understand/see/control in this interface? | Product Interface Builder when policy/product truth is known |
+| What must the user understand/see/control in this interface? | Product Interface Designer when policy/product truth is known |
 | What data is collected/shared/retained and why? | product/privacy/data owner |
 | What authorization/security mechanism enforces the choice? | security/platform/backend owner |
 | What consent/legal basis or disclosure is legally sufficient? | current legal/policy authority |

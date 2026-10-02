@@ -158,4 +158,4 @@ Treat that as a tooling/interchange decision, not a universal requirement:
 - do not force a project to migrate formats solely because a standard exists;
 - do not copy the external specification into this Skill.
 
-Likewise, do not select React/Vue/SwiftUI/Compose/Flutter/CSS architecture, a component framework, documentation site, or token tool by default. Product Interface Builder defines the reusable interface contract; the active platform/implementation owner chooses the mechanism.
+Likewise, do not select React/Vue/SwiftUI/Compose/Flutter/CSS architecture, a component framework, documentation site, or token tool by default. Product Interface Designer defines the reusable interface contract; the active platform/implementation owner chooses the mechanism.

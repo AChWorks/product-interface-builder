@@ -1,11 +1,11 @@
 ---
-name: product-interface-builder
-description: Design, build, review, and refine user-facing product interfaces across web, mobile, and desktop. Use for new interfaces, targeted UI changes, redesigns, design systems, layout, typography, color, responsive behavior, accessibility, interaction, motion, interface copy, visual QA, and locale-aware UI including Persian/RTL. Preserve an existing product's design language unless redesign is explicit. Skip pure backend, infrastructure, database, or non-visual work unless it materially changes the user-facing interface.
+name: product-interface-designer
+description: Design, review, refine, and guide implementation of user-facing product interfaces across web, mobile, and desktop. Use for new interfaces, targeted UI changes, redesigns, design systems, layout, typography, color, responsive behavior, accessibility, interaction, motion, interface copy, visual QA, and locale-aware UI including Persian/RTL. Preserve an existing product's design language unless redesign is explicit. Skip pure backend, infrastructure, database, or non-visual work unless it materially changes the user-facing interface.
 ---
 
-# Product Interface Builder
+# Product Interface Designer
 
-Build the interface the product needs, not a generic style demo. Treat current product truth, applicable mandatory constraints, explicit accepted requirements, platform/locale behavior, and credible evidence as stronger than catalog or aesthetic defaults.
+Design the interface the product needs, not a generic style demo. Treat current product truth, applicable mandatory constraints, explicit accepted requirements, platform/locale behavior, and credible evidence as stronger than catalog or aesthetic defaults.
 
 ## 1. Establish the interface problem
 
@@ -52,7 +52,7 @@ References are one level deep from this file. Apply routes cumulatively only whe
 | generative/predictive AI materially mediates user-facing content, recommendations, decisions, actions, uncertainty, or feedback/control | [references/ai-mediated.md](references/ai-mediated.md) | Set truthful expectations, preserve correction/override and consequential-action control, and route model/backend/risk-policy decisions to their owners. |
 | simultaneous/multi-user editing, shared-resource state, presence/ownership/locks/history, stale state, or conflict/overwrite choices | [references/collaboration-concurrency.md](references/collaboration-concurrency.md) | Own user-facing shared-state/conflict understanding only; backend concurrency, storage, permissions, and sync algorithms stay with their owners. |
 | resize/multiwindow/restore/foldable/large-screen context or pointer/touch/keyboard/pen transitions materially change interface composition | [references/adaptive-contexts.md](references/adaptive-contexts.md) | Adapt from available space/input/current platform state while preserving task context; retrieve exact target-platform behavior when material. |
-| another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Builder bounded to interface decisions and review. |
+| another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Designer bounded to interface decisions and review. |
 
 
 ## 4. Use current authority only when exact behavior matters
@@ -77,7 +77,7 @@ Use current official authority when materially needed for topics such as:
 
 Prefer primary official sources. Do not freeze large standards into this Skill or invent exact requirements from memory. If current retrieval is unavailable, state the affected uncertainty and avoid claiming exact compliance or platform correctness.
 
-Current external authority can constrain the interface decision; it does not expand Product Interface Builder's project, repository, legal, security, or platform-implementation ownership.
+Current external authority can constrain the interface decision; it does not expand Product Interface Designer's project, repository, legal, security, or platform-implementation ownership.
 
 ## 5. Route by capabilities, not vendor names
 

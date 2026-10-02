@@ -2,7 +2,7 @@
 
 Status: **AUTHORITATIVE AUTHORING DESIGN**
 
-This document defines how Product Interface Builder instructions should be structured so another AI can discover, reason with, and compose the Skill reliably. It is a project-authoring specification, not part of the distributable runtime unless a rule is promoted into `SKILL.md` or a runtime reference.
+This document defines how Product Interface Designer instructions should be structured so another AI can discover, reason with, and compose the Skill reliably. It is a project-authoring specification, not part of the distributable runtime unless a rule is promoted into `SKILL.md` or a runtime reference.
 
 ## 1. Design objective
 
@@ -108,7 +108,7 @@ Exact runtime wording is an implementation task, but the architecture must preve
 
 ## 6. Specialist composition model
 
-Product Interface Builder is a **consulted specialist**, not a nested project Master.
+Product Interface Designer is a **consulted specialist**, not a nested project Master.
 
 ### Generic composed flow
 
@@ -119,7 +119,7 @@ Does a material interface decision exist?
         ├─ no  → parent continues
         └─ yes
              ↓
-       invoke Product Interface Builder
+       invoke Product Interface Designer
              ↓
        interface decision packet
              ↓
@@ -127,7 +127,7 @@ platform/implementation owner executes
              ↓
 material rendered/interaction review needed?
         ├─ no  → parent continues integration
-        └─ yes → Product Interface Builder reviews
+        └─ yes → Product Interface Designer reviews
                   ↓
                 parent continues integration/release
 ```
@@ -136,7 +136,7 @@ The parent remains authoritative for scope, repository state, task coordination,
 
 ### Interface decision packet
 
-When composed, Product Interface Builder should return only what the caller needs:
+When composed, Product Interface Designer should return only what the caller needs:
 
 - **intent:** what user/task outcome the interface must support;
 - **decision:** concrete hierarchy/interaction/visual/locale behavior;
@@ -149,7 +149,7 @@ Do not return a second project plan, repository workflow, release plan, or imple
 
 ## 7. Composition with AChWorks Skills
 
-| Active Skill | Product Interface Builder owns | Other Skill retains |
+| Active Skill | Product Interface Designer owns | Other Skill retains |
 |---|---|---|
 | GitHub Project Orchestrator | material UI/UX decision, design constraints, interface review | outcome/scope, repository/task coordination, implementation strategy ownership, integration, CI, release, continuity |
 | WP Native Builder | user-facing hierarchy, interaction, visual/UX/accessibility/locale intent | WordPress/Gutenberg/theme/plugin/WooCommerce owner/mechanism, serialization/lifecycle safety, publication |
@@ -166,7 +166,7 @@ Return control instead of guessing when the unresolved choice materially changes
 - legal/compliance policy;
 - another owner's durable contract.
 
-Ordinary reversible interface decisions remain inside Product Interface Builder.
+Ordinary reversible interface decisions remain inside Product Interface Designer.
 
 ## 8. Evidence discipline
 
@@ -214,7 +214,7 @@ Do not vendor entire standards merely to avoid current retrieval.
 Before integrating a Skill-content change, ask:
 
 1. Does it close an evidenced decision gap?
-2. Is this Product Interface Builder's responsibility?
+2. Is this Product Interface Designer's responsibility?
 3. Is the rule non-obvious enough to earn context?
 4. Does it have one canonical owner?
 5. Is the chosen representation appropriate for how an AI must reason with it?

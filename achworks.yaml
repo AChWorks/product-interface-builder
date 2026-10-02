@@ -2,8 +2,8 @@ schemaVersion: achworks.dev/v1alpha1
 kind: Component
 
 metadata:
-  name: product-interface-builder
-  title: Product Interface Builder
+  name: product-interface-designer
+  title: Product Interface Designer
   description: Provider-neutral AI Skill for product interface design, UX, visual systems, localization, and cross-platform interface quality.
 
 spec:
@@ -30,8 +30,8 @@ spec:
     path: docs/
 
   source:
-    repository: AChWorks/product-interface-builder
-    url: https://github.com/AChWorks/product-interface-builder
+    repository: AChWorks/product-interface-designer
+    url: https://github.com/AChWorks/product-interface-designer
 
   extensions:
     achworks:
