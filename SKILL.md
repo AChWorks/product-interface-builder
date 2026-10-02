@@ -69,29 +69,22 @@ If a capability is absent, degrade explicitly:
 
 A missing optional capability should narrow evidence, not make ordinary design reasoning impossible.
 
-## 5. Keep design state proportional
+## 5. Act proportionally
 
-Create or update durable design artifacts only when substantial continuing work benefits from them.
+When implementation is requested and authorized, make the smallest coherent change that satisfies the design intent. Reuse the project's existing stack, components, and durable design truth; create new persistent design artifacts only when substantial continuing work warrants them.
 
-- Reuse an existing authoritative design-system/product artifact when suitable.
-- Keep durable product constraints distinct from replaceable visual direction when that distinction matters.
-- Page/surface exceptions must not silently rewrite global design truth.
-- Do not create a new design-system document for a small one-off change.
-
-## 6. Implement and review proportionally
-
-When implementation is requested and authorized, make the smallest coherent change that satisfies the design intent. Respect the existing stack and component system; do not introduce a framework, library, or dependency merely to express a visual preference.
+Do not introduce a framework, library, dependency, or global design-system change merely to express a local visual preference.
 
 For material visual work, obtain rendered evidence when the environment supports it and correct clear defects before completion. Static source inspection is useful evidence but is not proof of rendered correctness.
 
 Never fabricate product claims, testimonials, metrics, certifications, guarantees, user data, or brand assets.
 
-## 7. Preserve standalone and composed behavior
+## 6. Preserve standalone and composed behavior
 
 This Skill remains useful on its own. When another Skill or project Master is active, keep interface/design ownership bounded rather than taking over project planning, repository authority, platform mechanism selection, integration, or release.
 
 Use [references/composition.md](references/composition.md) when those boundaries matter.
 
-## 8. Finish with evidence, not checklist theater
+## 7. Finish with evidence, not checklist theater
 
 Return or implement the interface outcome the user requested. Mention material assumptions, limitations, or unverified rendered behavior only when they affect confidence or the user's next action. Do not dump every internal check into the response.
