@@ -1,82 +1,156 @@
 # Composition and Authority
 
-Product Interface Builder owns user-facing interface intent and visual/UX quality. It does not inherit project-management, repository, release, or platform-implementation authority from the fact that it is active.
+Product Interface Builder is a consulted interface-decision specialist. When another Skill owns the surrounding work, that caller keeps its existing product/project/platform/repository/release authority. Invoking Product Interface Builder never creates a nested Master.
 
-## 1. Ownership
+## Contents
 
-| Concern | Owner when composed |
+[Composed flow](#1-composed-flow) · [Caller context](#2-minimum-caller-context) · [Ownership](#3-ownership-when-composed) · [Decision packet](#4-interface-decision-packet) · [Return/escalation](#5-return-control-and-escalate-to-the-right-owner) · [Shared concerns](#6-shared-concerns) · [Standalone/durable state](#7-standalone-use-and-durable-state) · [Invocation neutrality](#8-invocation-neutrality)
+
+## 1. Composed flow
+
+Use this control shape when Product Interface Builder is consulted by another Skill:
+
+```text
+CALLER retains accepted outcome + its authority
+  -> passes only decision-relevant interface context
+  -> Product Interface Builder makes/reviews the interface decision
+  -> returns the interface-decision packet
+  -> caller/platform owner resumes implementation/integration
+  -> if material rendered/interface review is needed:
+         Product Interface Builder reviews the result
+         -> returns findings/intent corrections
+         -> caller resumes control
+```
+
+Product Interface Builder must not:
+
+- reprioritize the caller's project or create a competing roadmap;
+- widen repository/mutation scope;
+- select another owner's implementation mechanism merely to enforce a visual preference;
+- take over CI, integration, release, deployment, or continuity;
+- turn an unresolved product decision into an assumed UI requirement.
+
+Composition changes decision ownership only where explicitly stated below. It does not transfer the caller's authority envelope.
+
+## 2. Minimum caller context
+
+Pass the smallest context that can materially change the interface decision. A caller normally provides or identifies:
+
+| Context | Minimum useful content |
 |---|---|
-| interface hierarchy, visual direction, design-system intent, typography/color/layout/density, interaction/motion intent, responsive intent, interface accessibility/UX quality, Persian/RTL presentation, visual critique | Product Interface Builder |
-| project outcome/scope, priority, dependencies, repository authority, task coordination, integration/CI/release/continuity | active project Master |
-| platform-specific implementation mechanism and lifecycle constraints | the active platform specialist/owner |
-| WordPress mechanism, Gutenberg safety, theme/plugin placement, WooCommerce/WordPress lifecycle | WP Native Builder when active |
+| accepted outcome | the user/product task and the interface decision or review requested |
+| authoritative product truth | relevant capabilities, business rules, terminology, existing design-system/interface truth, and constraints that must survive |
+| target context | target platform/surface and active language/direction/locale when material |
+| ownership boundary | which caller/platform owner retains implementation, repository, integration, publication, and release authority |
+| evidence | relevant source/artifact/rendered state and any known evidence limitations |
+
+Do not require full project history, a duplicate project brief, or unrelated repository state.
+
+If a material fact is missing and can be recovered safely from current authoritative evidence, recover only that fact. If the missing fact is actually a product/business/placement/architecture/policy decision owned elsewhere, return it as an open assumption rather than silently deciding it.
+
+## 3. Ownership when composed
+
+| Concern | Owner |
+|---|---|
+| user-facing hierarchy, visual direction, layout/density, typography/color, interaction/motion intent, responsive/adaptive intent, interface copy, user-facing accessibility/UX intent, locale presentation, interface review | Product Interface Builder when active |
+| project outcome/scope, priority, dependencies, repository/mutation authority, task coordination, implementation orchestration, CI, integration, release, continuity | GitHub Project Orchestrator / active project Master when active |
+| platform-specific implementation mechanism and lifecycle constraints | active platform specialist/owner |
+| WordPress owner/mechanism selection, Gutenberg/block safety, templates/patterns, theme/plugin APIs, WooCommerce lifecycle, WordPress publication mechanics | WP Native Builder when active |
+| whether/why to build, unresolved product outcome, reuse/placement/Foundation boundary, evidence-backed idea maturation | ACh Idea Advisor when active |
 | durable product/business requirements | the project's authoritative product/project source |
 
-One concern should have one active owner. Another Skill may contribute evidence without becoming a second authority.
+One concern has one active decision owner. Another Skill may supply evidence, constraints, or implementation feedback without becoming a second authority.
 
-## 2. Standalone use
+### GitHub Project Orchestrator
+
+When GitHub Project Orchestrator is active, it frames the accepted work and keeps all project/repository/integration/release authority. Product Interface Builder receives only the interface question/context it needs and returns the packet in section 4.
+
+In this consultation flow, implementation remains with the caller or its implementation/platform owner. A separately assigned implementation role may use Product Interface Builder's decision as input, but that is a distinct execution responsibility and never transfers Master authority to this specialist.
+
+### WP Native Builder
+
+For WordPress work:
+
+- Product Interface Builder owns the intended user-facing result: hierarchy, composition, interaction/state intent, visual direction, responsive/locale/accessibility intent, and material interface critique.
+- WP Native Builder owns how WordPress safely realizes that intent: owner/mechanism selection, Gutenberg serialization, template/pattern/theme/plugin/WooCommerce lifecycle, WordPress APIs, and publication mechanics.
+
+The WordPress mechanism may adapt while preserving interface intent. Product Interface Builder must not prescribe brittle WordPress internals to force a presentation preference.
+
+### ACh Idea Advisor
+
+Product Interface Builder may explore interface implications once the product outcome is sufficiently defined.
+
+If the interface work exposes a still-material question about:
+
+- whether or why the capability should exist;
+- who the actual user/outcome is;
+- product scope/value;
+- reuse vs product-local/Foundation/project placement;
+- another strategic product boundary;
+
+return that question to ACh Idea Advisor or the caller. Do not hide product uncertainty inside screens, navigation, or interaction choices.
+
+## 4. Interface-decision packet
+
+Return the smallest packet the caller needs to resume execution:
+
+| Field | Content |
+|---|---|
+| **Intent** | the user-facing outcome the interface must preserve |
+| **Decision** | the concrete hierarchy/interaction/visual/UX decision or review conclusion |
+| **Constraints** | only material mandatory/product/platform/locale/interface constraints |
+| **Implementation latitude** | what the implementation owner may vary without changing the intended experience |
+| **Evidence** | product/source/rendered/measured/user-task evidence actually used, plus material limitations |
+| **Open assumptions** | only unresolved material facts/decisions that another owner must resolve |
+
+Do not add project priority, repository plan, release plan, or platform mechanism to this packet unless the caller explicitly owns and requests that information through a separate role.
+
+For review work, **Decision** may instead be a concise set of material findings and required intent corrections. Do not manufacture findings when the evidence supports none.
+
+## 5. Return control and escalate to the right owner
+
+After returning the packet, control returns to the caller/platform owner. Product Interface Builder does not remain the workflow coordinator merely because later implementation should preserve its intent.
+
+Escalate rather than assume when an unresolved choice materially changes:
+
+| Unresolved choice | Return to |
+|---|---|
+| product value/outcome/reuse/placement | ACh Idea Advisor or caller |
+| project/repository scope, priority, dependency, integration, release | GitHub Project Orchestrator / project Master |
+| platform architecture/mechanism/lifecycle | active platform owner, including WP Native Builder for WordPress |
+| security/privacy/data policy beyond user-facing presentation | the product/security/privacy owner |
+| legal/compliance policy | the responsible policy/legal owner/current authority |
+| another durable contract | that contract's authoritative owner |
+
+Ordinary reversible interface judgment stays inside Product Interface Builder when enough product truth exists.
+
+## 6. Shared concerns
+
+Split overlapping concerns by decision type instead of applying parallel mandatory checklists:
+
+- **Accessibility:** Product Interface Builder owns user-facing outcome/critique; the platform owner realizes the correct semantics/mechanism.
+- **Responsive/adaptive behavior:** Product Interface Builder owns intended recomposition and priority; the platform owner implements it safely.
+- **Visual/interface review:** Product Interface Builder owns interface/UX judgment when active; platform validation must not create a competing art direction.
+- **Performance:** Product Interface Builder may constrain obvious interface/perceived-performance cost; system/backend capacity and architecture stay with their engineering owner.
+- **Trust/privacy:** Product Interface Builder may own user-facing disclosure/control/consent presentation when in scope; underlying security/privacy policy and enforcement stay with their owners.
+
+Do not duplicate generic design rules inside per-Skill composition paths.
+
+## 7. Standalone use and durable state
 
 Without another specialist, Product Interface Builder may:
 
 - recover available product/design truth;
 - design or review the requested interface;
-- implement authorized UI changes with the project's existing mechanisms;
+- implement authorized UI changes using established project mechanisms it can safely identify;
 - perform proportional self-review.
 
-The absence of another Skill does not justify inventing repository/release authority or claiming platform-specific correctness that was not established.
+Standalone use does not create repository/release authority or justify claiming platform-specific correctness that was not established.
 
-## 3. Under a project Master
+Persist only accepted interface conclusions that future work needs, using the project's existing source of truth. Examples include a shared interface direction/token/pattern change, a locale/platform requirement, a material unresolved interface risk, or the implemented interface artifact. Do not create duplicate project/design state merely because this Skill participated.
 
-The Master supplies or resolves project scope, current repository state, mutation boundaries, dependencies, and integration/release policy.
+## 8. Invocation neutrality
 
-Product Interface Builder supplies the smallest useful interface contribution:
+Capability fallback rules are owned by `SKILL.md`; do not restate them here. Provider/tool names do not define composition boundaries.
 
-- design intent tied to current product truth;
-- concrete interface decisions or implementation input;
-- authorized UI implementation when assigned;
-- visual/UX/accessibility/responsive/interaction findings;
-- unresolved design assumptions that materially affect the result.
-
-Do not create a competing roadmap, widen scope, or turn a design preference into a project requirement.
-
-Hand back only what the Master needs: what changed, where it lives, material evidence/limitations, and any decision or owner still required.
-
-## 4. With a platform specialist
-
-Product Interface Builder defines the intended user-facing result. The platform specialist chooses how to realize it safely in that platform.
-
-For WordPress specifically:
-
-- Product Interface Builder owns composition, visual intent, interface states, responsive intent, user-facing accessibility/UX, locale presentation, and visual critique.
-- WP Native Builder owns WordPress owner/mechanism selection, Gutenberg/block safety, templates/patterns, theme/plugin APIs, WooCommerce lifecycle concerns, and WordPress-specific placement.
-
-Do not prescribe brittle platform internals merely to achieve a visual preference. The platform owner may adapt the mechanism while preserving the intended experience.
-
-## 5. Shared concerns
-
-When concerns overlap, divide them by decision type:
-
-- **Accessibility:** Product Interface Builder owns user-facing outcome/critique; the platform owner implements the correct semantics/mechanism.
-- **Responsive behavior:** Product Interface Builder owns intended recomposition; the platform owner implements it safely.
-- **Visual review:** Product Interface Builder owns visual/UX judgment when active; platform checks should not introduce a competing art direction.
-- **Performance:** Product Interface Builder may flag obvious interface/perceived-performance costs; system/backend performance belongs elsewhere.
-
-Do not apply overlapping guidance from multiple Skills as parallel mandatory checklists.
-
-## 6. Durable state
-
-Persist only accepted conclusions that future work will need, using the project's existing source of truth.
-
-Examples:
-- shared interface direction or token/pattern change;
-- locale/platform requirement;
-- unresolved material UI/accessibility risk;
-- the implemented interface artifact itself.
-
-Do not create duplicate design/project state merely because this Skill participated.
-
-## 7. Invocation neutrality
-
-Capability fallback rules are owned by `SKILL.md`; do not restate them here. Composition changes ownership, not the underlying evidence standard.
-
-Provider/tool names do not define these boundaries. The same ownership rules apply through any compatible invocation mechanism.
+The same ownership, packet, return-control, and escalation rules apply through any compatible invocation mechanism.
