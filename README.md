@@ -10,7 +10,7 @@ Product Interface Builder is an **AChWorks-owned synthesis**, not a fork or wrap
 
 The project studies several design/UX sources, extracts ideas that fit our requirements, resolves overlap, and rewrites the useful knowledge into one local behavior model. Upstream command names, chapter structures, workflows, catalogs, provider assumptions, and taxonomies are not the architecture of this Skill.
 
-See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source corpus and provenance policy.
+See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source corpus/provenance policy and [docs/INSTRUCTION-ARCHITECTURE.md](docs/INSTRUCTION-ARCHITECTURE.md) for AI-legible instruction/composition design.
 
 ## Structure
 
@@ -21,6 +21,7 @@ See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source co
 - [references/review.md](references/review.md) — proportional interface review and finish guidance.
 - [references/composition.md](references/composition.md) — bounded composition with project/platform specialists.
 - [agents/openai.yaml](agents/openai.yaml) — optional provider UI/discovery metadata; not a behavioral source of truth.
+- [docs/INSTRUCTION-ARCHITECTURE.md](docs/INSTRUCTION-ARCHITECTURE.md) — authoring structure and cross-Skill composition contract.
 
 ## Ecosystem boundaries
 
