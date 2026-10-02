@@ -57,8 +57,10 @@ The six audited projects are the **design/UX synthesis corpus**, not a replaceme
 When a task depends on a version-sensitive or normative requirement, use the current official source as execution evidence when available, for example:
 
 - W3C/WCAG and ARIA Authoring Practices for web accessibility requirements;
-- Apple Human Interface Guidelines and current Apple platform documentation for iOS/iPadOS behavior;
+- Apple Human Interface Guidelines and current Apple platform documentation for Apple-platform behavior;
 - current Android/Material/platform documentation for Android behavior;
+- current Microsoft Windows app design/platform documentation for Windows behavior;
+- current Unicode/CLDR/W3C internationalization guidance for exact locale/script/bidi behavior;
 - current browser/platform/API documentation for implementation-sensitive behavior.
 
 Do not vendor those documentation sets wholesale into this Skill. Product Interface Designer should retain durable design principles and routing guidance; exact requirements that may change should be checked against their authoritative current owner when they materially affect the task.
