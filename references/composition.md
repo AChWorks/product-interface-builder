@@ -75,12 +75,8 @@ Examples:
 
 Do not create duplicate design/project state merely because this Skill participated.
 
-## 7. Capability degradation
+## 7. Invocation neutrality
 
-- No project Master -> work standalone within current authority.
-- No platform specialist -> stay within verified implementation knowledge and state uncertainty where mechanism correctness matters.
-- No rendering -> provide static review; do not claim rendered correctness.
-- No write access -> provide implementation-ready decisions or patches; do not claim application.
-- No persistent project state -> finish the current task without claiming cross-session persistence.
+Capability fallback rules are owned by `SKILL.md`; do not restate them here. Composition changes ownership, not the underlying evidence standard.
 
 Provider/tool names do not define these boundaries. The same ownership rules apply through any compatible invocation mechanism.
