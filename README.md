@@ -18,9 +18,9 @@ Provider adapters may exist where a platform requires its own packaging or metad
 
 ## Status
 
-**v0.1 implementation in progress.**
+**v0.1 release-candidate validation in progress.**
 
-The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). The provider-neutral control kernel lives in [SKILL.md](SKILL.md), with direct progressive-loading references under `references/`. Future work must recover from repository and GitHub state rather than chat history.
+The canonical project definition is [docs/PROJECT-SPEC.md](docs/PROJECT-SPEC.md). The provider-neutral control kernel lives in [SKILL.md](SKILL.md), with direct progressive-loading references under `references/`. Reproducible evaluation scenarios live in [evals/scenarios.md](evals/scenarios.md), and the release procedure lives in [docs/VALIDATION.md](docs/VALIDATION.md). Future work must recover from repository and GitHub state rather than chat history.
 
 ## AChWorks / Koinon alignment
 
@@ -56,6 +56,16 @@ Directly imported or adapted third-party material must be traceable in [THIRD_PA
 ## License
 
 Product Interface Builder is licensed under the [MIT License](LICENSE). Third-party material retains its own applicable notice/license obligations as recorded in `THIRD_PARTY_NOTICES.md`.
+
+## Validation and packaging
+
+The runtime behavior is the root `SKILL.md` plus the relevant direct `references/`. Provider metadata is adapter-only.
+
+For release validation:
+- use the official current Skill validator/packager;
+- run [the v0.1 evaluation scenarios](evals/scenarios.md);
+- validate [the Koinon descriptor and release gate](docs/VALIDATION.md);
+- require two independent compatible runtime/harness families before release.
 
 ## Next work
 
