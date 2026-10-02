@@ -224,4 +224,4 @@ Before integrating a Skill-content change, ask:
 9. Does it need current external authority instead of frozen local detail?
 10. Can any existing instruction be removed or simplified because of this change?
 
-Passing this review does not require behavioral multi-model/harness testing.
+For semantic behavior changes, also run the materially affected cases in [THEORETICAL-SCENARIOS.md](THEORETICAL-SCENARIOS.md) as an instruction-level regression review. Widen to adjacent scenarios when the change can alter trigger, routing, ownership, questioning, evidence, or composed behavior. This remains a theoretical semantic audit; it does not require behavioral multi-model/harness testing.
