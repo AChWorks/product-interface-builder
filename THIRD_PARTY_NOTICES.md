@@ -1,66 +1,89 @@
 # Third-Party Sources and Notices
 
-This repository is licensed under MIT and is intended to synthesize multiple open-source design/UX sources. The repository-level MIT license does not supersede third-party license, NOTICE, attribution, or modified-file obligations for material copied or adapted from upstream sources.
+This repository is licensed under MIT and synthesizes design/UX ideas from multiple external sources. Repository-level MIT does not supersede any third-party license, NOTICE, attribution, or modified-file obligation for material copied or adapted from an upstream source.
 
-**Foundation state:** no third-party code, datasets, components, or copyrighted Skill prose has been vendored into this repository yet.
+**Current import state (Issue #1 / 2026-10-02): no third-party code, datasets, components, scripts, templates, or copyrighted Skill prose is vendored or adapted in this repository.** The audited sources below are conceptual references only. The implementation baseline is original synthesis.
 
-Before adding directly copied or adapted material, update this file with:
+The implementation-safe decision record and capability map are in [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md).
 
-- source project and URL;
+Before any future direct copy, translation, transformation, or derivative import, update this file with:
+
+- source project, repository and exact source path;
 - exact commit/tag/version;
-- imported files or data;
+- imported local files/data;
 - applicable license;
-- upstream copyright/NOTICE requirements;
+- upstream copyright/NOTICE/attribution requirements;
+- required modified-file notice, if any;
 - whether the material is copied, modified, translated, transformed, or only conceptually referenced;
 - local files containing the derivative material.
 
-## Reference sources
+## Audited reference sources
 
 ### Anthropic — frontend-design
 
 - Repository: https://github.com/anthropics/skills
-- Path: `skills/frontend-design`
-- Foundation role: visual taste, intentional art direction, anti-generic design, typography/layout reasoning, self-critique
-- License observed for the Skill: Apache License 2.0
-- Foundation import status: **reference only / nothing copied**
+- Audited revision: `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4`
+- Audited path: `skills/frontend-design/SKILL.md`
+- License path: `skills/frontend-design/LICENSE.txt`
+- License: Apache License 2.0
+- Role: visual direction, brief grounding, anti-template design, restraint, self-critique
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Future direct-import rule: retain applicable Apache-2.0 terms and notices; check exact NOTICE obligations and mark modified derivative files as required before import.
 
 ### UI UX Pro Max
 
 - Repository: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
-- Foundation role: structured design intelligence, style/product/palette/typography knowledge, UX guidance, design-system/search concepts
-- License observed: MIT
-- Foundation import status: **reference only / nothing copied**
+- Audited revision: `09170eec67eefd46a7ae85de61b40c194020f997`
+- License path: root `LICENSE`
+- License: MIT
+- Role: structured/searchable design intelligence, domain routing, design-system option generation
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Future direct-import rule: retain upstream MIT copyright/permission notice for substantial copied material. Bulk catalogs/search assets require a separate value/maintenance review before import.
 
 ### Impeccable
 
 - Repository: https://github.com/pbakaus/impeccable
-- Foundation role: product/design separation, shape/craft/critique/audit/polish/harden/adapt workflow concepts, deterministic detector and visual-iteration ideas
-- License observed: Apache License 2.0
-- Foundation import status: **reference only / nothing copied**
+- Audited revision: `5e7914c46890a73460d099a1fae100a169e08c09`
+- License path: root `LICENSE`
+- License: Apache License 2.0
+- Role: product/design truth separation, craft/review lifecycle, rendered evidence, provider-output architecture concepts
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Future direct-import rule: retain applicable Apache-2.0 terms and notices; check exact NOTICE obligations and mark modified derivative files as required before import.
 
 ### VibeFarsi
 
 - Repository: https://github.com/TronIsHere/vibefarsiui
-- Foundation role: Persian/RTL UI, typography, UI copy, Iranian interface conventions, Jalali/numeric/local patterns
-- Open-source use confirmed for this project context; repository README identifies the project as MIT and MIT license files exist for its CLI/MCP packages
-- Future direct import rule: verify the exact applicable license/notice for each source path being copied
-- Foundation import status: **reference only / nothing copied**
+- Audited revision: `8b2f6abf357c98a61f24acc4132f7aaf715ce914`
+- Relevant reviewed paths: `registry/skills/persian-rtl-ui/SKILL.md`, `registry/skills/persian-typography.md`
+- Verified MIT license scope at this revision: `mcp/LICENSE`, `packages/cli/LICENSE`, and corresponding package metadata
+- Repository-root / `registry/skills` license finding: **no root LICENSE or formal repository-wide grant covering these Skill files was verified**
+- Role: Persian/RTL, typography, bidi/LTR islands, locale-aware numbers/dates/forms and Iranian interface patterns
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Direct-import rule: **do not copy or adapt `registry/skills` material unless the exact applicable license grant for those paths is established first.**
 
 ### Vercel — Web Interface Guidelines
 
-- Repositories: https://github.com/vercel-labs/agent-skills and https://github.com/vercel-labs/web-interface-guidelines
-- Foundation role: web UI review/audit guidance
-- Foundation import status: **reference only / nothing copied**
+- Repository: https://github.com/vercel-labs/web-interface-guidelines
+- Audited revision: `e3d624baaf29dc1fc645aff3e38f03e564d2d6b1`
+- License path: root `LICENSE`
+- License: MIT
+- Role: web interface review/audit input
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Future direct-import rule: retain upstream MIT copyright/permission notice for substantial copied material; keep Vercel-specific preferences non-universal.
 
 ### LottieFiles — motion-design-skill
 
 - Repository: https://github.com/LottieFiles/motion-design-skill
-- Foundation role: optional motion-design specialist input
-- License observed: MIT
-- Foundation import status: **reference only / nothing copied**
+- Audited revision: `f9a8a041b85185ee4881b3471d3415e939aac772`
+- Audited path: `skills/motion-design/SKILL.md`
+- License path: root `LICENSE`
+- License: MIT
+- Role: optional motion-design reasoning
+- Current import status: **conceptual reference only / nothing copied or adapted**
+- Future direct-import rule: retain upstream MIT copyright/permission notice for substantial copied material.
 
-## Provenance rule
+## Provenance invariant
 
-A moving upstream branch is not sufficient provenance for copied material. Any future import must pin the source revision used and preserve every applicable notice/license obligation.
+A moving upstream branch is never sufficient provenance for directly imported material. Any future import must pin the exact source revision and path before it is integrated.
 
-Conceptual influence that is rewritten as original project guidance should still be documented when it materially shaped a rule, especially when future maintainers may need to compare or refresh it.
+Conceptual influence may be documented here even when no copyrightable material is copied, but such attribution does not turn the external source into a runtime dependency or a second behavioral source of truth.
