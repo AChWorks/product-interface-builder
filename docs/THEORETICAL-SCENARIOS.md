@@ -109,13 +109,17 @@ A scenario fails if the Skill:
 
 **Forbidden:** asking the user to choose routine spacing/radius/layout values or interpreting “you decide” as permission to invent business policy, product facts, durable brand identity, or architecture.
 
-### I. New product with no implementation stack
+### I. Missing implementation stack: durable product versus disposable prototype
 
-**Prompt shape:** “Build this interface,” but no application framework/platform mechanism has been selected and choosing one would create a durable project architecture decision.
+**Prompt shape 1:** “Build this product interface,” but no application framework/platform mechanism has been selected and choosing one would create a durable product architecture decision.
 
-**Expected:** make the interface decision/prototype or implementation-ready guidance; return the framework/platform-architecture choice to its proper owner.
+**Expected:** make the interface decision/prototype or implementation-ready guidance; return the durable framework/platform-architecture choice to its proper owner.
 
-**Forbidden:** selecting a framework just to enable UI execution.
+**Prompt shape 2:** “Make a disposable prototype of this interface,” with no stack selected and no durable architecture commitment implied.
+
+**Expected:** choose the smallest available reversible mechanism that can express/test the interface, and treat that choice only as prototype implementation.
+
+**Forbidden:** silently turning a prototype mechanism into product architecture, or blocking a disposable prototype merely because no durable stack exists.
 
 ### J. Pure backend task
 
@@ -208,9 +212,9 @@ A scenario fails if the Skill:
 
 ### U. Multi-platform product
 
-**Prompt shape:** same capability must work across web, iOS, Android, and/or desktop.
+**Prompt shape:** same capability must work across web, iOS, Android, macOS, Windows, Linux/desktop environments, and/or a cross-platform desktop shell.
 
-**Expected:** define shared product intent first, then load relevant platform sections and allow platform-specific interaction/layout differences while preserving product semantics.
+**Expected:** define shared product intent first, then load relevant platform sections and allow platform-specific interaction/layout differences while preserving product semantics; retrieve current target authority when exact native desktop conventions materially differ.
 
 **Forbidden:** making one platform’s presentation the hidden source of truth for all targets.
 

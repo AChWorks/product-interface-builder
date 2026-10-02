@@ -16,6 +16,7 @@ The Skill should help an AI make better UI/UX decisions, not merely apply visual
 
 - recover enough product, user, task, content, platform, locale, and incumbent-design truth before deciding;
 - turn that evidence into clear interface decisions another AI or implementation specialist can execute;
+- when used standalone and an established safe project mechanism exists, implement authorized UI changes without treating execution capability as new project/platform/repository authority;
 - preserve established product language for bounded changes and reconsider it deliberately for explicit redesigns;
 - reason about visual hierarchy, interaction architecture, information architecture, usability, accessibility, responsive/adaptive behavior, trust/privacy/consent, interface copy, motion, data presentation, localization, and non-ideal states;
 - distinguish design hypotheses from stronger usability/rendered/measured evidence;
@@ -43,7 +44,7 @@ The Skill covers, proportionally:
 - internationalization/localization, including Persian/RTL;
 - web, mobile/native, and desktop/adaptive reasoning;
 - AI-mediated and collaborative interface behavior when the product actually contains those concerns;
-- standalone use and bounded composition with other Skills.
+- standalone design/review plus authorized UI implementation through established mechanisms, and bounded composition with other Skills.
 
 Pure backend, infrastructure, database, deployment, business strategy, product-market validation, repository coordination, or platform-specific mechanism selection is outside scope unless it materially affects the user-facing interface decision.
 
