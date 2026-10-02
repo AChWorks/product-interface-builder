@@ -114,7 +114,7 @@ Check:
 - text/control/state distinctions remain visible in the actual theme;
 - focus, hover, active, selected, disabled, success/warning/destructive states are distinguishable;
 - color is not the only carrier of critical meaning;
-- dark/light variants remain coherent when both are supported.
+- dark/light variants remain coherent when both are supported; treat them as designed schemes rather than mechanically inverting colors.
 
 ### Overflow and reflow
 - no unintended horizontal scroll;
@@ -209,7 +209,7 @@ Use motion primarily to:
 - direct attention to a meaningful transition;
 - express product character without obstructing the task.
 
-When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
+When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune expressiveness to frequency: an interaction repeated all day should remain calm on the hundredth use, while a rare meaningful milestone can carry more character. Reuse recognizable motion for the same interaction meaning, and let movement originate from the control/state relationship users are tracking. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
 
 Review:
 - purpose: would removing the motion reduce understanding or intended character?
