@@ -4,7 +4,7 @@ Use this reference for new interface work, targeted visual/UX modification, and 
 
 ## Contents
 
-[Change type](#1-classify-the-change-before-designing) · [Direction](#2-ground-visual-direction-in-the-product) · [Hierarchy](#3-shape-hierarchy-before-decoration) · [Layout](#4-compose-layout-and-density-deliberately) · [Typography](#5-treat-typography-as-interface-structure) · [Color](#6-build-color-from-roles) · [Visual language](#7-keep-shape-depth-imagery-and-icons-coherent) · [Controls/copy/data](#8-design-controls-around-tasks-and-states) · [Edge states/onboarding](#9-design-the-non-ideal-states) · [Design systems](#10-use-design-systems-proportionally) · [Coherence check](#11-check-coherence-before-adding-detail)
+[Change type](#1-classify-the-change-before-designing) · [Direction](#2-ground-visual-direction-in-the-product) · [References/fidelity](#treat-references-by-requested-fidelity) · [Hierarchy](#3-shape-hierarchy-before-decoration) · [Layout](#4-compose-layout-and-density-deliberately) · [Typography](#5-treat-typography-as-interface-structure) · [Color](#6-build-color-from-roles) · [Visual language](#7-keep-shape-depth-imagery-and-icons-coherent) · [Controls/copy/data](#8-design-controls-around-tasks-and-states) · [Edge states/onboarding](#9-design-the-non-ideal-states) · [Design systems](#10-use-design-systems-proportionally) · [Coherence check](#11-check-coherence-before-adding-detail)
 
 ## 1. Classify the change before designing
 
@@ -61,6 +61,16 @@ Treat content as part of the interface material. Prefer real copy, data, imagery
 Do not default to whichever visual treatment is currently fashionable. Common patterns are valid when justified by the product; they are weak when selected merely because they are easy to generate.
 
 Allocate visual emphasis according to hierarchy. Use a small number of deliberate identity cues that reinforce the product; competing gestures weaken both hierarchy and character.
+
+### Treat references by requested fidelity
+
+A screenshot, mockup, wireframe, or another product can serve different roles. Resolve that role before copying surface choices.
+
+- If the user requests **high fidelity** or a close implementation match, treat observable hierarchy, geometry, density, typography character, color relationships, states, and interaction cues as accepted interface requirements unless a higher-precedence constraint or authoritative product truth conflicts.
+- If the reference is **inspiration/direction**, extract the useful principles—hierarchy, rhythm, density, visual character, imagery treatment, or interaction pattern—without assuming literal reproduction.
+- A visual reference proves only what it actually shows. Do not infer hidden product behavior, data rules, responsive states, assets, claims, or platform semantics from one screenshot.
+- Preserve real product content, terminology, brand assets, and requirements even when a reference uses different placeholders or identity.
+- When implementation/render capability exists and fidelity is material, review the result against the reference at representative states/sizes; [review.md](review.md) owns evidence strength and rendered verification.
 
 ### Set priorities from the user job
 
