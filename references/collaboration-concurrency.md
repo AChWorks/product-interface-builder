@@ -122,7 +122,7 @@ Use them only where they help the user coordinate or avoid conflict.
 
 ## 8. Route backend concurrency to its owner
 
-Product Interface Builder decides what users need to understand/control about shared state. The implementation owner decides how shared state is made correct.
+Product Interface Designer decides what users need to understand/control about shared state. The implementation owner decides how shared state is made correct.
 
 Do not prescribe:
 
