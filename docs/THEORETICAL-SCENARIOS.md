@@ -6,6 +6,10 @@ Use this document when changing Product Interface Designer semantics. It is an i
 
 The purpose is to test whether the Skill would make the right **routing, ownership, questioning, evidence, and interface-decision** choices before a change is integrated.
 
+## Contents
+
+[Evaluation dimensions](#evaluation-dimensions) · [A–F: build/change/reference](#a-new-dashboard--build-and-implement) · [G–J: decisions/scope](#g-missing-material-product-behavior) · [K–O: locale/standards/IA/systems](#k-rtl-without-persian) · [P–U: AI/collaboration/adaptive/review/trust/platform](#p-ai-mediated-product-interface) · [V–X: composition](#v-github-project-orchestrator-composition) · [Y–Z: capability/discovery boundaries](#y-missing-renderexternal-authority-capabilities) · [Regression rule](#regression-rule)
+
 For a semantic change, inspect every scenario whose trigger, owner, evidence assumption, or forbidden behavior could change. Representation-only edits need only the scenarios whose semantics they touch.
 
 ## Evaluation dimensions
