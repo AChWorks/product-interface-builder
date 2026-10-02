@@ -1,6 +1,6 @@
 # Product Interface Designer
 
-A reusable, provider-neutral AI Skill for designing, reviewing, refining, and guiding implementation of user-facing product interfaces across web, mobile, and desktop.
+A reusable, provider-neutral AI Skill for designing, building/implementing, prototyping, reviewing, and refining user-facing product interfaces across web, mobile, and desktop.
 
 It focuses on visual direction, UX, design systems, responsive/adaptive behavior, accessibility, interaction, motion, interface copy, localization, Persian/RTL, and interface-quality review.
 
@@ -31,6 +31,7 @@ See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source co
 - [references/composition.md](references/composition.md) — bounded composition with project/platform/advisory specialists.
 - [agents/openai.yaml](agents/openai.yaml) — optional provider UI/discovery metadata; not a behavioral source of truth.
 - [docs/INSTRUCTION-ARCHITECTURE.md](docs/INSTRUCTION-ARCHITECTURE.md) — authoring structure and cross-Skill composition contract.
+- [docs/THEORETICAL-SCENARIOS.md](docs/THEORETICAL-SCENARIOS.md) — authoring-only semantic regression scenarios for future Skill changes.
 
 ## Ecosystem boundaries
 
