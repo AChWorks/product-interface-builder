@@ -1,10 +1,12 @@
 # Product Interface Builder — Project Specification
 
-Status: **V0.1 PRE-RELEASE**
+Status: **v0.1 RELEASED**
 
 Repository: `AChWorks/product-interface-builder`
 
 This file owns durable product intent, scope, boundaries, architecture constraints, and v0.1 completion criteria. GitHub Issues/PRs own live work. Source provenance is owned by `docs/SOURCE-STRATEGY.md`.
+
+First public release: **v0.1**, tagged at `1de9c1042f850f20c7279375c9860347c9a13d76`.
 
 ## 1. Outcome
 
