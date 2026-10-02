@@ -6,7 +6,7 @@ Repository: `AChWorks/product-interface-designer`
 
 This file owns durable product intent, scope, boundaries, and architecture constraints. GitHub Issues/PRs own live work and release planning. Source provenance is owned by `docs/SOURCE-STRATEGY.md`; instruction-authoring/composition structure is owned by `docs/INSTRUCTION-ARCHITECTURE.md`.
 
-First public release: **v0.1**, tagged at `1de9c1042f850f20c7279375c9860347c9a13d76` under the former **Product Interface Builder** / `AChWorks/product-interface-builder` identity. The v0.1 tag, release notes, and asset remain historical records; the canonical identity from v0.2 onward is **Product Interface Designer** / `AChWorks/product-interface-designer`.
+First public release: **v0.1**, tagged at `1de9c1042f850f20c7279375c9860347c9a13d76`.
 
 ## 1. Outcome
 
@@ -200,7 +200,7 @@ v0.2 implements the accepted post-v0.1 direction without reintroducing source-sh
 - conditional AI-mediated interface guidance;
 - conditional collaboration/concurrency and adaptive-context guidance.
 
-The v0.2 release adopts the canonical **Product Interface Designer** identity. The historical v0.1 tag/release/asset remain under the former Product Interface Builder identity; they were not rewritten during the rename.
+The v0.2 release continues the canonical **Product Interface Designer** identity.
 
 ## 12. Locked decisions
 
