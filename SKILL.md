@@ -5,49 +5,78 @@ description: Design, build, review, and refine user-facing product interfaces ac
 
 # Product Interface Builder
 
-Build the interface the product needs, not a generic style demo. Treat current product truth, explicit requirements, platform constraints, locale/script behavior, and rendered evidence as stronger than catalog or aesthetic defaults.
+Build the interface the product needs, not a generic style demo. Treat current product truth, applicable mandatory constraints, explicit accepted requirements, platform/locale behavior, and credible evidence as stronger than catalog or aesthetic defaults.
 
 ## 1. Establish the interface problem
 
-Before changing visual behavior, recover enough evidence to answer:
+Before changing user-facing behavior, recover enough evidence to answer:
 
 - Is this a **new interface**, **targeted modification**, **redesign**, or **review**?
-- What product, audience, task, content, and usage context matter?
-- What current design system, components, tokens, brand rules, copy vocabulary, or screenshots already exist?
+- What product, audience, task, content, consequence level, and usage context matter?
+- What current design system, components, tokens, brand rules, copy vocabulary, or rendered artifacts already exist?
 - Which platform is actually targeted: web, mobile/native, desktop, or a deliberate combination?
-- Which locale/script requirements actually apply?
-- Which runtime capabilities are available for source inspection, editing, rendering, screenshots/images, command execution, or persistent project state?
+- Which language, script, direction, locale, and regional requirements actually apply?
+- Which runtime capabilities are available for source inspection, editing, rendering, screenshots/images, command execution, persistent project state, or current external authority?
 
-Do not invent missing incumbent design truth. For bounded changes, preserve what is already authoritative unless the request explicitly changes it.
+Do not invent missing incumbent design truth. For bounded changes, preserve what is already authoritative unless the accepted request explicitly changes it.
 
-## 2. Use decision precedence
+## 2. Resolve conflicts by explicit precedence
 
-When guidance conflicts, prefer:
+Apply the highest relevant layer first:
 
-1. explicit current user requirements;
-2. authoritative product/project/design-system truth;
-3. applicable accessibility, safety, legal, and platform requirements;
-4. platform conventions;
-5. locale/script conventions;
-6. product, audience, content, and task reasoning;
-7. general design principles;
-8. style/catalog suggestions.
+1. **Applicable mandatory constraints from current authoritative sources** — safety, legal/regulatory, accessibility, platform, policy, or other non-negotiable constraints that materially govern the interface.
+2. **Accepted product/user outcome and explicit current requirements** — what the user or product is trying to accomplish, limited by layer 1.
+3. **Authoritative product/project/design-system truth** — existing behavior, business rules, terminology, components, tokens, and brand/design contracts that have not been intentionally changed.
+4. **Target platform and active locale/script conventions** — established interaction, input, navigation, direction, formatting, and presentation expectations for the actual target.
+5. **User, task, content, and context reasoning** — frequency, cognitive burden, consequence, environment, content shape, and workflow.
+6. **Domain design principles** — hierarchy, usability, accessibility-informed design judgment, responsive/adaptive composition, interaction clarity, and coherence.
+7. **Optional stylistic suggestions** — trends, inspiration, decorative treatments, and catalog-style ideas.
 
-A style suggestion is an option, never authority.
+Do not infer precedence from paragraph order elsewhere. An ordinary aesthetic preference cannot silently override an applicable mandatory constraint. When a requested expression conflicts with a higher layer, preserve the accepted outcome with the closest compliant interface solution and surface the conflict only when it materially changes the result or requires another owner.
 
-## 3. Load only the guidance the task needs
+## 3. Route only to decision-relevant owners
 
-References are one level deep from this file. Do not load them all by default.
+References are one level deep from this file. Apply routes cumulatively only when each trigger is materially present; do not load every reference because a product could contain the concern.
 
-- For **new design, modification, or redesign**, read [references/design-core.md](references/design-core.md).
-- When **Persian, RTL, bidirectional content, or Iranian-local interface behavior** is actually relevant, read [references/persian-rtl.md](references/persian-rtl.md).
-- When platform conventions or implementation behavior differ across **web, mobile/native, or desktop**, read [references/platforms.md](references/platforms.md).
-- For **interface review**, or before declaring material visual work complete when review evidence can be obtained, read [references/review.md](references/review.md).
-- When working under another project Master or with a platform specialist, read [references/composition.md](references/composition.md).
+| Trigger | Direct owner | Routing rule |
+|---|---|---|
+| new interface, targeted UI/UX modification, redesign, visual hierarchy, controls, copy, data presentation, non-ideal states, or ordinary design-system reuse | [references/design-core.md](references/design-core.md) | Core cross-locale interface reasoning. |
+| Persian, RTL, bidirectional content, or Iranian-local behavior | [references/persian-rtl.md](references/persian-rtl.md) | Load only for the active language/direction/locale surface; do not generalize Persian rules to all RTL contexts. |
+| behavior materially differs across web, mobile/native, or desktop | [references/platforms.md](references/platforms.md) | Load the target platform section only; do not load all platform variants by default. |
+| interface review, refinement, or material visual work that can be checked against rendered/interaction evidence | [references/review.md](references/review.md) | Keep review proportional; static inspection is not rendered proof. |
+| another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Builder bounded to interface decisions and review. |
 
-Do not load Persian/RTL guidance for unrelated LTR work. Do not load every platform section when one target is known. Do not turn review guidance into ceremony for a trivial local change.
+The following are conditional decision domains in the product architecture: human factors/usability evidence, information architecture/findability/complex interactions, trust/privacy/consent, general internationalization, substantial design-system architecture, AI-mediated interfaces, and collaborative/concurrent/adaptive contexts.
 
-## 4. Route by capabilities, not vendor names
+- Load a dedicated direct reference for one of these domains only when the installed bundle provides that owner **and** the task materially triggers it.
+- Until a dedicated owner exists in the current bundle, use only the applicable existing core/platform/locale/review guidance plus current authoritative external material when required; do not invent a hidden rule set or load an unrelated reference as a substitute.
+- When a new direct owner is added, route to it here rather than duplicating its detailed rules in this control plane.
+
+## 4. Use current authority only when exact behavior matters
+
+Durable design principles belong in this Skill. Exact version-sensitive or jurisdiction-sensitive requirements stay with their current authoritative owner.
+
+```text
+Would an exact external rule materially change the interface decision?
+  ├─ no  -> use the applicable local guidance
+  └─ yes -> retrieve the current authoritative source for the actual target/version/context
+            -> apply that exact requirement
+            -> return to the local interface decision
+```
+
+Use current official authority when materially needed for topics such as:
+
+- accessibility standards and established widget interaction patterns;
+- native platform conventions or APIs;
+- browser/platform behavior;
+- legal/regulatory requirements;
+- another authoritative product/platform contract.
+
+Prefer primary official sources. Do not freeze large standards into this Skill or invent exact requirements from memory. If current retrieval is unavailable, state the affected uncertainty and avoid claiming exact compliance or platform correctness.
+
+Current external authority can constrain the interface decision; it does not expand Product Interface Builder's project, repository, legal, security, or platform-implementation ownership.
+
+## 5. Route by capabilities, not vendor names
 
 Treat capabilities as optional environment features:
 
@@ -57,7 +86,7 @@ Treat capabilities as optional environment features:
 - **image/screenshot inspection** — evaluate rendered visual evidence;
 - **shell/command execution** — run repository-defined validation where safe;
 - **persistent workspace/project state** — reuse durable design truth when justified;
-- **external retrieval/connectors** — retrieve current product/platform evidence when permitted.
+- **external retrieval/connectors** — retrieve current product/platform/standards evidence when permitted.
 
 If a capability is absent, degrade explicitly:
 
@@ -65,13 +94,14 @@ If a capability is absent, degrade explicitly:
 - no write access -> provide implementation-ready guidance instead of claiming changes;
 - no render/screenshot access -> perform static review, label it static, and never claim rendered correctness;
 - no shell/test capability -> do not claim tests or validation ran;
-- no persistent state -> do not manufacture a substitute source of truth in chat.
+- no persistent state -> do not manufacture a substitute source of truth in chat;
+- no current external retrieval -> do not invent exact version-sensitive requirements.
 
 A missing optional capability should narrow evidence, not make ordinary design reasoning impossible.
 
-## 5. Act proportionally
+## 6. Act proportionally
 
-When implementation is requested and authorized, make the smallest coherent change that satisfies the design intent. Reuse the project's existing stack, components, and durable design truth; create new persistent design artifacts only when substantial continuing work warrants them.
+When implementation is requested and authorized, make the smallest coherent change that satisfies the interface intent. Reuse the project's existing stack, components, and durable design truth; create new persistent design artifacts only when substantial continuing work warrants them.
 
 Do not introduce a framework, library, dependency, or global design-system change merely to express a local visual preference.
 
@@ -79,12 +109,12 @@ For material visual work, obtain rendered evidence when the environment supports
 
 Never present invented product claims, testimonials, customers, metrics, certifications, guarantees, user data, or brand assets as real. Clearly representative/synthetic content is acceptable for a mockup only when it cannot be mistaken for factual product evidence.
 
-## 6. Preserve standalone and composed behavior
+## 7. Preserve standalone and composed behavior
 
 This Skill remains useful on its own. When another Skill or project Master is active, keep interface/design ownership bounded rather than taking over project planning, repository authority, platform mechanism selection, integration, or release.
 
 Use [references/composition.md](references/composition.md) when those boundaries matter.
 
-## 7. Finish with evidence, not checklist theater
+## 8. Finish with evidence, not checklist theater
 
-Return or implement the interface outcome the user requested. Mention material assumptions, limitations, or unverified rendered behavior only when they affect confidence or the user's next action. Do not dump every internal check into the response.
+Return or implement the interface outcome the user requested. Mention material assumptions, limitations, current-authority uncertainty, or unverified rendered behavior only when they affect confidence or the user's next action. Do not dump every internal check into the response.
