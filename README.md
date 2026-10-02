@@ -16,12 +16,20 @@ See [docs/SOURCE-STRATEGY.md](docs/SOURCE-STRATEGY.md) for the audited source co
 
 ## Structure
 
-- [SKILL.md](SKILL.md) — compact control plane and routing.
-- [references/design-core.md](references/design-core.md) — product-grounded interface design reasoning.
-- [references/persian-rtl.md](references/persian-rtl.md) — conditional Persian/RTL behavior.
-- [references/platforms.md](references/platforms.md) — web, mobile/native, and desktop differences.
+- [SKILL.md](SKILL.md) — compact control plane, precedence, capability fallback, and direct routing.
+- [references/design-core.md](references/design-core.md) — product-grounded core interface reasoning.
+- [references/human-factors.md](references/human-factors.md) — cognitive/usability reasoning and evidence boundaries.
+- [references/information-architecture.md](references/information-architecture.md) — IA, findability, flows, and complex interactions.
+- [references/trust-agency.md](references/trust-agency.md) — user-facing trust, consent, privacy, agency, and anti-deceptive behavior.
+- [references/internationalization.md](references/internationalization.md) — general language/script/direction/locale reasoning.
+- [references/persian-rtl.md](references/persian-rtl.md) — Persian/Iran-specific specialization.
+- [references/platforms.md](references/platforms.md) — web, mobile/native, and desktop conventions.
+- [references/design-systems.md](references/design-systems.md) — conditional reusable-system/token/component contracts.
+- [references/ai-mediated.md](references/ai-mediated.md) — conditional AI-mediated interface guidance.
+- [references/collaboration-concurrency.md](references/collaboration-concurrency.md) — collaborative/shared-state and conflict UX.
+- [references/adaptive-contexts.md](references/adaptive-contexts.md) — resize, multi-window, fold/posture, restore, and input transitions.
 - [references/review.md](references/review.md) — proportional interface review and finish guidance.
-- [references/composition.md](references/composition.md) — bounded composition with project/platform specialists.
+- [references/composition.md](references/composition.md) — bounded composition with project/platform/advisory specialists.
 - [agents/openai.yaml](agents/openai.yaml) — optional provider UI/discovery metadata; not a behavioral source of truth.
 - [docs/INSTRUCTION-ARCHITECTURE.md](docs/INSTRUCTION-ARCHITECTURE.md) — authoring structure and cross-Skill composition contract.
 
