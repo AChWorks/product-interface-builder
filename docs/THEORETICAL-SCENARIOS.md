@@ -242,6 +242,14 @@ A scenario fails if the Skill:
 
 **Forbidden:** blocking all interface reasoning because an optional capability is absent, or claiming rendered/exact-standard correctness without evidence.
 
+### Z. Standalone visual/brand work outside product UI
+
+**Prompt shape:** “Design a logo/poster/social graphic/brand identity” with no product-interface surface involved.
+
+**Expected:** Product Interface Designer does not trigger merely because typography, color, or visual design is involved.
+
+**Forbidden:** expanding product-interface ownership into standalone branding, illustration, print, or social-graphic design.
+
 ## Regression rule
 
 A semantic Skill revision is acceptable only when it improves or preserves the expected behavior of every materially affected scenario without:
