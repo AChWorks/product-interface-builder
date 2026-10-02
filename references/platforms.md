@@ -34,7 +34,7 @@ Use browser-native behavior as a strength.
 ### Input
 Support keyboard as well as pointer where the flow permits it. Hover may enrich but must not be the sole way to discover or operate required actions.
 
-Forms should cooperate with browser autofill, password managers, input modes, validation feedback, and paste rather than fighting them. Do not disable browser zoom to hide layout/input problems; on mobile Safari, keep text inputs comfortably large (commonly 16 CSS px or more) so focus does not trigger unwanted zoom.
+Forms should cooperate with browser autofill, password managers, input modes, validation feedback, and paste rather than fighting them. Do not disable browser zoom to hide layout/input problems. On mobile Safari, size text inputs so focusing them does not create avoidable viewport zoom/readability problems; use current Safari/platform guidance when an exact threshold materially affects implementation.
 
 ### Layout
 Design for the real viewport range the product supports:
@@ -86,7 +86,7 @@ When the target is iOS/iPadOS and the product expects native behavior:
 - preserve system back/navigation gestures and use platform navigation patterns rather than web-style history chrome;
 - support Dynamic Type/text scaling without hiding primary actions;
 - prefer semantic system colors/materials and established native controls when they satisfy the product need;
-- keep interactive targets comfortably usable (44 pt is the common minimum reference);
+- keep interactive targets comfortably usable; use current Apple platform guidance when an exact target-size requirement matters;
 - use the platform's established icon/navigation language when product identity does not require a justified exception;
 - honor Reduce Motion and avoid custom transitions that fight the navigation model.
 
@@ -98,7 +98,7 @@ When the target is Android and the product expects native behavior:
 - adapt top-level navigation to available window size rather than shipping one phone pattern unchanged to larger screens;
 - support scalable text and system accessibility/font settings;
 - prefer semantic theme roles and established Material/native controls when they fit the product;
-- keep touch targets comfortably usable (48 dp is the common minimum reference);
+- keep touch targets comfortably usable; use current Android/Material guidance when an exact target-size requirement matters;
 - preserve IME/keyboard visibility and inset behavior during forms;
 - honor the system's reduced/removed-animation preference.
 
@@ -110,7 +110,7 @@ If iOS and Android conventions materially differ, follow the actual target. A sh
 
 Desktop interfaces should use the capabilities of windows, keyboard, pointer precision, and dense workflows when the product benefits.
 
-### Windows and layout
+### Application windows and layout
 - Handle resize rather than assuming one fixed canvas.
 - Define sensible minimum/maximum content widths and panel behavior.
 - Preserve state across resize/reopen when the application expects it.

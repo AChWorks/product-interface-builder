@@ -1,6 +1,6 @@
 ---
 name: product-interface-designer
-description: Design, review, refine, and guide implementation of user-facing product interfaces across web, mobile, and desktop. Use for new interfaces, targeted UI changes, redesigns, design systems, layout, typography, color, responsive behavior, accessibility, interaction, motion, interface copy, visual QA, and locale-aware UI including Persian/RTL. Preserve an existing product's design language unless redesign is explicit. Skip pure backend, infrastructure, database, or non-visual work unless it materially changes the user-facing interface.
+description: Design, build/implement, prototype, review, and refine user-facing product interfaces across web, mobile, and desktop. Use for new screens/surfaces, dashboards, landing pages, forms, navigation, targeted UI changes, redesigns, wireframes/mockups, screenshot/reference-led work, design systems, layout, typography, color, responsive/adaptive behavior, accessibility, interaction, motion, interface copy, visual QA, and locale-aware UI including Persian/RTL. When implementation is requested, make authorized UI changes when write capability exists; otherwise return implementation-ready guidance. Preserve existing product/design truth for bounded changes unless redesign is explicit. Skip standalone branding/logo/illustration/print/social-graphic work and pure backend, infrastructure, database, deployment, or non-visual work unless it materially changes a user-facing product interface.
 ---
 
 # Product Interface Designer
@@ -17,6 +17,9 @@ Before changing user-facing behavior, recover enough evidence to answer:
 - Which platform is actually targeted: web, mobile/native, desktop, or a deliberate combination?
 - Which language, script, direction, locale, and regional requirements actually apply?
 - Which runtime capabilities are available for source inspection, editing, rendering, screenshots/images, command execution, persistent project state, or current external authority?
+- What reference, screenshot, mockup, wireframe, or fidelity target—if any—is authoritative versus merely inspirational?
+
+Recover or discover before asking. Ask only when a missing fact cannot be recovered safely and materially changes accepted product/business behavior, required content/action, a durable brand commitment, target platform/locale, fidelity target, high-consequence user outcome, or another owner's decision. Infer ordinary reversible interface choices—such as spacing, composition, component expression, and minor visual treatment—from the strongest available product/context evidence. Defer polish that does not block a coherent result. If the user delegates design judgment (for example, “you decide”), treat that as authority for ordinary reversible interface choices, not permission to invent product facts, business policy, durable brand identity, or platform architecture.
 
 Do not invent missing incumbent design truth. For bounded changes, preserve what is already authoritative unless the accepted request explicitly changes it.
 
@@ -40,7 +43,7 @@ References are one level deep from this file. Apply routes cumulatively only whe
 
 | Trigger | Direct owner | Routing rule |
 |---|---|---|
-| new interface, targeted UI/UX modification, redesign, visual hierarchy, controls, copy, data presentation, non-ideal states, or ordinary design-system reuse | [references/design-core.md](references/design-core.md) | Core cross-locale interface reasoning. |
+| new interface/screen, build/implementation, prototype/wireframe/mockup, screenshot/reference-led work, targeted UI/UX modification, redesign, visual hierarchy, controls, copy, data presentation, non-ideal states, or ordinary design-system reuse | [references/design-core.md](references/design-core.md) | Core cross-locale interface reasoning. |
 | multiple languages/scripts/locales, localization/translation, RTL/bidi generally, or locale-sensitive numbers/dates/time zones/currency/units/collation | [references/internationalization.md](references/internationalization.md) | Keep language, script, direction, locale, region, calendar, numbering system, currency, and time zone separate; use current locale/platform authority for exact behavior. |
 | Persian language/script/typography/orthography or Iranian-local product behavior | [references/persian-rtl.md](references/persian-rtl.md) | Load as a Persian/Iran specialization alongside general internationalization when relevant; never infer Persian/Iran from RTL alone. |
 | behavior materially differs across web, mobile/native, or desktop | [references/platforms.md](references/platforms.md) | Load the target platform section only; do not load all platform variants by default. |
@@ -104,7 +107,9 @@ A missing optional capability should narrow evidence, not make ordinary design r
 
 ## 6. Act proportionally
 
-When implementation is requested and authorized, make the smallest coherent change that satisfies the interface intent. Reuse the project's existing stack, components, and durable design truth; create new persistent design artifacts only when substantial continuing work warrants them.
+When implementation is requested and authorized, do not stop at advice when available capabilities can safely implement the interface. Reuse the project's established owner/mechanism, stack, components, and durable design truth; make the smallest coherent change that satisfies the interface intent, and create new persistent design artifacts only when substantial continuing work warrants them.
+
+If implementation would require choosing an unestablished application framework, durable platform architecture, backend/data contract, or another specialist's mechanism, return that decision to the project/platform owner rather than silently making it for the sake of UI execution. In standalone work, continue with the interface decision, prototype, or implementation-ready guidance until that ownership fact is resolved.
 
 Do not introduce a framework, library, dependency, or global design-system change merely to express a local visual preference.
 
