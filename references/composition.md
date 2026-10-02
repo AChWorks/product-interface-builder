@@ -1,201 +1,82 @@
 # Composition and Authority
 
-Product Interface Builder owns user-facing interface design intent and visual/UX quality. Composition must never transfer unrelated project, repository, release, or platform-mechanism authority.
+Product Interface Builder owns user-facing interface intent and visual/UX quality. It does not inherit project-management, repository, release, or platform-implementation authority from the fact that it is active.
 
-These semantics are role-based and capability-based. They must work in any compatible agent runtime; no specific dispatch/tool/vendor mechanism is part of the contract.
+## 1. Ownership
 
-## 1. Ownership matrix
-
-| Concern | Canonical owner in composition |
+| Concern | Owner when composed |
 |---|---|
-| product-interface design reasoning, visual direction, hierarchy, design systems, typography/color/layout/density, interaction/motion intent, responsive intent, interface accessibility/UX quality, Persian/RTL presentation, rendered visual critique | Product Interface Builder |
-| project framing, scope, priority, dependencies, repository mutation authority, worker/task coordination, review/integration policy, CI, release, continuity | GitHub Project Orchestrator / active project Master |
-| WordPress owner/mechanism selection, Gutenberg/block serialization safety, theme/builder/plugin placement, hooks/APIs, WooCommerce/WordPress lifecycle behavior | WP Native Builder |
-| durable product/business requirements | the project's authoritative product/project source, not any Skill default |
-| Koinon ecosystem discovery/governance/contracts | Koinon sources when applicable; project-local implementation/work remains in the owning repository |
+| interface hierarchy, visual direction, design-system intent, typography/color/layout/density, interaction/motion intent, responsive intent, interface accessibility/UX quality, Persian/RTL presentation, visual critique | Product Interface Builder |
+| project outcome/scope, priority, dependencies, repository authority, task coordination, integration/CI/release/continuity | active project Master |
+| platform-specific implementation mechanism and lifecycle constraints | the active platform specialist/owner |
+| WordPress mechanism, Gutenberg safety, theme/plugin placement, WooCommerce/WordPress lifecycle | WP Native Builder when active |
+| durable product/business requirements | the project's authoritative product/project source |
 
-A supporting Skill may contribute evidence to another owner's decision without becoming a second rule owner.
+One concern should have one active owner. Another Skill may contribute evidence without becoming a second authority.
 
-## 2. Standalone behavior
+## 2. Standalone use
 
-When no project Master or platform specialist is active, Product Interface Builder remains fully useful.
+Without another specialist, Product Interface Builder may:
 
-It may:
-- recover the available product/design truth;
+- recover available product/design truth;
 - design or review the requested interface;
-- implement authorized UI changes when the environment permits;
-- use the target project's existing stack and mechanisms;
+- implement authorized UI changes with the project's existing mechanisms;
 - perform proportional self-review.
 
-It must not invent project/repository/release authority merely because no Master is present.
+The absence of another Skill does not justify inventing repository/release authority or claiming platform-specific correctness that was not established.
 
-Missing specialist capability narrows specialization; it does not automatically block ordinary safe interface work.
+## 3. Under a project Master
 
-## 3. Composition with a project Master
+The Master supplies or resolves project scope, current repository state, mutation boundaries, dependencies, and integration/release policy.
 
-When GitHub Project Orchestrator or another explicit project Master is active:
+Product Interface Builder supplies the smallest useful interface contribution:
 
-### The Master provides or resolves
-- current outcome/scope;
-- authoritative repository/project state;
-- mutation/approval boundaries;
-- task acceptance/dependencies;
-- integration/release path.
+- design intent tied to current product truth;
+- concrete interface decisions or implementation input;
+- authorized UI implementation when assigned;
+- visual/UX/accessibility/responsive/interaction findings;
+- unresolved design assumptions that materially affect the result.
 
-### Product Interface Builder provides
-- design intent and rationale tied to product truth;
-- concrete interface decisions/tokens/pattern changes when needed;
-- implementation input or authorized implementation within the task scope;
-- visual/UX/accessibility/responsive/interaction review evidence;
-- explicit unresolved design risks or missing product truth.
+Do not create a competing roadmap, widen scope, or turn a design preference into a project requirement.
 
-### Product Interface Builder does not
-- reprioritize the roadmap;
-- widen repository mutation scope;
-- create competing project plans/issues merely to track its own reasoning;
-- merge/release/deploy unless the active project authority separately permits it;
-- turn a design preference into a project requirement without evidence.
+Hand back only what the Master needs: what changed, where it lives, material evidence/limitations, and any decision or owner still required.
 
-### Handback
+## 4. With a platform specialist
 
-Return the smallest useful handback to the Master:
-- what design outcome was established/changed;
-- what artifact or exact change carries it;
-- what evidence was reviewed;
-- any material unresolved dependency/decision;
-- whether another owner must act next.
+Product Interface Builder defines the intended user-facing result. The platform specialist chooses how to realize it safely in that platform.
 
-Do not send an internal checklist transcript.
+For WordPress specifically:
 
-## 4. Composition with WP Native Builder
+- Product Interface Builder owns composition, visual intent, interface states, responsive intent, user-facing accessibility/UX, locale presentation, and visual critique.
+- WP Native Builder owns WordPress owner/mechanism selection, Gutenberg/block safety, templates/patterns, theme/plugin APIs, WooCommerce lifecycle concerns, and WordPress-specific placement.
 
-For WordPress work, design intent and WordPress mechanism are separate decisions.
+Do not prescribe brittle platform internals merely to achieve a visual preference. The platform owner may adapt the mechanism while preserving the intended experience.
 
-### Product Interface Builder owns
-- intended information hierarchy and composition;
-- visual direction and token/pattern intent;
-- interface states and interaction intent;
-- responsive/adaptive intent;
-- user-facing accessibility/UX quality;
-- locale/Persian/RTL presentation requirements;
-- rendered visual critique.
+## 5. Shared concerns
 
-### WP Native Builder owns
-- which current WordPress/theme/builder/plugin/data surface should own the behavior;
-- Gutenberg/Core block safety and serialization;
-- Patterns/templates/template parts;
-- supported theme/builder/plugin APIs and extension surfaces;
-- custom-code placement when justified;
-- WooCommerce and WordPress lifecycle/permission/integration concerns;
-- WordPress-specific publication/verification boundaries.
+When concerns overlap, divide them by decision type:
 
-Product Interface Builder must not prescribe raw block markup, direct third-party/core edits, hook placement, theme/plugin architecture, or another WordPress mechanism unless WP Native Builder has selected/confirmed that mechanism.
+- **Accessibility:** Product Interface Builder owns user-facing outcome/critique; the platform owner implements the correct semantics/mechanism.
+- **Responsive behavior:** Product Interface Builder owns intended recomposition; the platform owner implements it safely.
+- **Visual review:** Product Interface Builder owns visual/UX judgment when active; platform checks should not introduce a competing art direction.
+- **Performance:** Product Interface Builder may flag obvious interface/perceived-performance costs; system/backend performance belongs elsewhere.
 
-WP Native Builder may reject or adapt an implementation mechanism that would be brittle or unsafe while preserving the intended user-facing result.
+Do not apply overlapping guidance from multiple Skills as parallel mandatory checklists.
 
-## 5. Three-way project + design + WordPress flow
+## 6. Durable state
 
-A normal substantial WordPress project can compose as:
-
-1. **Project Master** resolves project outcome, scope, current repository/work state, and authority.
-2. **Product Interface Builder** establishes or reviews user-facing design intent using current project/site evidence.
-3. **WP Native Builder** maps that intent onto the smallest supported WordPress-native owner/mechanism and implements/verifies it when authorized.
-4. **Product Interface Builder** reviews rendered user-facing quality when material and when rendered evidence is available.
-5. **Project Master** owns acceptance, integration, continuity, and release.
-
-Skip stages that add no value. A small safe WordPress UI fix does not require ceremonial multi-agent choreography.
-
-## 6. Shared concerns without duplicate rulebooks
-
-Some concerns cross boundaries.
-
-### Accessibility
-Product Interface Builder owns user-facing accessibility intent/review. A platform specialist owns platform-specific semantics/mechanisms needed to realize it. The Master owns project acceptance policy.
-
-### Responsive behavior
-Product Interface Builder owns intended recomposition and user-facing quality. The platform specialist owns the safe/native implementation mechanism.
-
-### Visual review
-Product Interface Builder is the canonical visual-quality reviewer when it is active for the task. Platform specialists may perform mechanism-specific visual checks, but should not introduce a competing art direction.
-
-### Performance
-Product Interface Builder may flag obvious UI/perceived-performance risks caused by design implementation. Backend/runtime/system performance remains with the appropriate engineering owner.
-
-When two Skills contain overlapping general guidance, select the owner closest to the concrete decision instead of applying both as independent mandatory checklists.
-
-## 7. Existing project/design truth outranks Skill defaults
-
-When another Skill already recovered an authoritative Project Brief, design system, site architecture, product requirements, or accepted durable decision:
-
-- consume it instead of reconstructing a competing artifact;
-- update only the natural owner when an accepted durable conclusion actually changes;
-- do not treat a Skill's internal defaults as newer project truth;
-- re-read current live/project state when drift would materially change the design decision.
-
-Product Interface Builder can challenge a harmful/outdated design choice, but it must distinguish recommendation from current truth.
-
-## 8. Durable state handoff
-
-Persist only future-useful accepted conclusions.
+Persist only accepted conclusions that future work will need, using the project's existing source of truth.
 
 Examples:
-- accepted product-interface design direction;
-- shared token/pattern decision;
+- shared interface direction or token/pattern change;
 - locale/platform requirement;
-- unresolved material visual/accessibility risk;
-- implemented interface artifact/change.
+- unresolved material UI/accessibility risk;
+- the implemented interface artifact itself.
 
-Use the project's natural source of truth: repository artifact, issue/task, design document, or other accepted durable project system.
+Do not create duplicate design/project state merely because this Skill participated.
 
-Do not:
-- persist chat transcripts;
-- create a duplicate Koinon backlog;
-- make `achworks.yaml` a worklog;
-- store live deployment/runtime state in this Skill's metadata.
+## 7. Invocation neutrality
 
-## 9. Koinon boundary
+Capability fallback rules are owned by `SKILL.md`; do not restate them here. Composition changes ownership, not the underlying evidence standard.
 
-Koinon is the technology-agnostic ecosystem coordination/governance/discovery/contracts layer.
-
-Product Interface Builder:
-- keeps its implementation, Issues/PRs, validation evidence, packaging, and release truth in this repository;
-- uses `achworks.yaml` only for stable discovery/capability/dependency metadata;
-- may consume applicable Koinon contracts during project/release work;
-- does not require Koinon at runtime to design an interface;
-- does not copy live project work state into Koinon or its descriptor;
-- treats other repositories as read-only unless explicit mutation scope names them.
-
-Koinon discovery can reveal a reusable capability; it does not force reuse when local implementation is simpler or more appropriate.
-
-## 10. Graceful degradation
-
-### No project Master
-Work standalone within current authority. Do not emulate a fake Master process.
-
-### No WP Native Builder for WordPress
-Provide design intent and implementation guidance constrained to verified WordPress knowledge/capabilities. Do not claim WordPress-native mechanism correctness that was not verified.
-
-### No rendering capability
-Return static design/implementation review and mark rendered quality as unverified.
-
-### No write capability
-Return implementation-ready design decisions/patch guidance; do not claim changes were applied.
-
-### No persistent project state
-Complete the current task but do not claim cross-session recovery.
-
-## 11. Provider-neutral invocation contract
-
-Composition depends on roles and inputs/outputs, not on tool names.
-
-A compatible runtime may:
-- invoke another Skill directly;
-- delegate to a sub-agent;
-- execute roles sequentially in one agent;
-- pass a task contract through a project system.
-
-All are valid if authority, source-of-truth, evidence, and ownership boundaries remain the same.
-
-Provider adapters may make discovery/invocation easier, but must never redefine these contracts.
-
-If composition reveals that a neighboring Skill needs a lasting change, record that need in the owning project/repository and obtain separate mutation scope. Do not change it from this project.
+Provider/tool names do not define these boundaries. The same ownership rules apply through any compatible invocation mechanism.

@@ -18,16 +18,16 @@ Make the smallest coherent change. Do not use a local feature request as permiss
 
 ### Redesign
 
-Separate durable product truth from replaceable design decisions.
+Separate constraints that must survive from visual choices that are open to change.
 
-Usually durable:
+Keep fixed unless the request or authoritative product evidence changes them:
 - user jobs and product capabilities;
 - content semantics and information requirements;
 - safety/accessibility/legal obligations;
 - validated terminology and business rules;
 - platform constraints and integrations.
 
-Potentially replaceable:
+Reconsider deliberately:
 - visual direction;
 - type scale and font choices;
 - color roles;
@@ -35,9 +35,9 @@ Potentially replaceable:
 - shape/elevation language;
 - composition and component expression;
 - imagery/illustration direction;
-- motion personality.
+- motion character.
 
-A redesign should reconsider the system deliberately instead of painting a new style over the existing structure.
+Do not confuse a redesign with restyling the old layout. Rebuild visual decisions around the retained constraints.
 
 ## 2. Ground visual direction in the product
 
@@ -54,46 +54,37 @@ Turn those inputs into a short direction, not a mood-board dump. A useful direct
 
 Do not default to whichever visual treatment is currently fashionable. Common patterns are valid when justified by the product; they are weak when selected merely because they are easy to generate.
 
-Spend distinctiveness selectively. One memorable compositional, typographic, imagery, or interaction idea is usually stronger than many unrelated flourishes.
+Allocate visual emphasis according to hierarchy. Use a small number of deliberate identity cues that reinforce the product; competing gestures weaken both hierarchy and character.
 
-### Choose the surface posture
+### Set priorities from the user job
 
-Decide what success means **on this surface**, not what category the whole product belongs to.
+Before choosing visual treatments, write a compact priority statement for the surface from the evidence you have. Base it on:
 
-- **Task/operation:** the user needs to complete work, scan status, compare data, or repeat actions efficiently. Familiarity, consistency, state clarity, density, and native expectations usually outrank spectacle.
-- **Reading/learning:** the user needs to understand material. Typography, information structure, source fidelity, comfortable measure, and wayfinding carry more weight than component novelty.
-- **Decision/persuasion:** the user needs to understand value, trust the offer, and decide or act. Real proof/content, clear sequencing, and a distinctive identity can carry more visual weight.
-- **Experience/showcase:** the user is primarily exploring or appreciating the work itself. The interface can recede while sequencing, imagery, and selective interaction lead.
+- what the user must accomplish, understand, compare, decide, or notice;
+- how often and how quickly the surface is used;
+- information density and content complexity;
+- consequence/trust level of mistakes or decisions;
+- how much brand expression helps rather than distracts;
+- the dominant input/device context.
 
-Choose the posture per surface. A productivity product can have a persuasive marketing page and a highly operational dashboard. Do not force one visual register across both.
+Example: a frequently used operations screen may prioritize fast comparison and stable interaction while carrying brand character through type, color, and detail; a product-introduction surface may give sequencing, imagery, and identity more room because attention and trust are part of the task.
 
-For task-heavy interfaces, express domain character through typography, color, imagery, language, and precise details rather than literally costuming the UI as a terminal, control panel, or physical instrument unless that metaphor improves the task.
+Do not turn those priorities into rigid page categories. A single product can need very different priorities on different surfaces.
 
-### Keep design dials independent
+### Keep visual qualities independent
 
-Treat these as separate decisions:
+Do not treat density, visual distinctiveness, contrast, ornament, and motion as one bundled style preset. Decide each from the task and content. A dense interface can still be visually distinctive; a bold interface can remain quiet in motion; a spacious page does not need decorative excess.
 
-- **distinctiveness:** conventional ↔ highly characteristic;
-- **density:** spacious ↔ information-dense;
-- **motion intensity:** quiet ↔ expressive.
+### Test every distinctive choice for relevance
 
-Do not assume bold design requires more animation, dense tools must look conservative, or spacious pages must be minimal. Set each axis from the surface's task, audience, and brand evidence.
+For each strong visual device, ask:
 
-### Guard against generic defaults
+- What product, content, hierarchy, state, or interaction does it express?
+- Would the same choice survive unchanged in an unrelated product?
+- Does repeating it improve comprehension or merely create a pattern?
+- If it were removed, would the interface lose useful meaning, orientation, or character?
 
-When the brief leaves room for invention, challenge choices that could be pasted into many unrelated products unchanged.
-
-Common warning signs include:
-- every section becoming the same rounded card;
-- one radius/shadow treatment applied to every level of hierarchy;
-- decorative gradients or glows with no connection to product content;
-- repetitive eyebrow or all-caps micro-labels above every heading;
-- arbitrary numbering that does not represent real sequence or structure;
-- default emphasis on a single headline word just to create visual interest;
-- decorative arrows appended to every link or action;
-- monospace used as generic decoration for ordinary labels or metadata.
-
-These patterns are not banned. Use them when the brief, content, or information structure actually earns them.
+Keep familiar conventions when they help users. Keep unusual choices when they are earned by the product. Remove decoration that has no defensible role.
 
 ## 3. Shape hierarchy before decoration
 
@@ -271,9 +262,9 @@ A surface-specific exception may be justified, but it should not silently become
 
 Persist design decisions only when continuing work benefits from recovery across sessions/people/tools. Reuse the project's existing design source of truth when one exists. Do not manufacture a MASTER/design-system document for a trivial change.
 
-## 11. Self-critique before polishing
+## 11. Check coherence before adding detail
 
-Before adding more visual detail, check:
+Before adding more detail, check:
 
 - Does the direction clearly relate to this product and content?
 - Is the primary task obvious?

@@ -1,4 +1,4 @@
-# Interface Review and Finish Loop
+# Interface Review
 
 Use for explicit interface review requests and for proportional self-review of material visual work.
 
@@ -209,7 +209,7 @@ Use motion primarily to:
 - direct attention to a meaningful transition;
 - express product character without obstructing the task.
 
-When motion is material, keep a small coherent motion vocabulary instead of inventing a new personality for every component. Distinguish at most a few roles such as direct input feedback, ordinary spatial/state transition, and a rare expressive moment. Tune them to the product and platform rather than importing preset timing tables.
+When motion is material, keep its behavior coherent across the product. Direct manipulation should feel immediate, spatial/state transitions should preserve orientation, and expressive choreography should be reserved for places where it adds real product value. Tune timing and easing to the actual change instead of importing external timing tables or named motion presets.
 
 Review:
 - purpose: would removing the motion reduce understanding or intended character?
