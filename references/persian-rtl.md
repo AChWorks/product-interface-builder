@@ -1,104 +1,83 @@
-# Persian / RTL Interface Behavior
+# Persian / Iranian Interface Specialization
 
-Load this reference only when Persian, RTL composition, bidirectional content, or Iranian-local behavior is relevant.
+Load this reference only when **Persian language/script behavior or Iranian-local product behavior** is materially active.
 
-Do not collapse language, direction, locale, calendar, currency, digit style, and regional product conventions into one switch. Evidence for one does not automatically activate the others.
+General language/script/direction/locale/formatting rules are owned by [internationalization.md](internationalization.md). RTL alone does **not** activate this specialization: Arabic, Hebrew, Urdu, and other RTL contexts must not inherit Persian orthography, typography, digits, calendar, currency, or Iranian product conventions.
 
 ## Contents
 
-[Locale dimensions](#1-resolve-the-active-locale-dimensions) · [RTL/bidi structure](#2-build-direction-and-bidi-into-structure) · [Persian text](#3-treat-persian-text-as-a-real-writing-system) · [Display vs stored values](#4-separate-user-facing-formatting-from-stored-values) · [Component recomposition](#5-recompose-components-for-rtl-do-not-merely-mirror-them) · [Iran-specific behavior](#6-treat-iranian-local-conventions-as-optional-product-requirements) · [Non-leakage](#7-non-leakage)
+[Activation](#1-separate-persian-from-rtl-and-iran) · [Typography](#2-treat-persian-text-as-a-real-writing-system) · [Mixed direction](#3-handle-persian-mixed-direction-content-deliberately) · [Digits/calendar/currency](#4-keep-persian-display-choices-separate-from-iranian-product-rules) · [Components](#5-review-persian-interface-composition) · [Iran](#6-apply-iranian-local-conventions-only-when-required) · [Non-leakage](#7-non-leakage)
 
-## 1. Resolve the active locale dimensions
+## 1. Separate Persian from RTL and Iran
 
-Establish only the dimensions the product actually requires:
+Resolve the active context before applying a Persian-specific rule.
 
-- interface language/script;
-- overall text/layout direction;
-- locale/region for formatting and product conventions;
-- Persian vs Latin display digits;
-- calendar and time-zone behavior;
-- currency/unit conventions;
-- Iranian-local fields or workflows, if any.
+- Persian language/script does not automatically mean Iran as the product region.
+- An Iranian product may still use another interface language or calendar/number presentation.
+- Persian copy can legitimately use Gregorian dates, Latin digits, non-Iranian currency, or another regional convention when product truth requires it.
+- RTL direction alone does not imply Persian language, Persian digits, Jalali calendar, Toman/Rial, Iranian address/banking fields, or Persian typography.
+- Another language written with an Arabic-derived script may have different orthography, terminology, punctuation, glyph expectations, and locale conventions.
 
-Examples:
+Use [internationalization.md](internationalization.md) to resolve language, script, direction, locale, numbering, calendar, time zone, currency, and region as separate dimensions.
 
-- Persian copy can still use Gregorian dates and USD.
-- An RTL surface does not automatically need Persian copy.
-- A Persian-language product outside Iran does not automatically need Iranian address, banking, calendar, or currency rules.
+## 2. Treat Persian text as a real writing system
 
-Current product truth outranks generic Persian-market assumptions.
-
-## 2. Build direction and bidi into structure
-
-Apply RTL at the highest correct surface/root and use logical flow concepts wherever meaning follows reading direction.
-
-Prefer:
-- start/end over physical left/right for flow-relative spacing, alignment, borders, radii, and positioning;
-- normal document order that works in both directions;
-- gap/layout primitives over directional spacing hacks.
-
-Do not reverse rows merely to compensate for LTR-authored components. Fix the component's direction-sensitive semantics instead.
-
-Physical left/right remains valid when the meaning is genuinely spatial rather than reading-order-relative.
-
-### Mixed-direction content
-
-RTL interfaces often contain LTR data such as:
-
-- URLs, paths, commands, and code;
-- email addresses;
-- IDs/SKUs/version strings;
-- phone, card, account, IBAN, OTP, and similar sequences;
-- Latin brand or technical names.
-
-Keep the surrounding UI RTL and isolate the intrinsic LTR run with appropriate bidi semantics such as `bdi`, `dir="auto"`, or a scoped LTR input/control.
-
-Do not switch a whole sentence, field group, or form to LTR to repair one token. Check punctuation, parentheses, slashes, hyphens, numbers, selection, and copy/paste around mixed-script content.
-
-Directional icons and spatial transitions should follow actual start/end meaning. Do not mirror every icon or SVG globally.
-
-## 3. Treat Persian text as a real writing system
-
-Use typefaces that genuinely support the required Persian/Arabic glyphs and weights. Confirm the project has the right to ship any commercial Persian font; do not redistribute font files through this Skill.
+Use typefaces that genuinely support the required Persian/Arabic-script glyphs and weights. Confirm the project has the right to ship any commercial Persian font; do not redistribute font files through this Skill.
 
 - Preserve joined-script shaping; arbitrary letter spacing can break or degrade Persian text.
-- Give Persian copy enough line height for its glyph shapes and diacritics.
+- Give Persian copy enough line height for glyph shapes and diacritics.
 - Avoid synthetic styles when the font does not provide the needed face.
-- Verify fallbacks so individual glyphs/words do not silently switch to incompatible type.
+- Verify fallback behavior so individual glyphs/words do not silently switch to an incompatible visual system.
 - Keep Persian labels readable at the product's real density.
-- Let Latin runs coexist intentionally rather than forcing the whole UI into a separate type system.
+- Let Latin runs coexist intentionally rather than forcing the whole surface into a separate type system.
 
-Preserve meaningful text behavior:
+Preserve meaningful Persian text behavior:
 
-- retain correct ZWNJ (نیم‌فاصله);
-- author Persian copy with Persian ی and ک rather than Arabic ي and ك unless source data intentionally preserves another form;
-- use Persian punctuation and spacing conventions in Persian prose (for example «گیومه»، «،»، «؛»، «؟»);
+- retain correct ZWNJ (نیم‌فاصله) where Persian orthography requires it;
+- author Persian copy with Persian ی and ک rather than Arabic ي and ك unless authoritative source data intentionally preserves another form;
+- use Persian punctuation/spacing conventions in Persian prose where appropriate, such as «گیومه»، «،»، «؛»، and «؟»;
 - avoid raw-character truncation that can cut joined text badly; prefer layout-aware clamping;
 - do not apply Latin-only casing conventions to Persian;
-- keep established terminology/glossaries authoritative;
-- normalize alternate character/digit forms only where search/validation needs it; do not silently rewrite authoritative display content.
+- keep established product terminology/glossaries authoritative;
+- normalize alternate character/digit forms only where search/validation requirements justify it; do not silently rewrite authoritative display content.
 
-For interface copy, use one consistent product register (formal, neutral conversational, or another established voice). Do not mix formal and colloquial verb forms accidentally across one flow. Prefer familiar product language over literal translation of implementation terms. Keep errors/empty states actionable and technical identifiers untranslated when translation would reduce clarity.
+For interface copy, keep one product-appropriate register and avoid accidental mixing of formal and colloquial verb forms in the same flow. Prefer familiar Persian product language over literal translation of implementation terms.
 
-## 4. Separate user-facing formatting from stored values
+## 3. Handle Persian mixed-direction content deliberately
 
-Display and machine values may legitimately differ.
+Persian surfaces frequently contain intrinsically LTR data such as URLs, email addresses, file paths, commands, code, IDs/SKUs, version strings, Latin technical names, phone/account/card/IBAN/OTP sequences, and mixed-script user content.
 
-- Format visible numbers according to the chosen locale/digit style.
-- Keep protocol/API/identifier values in the format the system requires.
-- When appropriate, accept equivalent Persian/Arabic/Latin digit input and normalize before validation.
-- Use tabular numeric styling when aligned comparison benefits from it.
+Use the general bidi structure from [internationalization.md](internationalization.md), then check Persian-specific presentation in context:
 
-Do not force Persian digits simply because the language is Persian.
+- keep surrounding Persian copy RTL while isolating intrinsic LTR runs with the target platform's correct bidi mechanism;
+- verify punctuation, parentheses, slashes, hyphens, numbers, cursor/selection behavior, and copy/paste around Persian + Latin runs;
+- do not switch a whole sentence/form/group to LTR to repair one token;
+- keep technical identifiers untranslated when translation would reduce correctness;
+- verify directional arrows/navigation meaning from the actual interaction, not from blanket mirroring.
+
+Do not hard-code Unicode control characters or platform-specific bidi recipes from memory; use current platform/Unicode/W3C authority when exact behavior matters.
+
+## 4. Keep Persian display choices separate from Iranian product rules
+
+### Digits
+
+Do not force Persian digits merely because the language is Persian.
+
+When the product chooses Persian digits:
+
+- localize visible number presentation consistently;
+- keep protocol/API/identifier values in the format their owner requires;
+- when product requirements allow, accept equivalent Persian/Arabic/Latin digit input through locale-aware normalization before validation rather than visual substitution hacks.
 
 ### Dates and calendars
 
-Use the calendar the product requires.
+Do not infer Jalali/Solar Hijri solely from Persian language or RTL.
 
-When a Persian/Jalali calendar is required:
-- use a proven date/calendar implementation rather than hand-written conversion math;
-- verify parsing, ranges, leap behavior, labels, week conventions, and time-zone boundaries;
-- keep machine timestamps separate from localized display.
+When the product requires a Persian/Jalali calendar:
+
+- use a maintained, proven calendar/date implementation;
+- verify parsing, ranges, leap behavior, labels, week conventions, time zones, and boundary cases through current authoritative product/library/platform evidence;
+- keep canonical timestamps/data separate from localized display.
 
 When Gregorian or another calendar is required, keep it.
 
@@ -107,55 +86,59 @@ When Gregorian or another calendar is required, keep it.
 Do not infer Toman or Rial from language.
 
 When Iranian money is used:
+
 - label the chosen unit unambiguously;
 - never silently mix Rial and Toman;
-- keep calculations in the system's canonical unit;
-- localize only presentation according to product requirements.
+- keep calculations/accounting in the system's authoritative canonical unit;
+- localize presentation only according to current product requirements.
 
-## 5. Recompose components for RTL; do not merely mirror them
+## 5. Review Persian interface composition
 
-Review the actual interaction and reading order of affected components.
+Generic RTL layout rules live in [internationalization.md](internationalization.md). For active Persian surfaces, additionally inspect the places where Persian typography and common mixed-direction data make defects easy to miss.
 
 ### Forms
-- keep RTL labels/content flow while isolating LTR-value controls where needed;
-- verify prefix/suffix placement;
-- keep validation associated with the correct field;
-- verify logical focus order;
-- verify OTP/multi-cell ordering and paste behavior.
+
+- keep Persian labels/content flow coherent while isolating intrinsically LTR-value controls where needed;
+- verify prefix/suffix placement and validation association;
+- verify logical focus/order and Persian + numeric input behavior;
+- verify OTP/multi-cell ordering and paste behavior when the product uses them.
 
 ### Navigation and overlays
-- place drawers/sheets according to intended start/end semantics;
-- verify back/forward, breadcrumb, pagination, tab, and step progression;
-- preserve the platform's own navigation conventions when they conflict with naive mirroring.
 
-### Tables and charts
-- choose column order from user reading/comparison needs;
-- keep numbers and mixed-script cells legible;
-- make overflow/filter/sort behavior understandable;
-- localize chart axes, legends, tooltips, dates, and numbers as required;
-- do not rely on color alone for series/state meaning.
+- preserve platform navigation behavior while checking back/forward, breadcrumb, pagination, tabs, steps, drawers, and sheets in the actual Persian direction;
+- do not mirror platform/system conventions merely because the content is Persian.
 
-### Responsive behavior
-RTL is not an LTR breakpoint with `dir=rtl` added afterward. Re-evaluate alignment, ordering, edge anchoring, truncation, and mixed-script content at narrow and wide sizes.
+### Tables, charts, and dense data
 
-### Accessibility
-Set correct language and direction at the appropriate document/surface level. Verify logical reading/focus order rather than assuming visual reversal produces an accessible order.
+- choose column order from the user's comparison task;
+- keep Persian labels, numbers, and mixed-script cells legible;
+- localize axes, legends, tooltips, dates, and numbers only to the dimensions the product actually selected.
 
-## 6. Treat Iranian-local conventions as optional product requirements
+### Responsive/accessibility
 
-Only apply Iran-specific behavior when the product actually needs it, for example:
+- test Persian strings at narrow and wide sizes instead of assuming the LTR breakpoint still works;
+- set correct language/direction metadata at the appropriate surface;
+- verify logical reading/focus order rather than treating visual mirroring as proof.
 
-- Iranian phone formats;
-- national identification;
-- Sheba/IBAN or local bank-card flows;
-- postal/address structures;
-- local payment/shipping terminology;
-- local working-week expectations.
+Rendered verification remains owned by [review.md](review.md).
 
-Do not invent checksums, legal rules, business constraints, or field formats from design memory. Validation rules belong to authoritative product/domain requirements.
+## 6. Apply Iranian-local conventions only when required
+
+Only apply Iran-specific product behavior when current product/domain truth requires it, for example:
+
+- Iranian phone-number expectations;
+- national identification fields;
+- Sheba/IBAN or local bank-card/payment flows;
+- Iranian postal/address structures;
+- local shipping/payment terminology;
+- local working-week/holiday expectations.
+
+Do not invent checksums, legal rules, field formats, banking rules, address schemas, or validation behavior from design memory. Retrieve the current authoritative product/domain/legal/platform source when exact rules matter.
 
 ## 7. Non-leakage
 
-When Persian/RTL is not activated by the task or project, this reference must not change the English/LTR/global path.
+When Persian language/script and Iranian-local behavior are both irrelevant, this reference must not affect the interface.
 
-Locale-specific behavior overrides generic design guidance only for the exact surface/context where that language, direction, locale, or regional requirement applies.
+When Persian is active without Iran-specific product requirements, apply Persian language/script rules only. When Iran-specific behavior is active without Persian copy, apply only the current Iranian product/domain requirement.
+
+Persian/Iran rules never become defaults for Arabic, Hebrew, Urdu, other RTL languages, or global RTL behavior.
