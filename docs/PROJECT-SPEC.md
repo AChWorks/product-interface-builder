@@ -83,10 +83,10 @@ When another Skill/project/platform owner retains surrounding non-interface auth
 
 1. the caller retains authority for its own workflow;
 2. Product Interface Designer receives the smallest sufficient product/task/platform/locale/design context;
-3. Product Interface Designer returns the canonical interface-decision packet and any material unresolved assumption;
+3. Product Interface Designer returns the canonical interface-decision packet;
 4. the caller resumes its owning workflow;
 5. implementation/integration remains with the existing implementation/platform/project owner when applicable;
-6. Product Interface Designer may review the resulting interface when material, but does not become the workflow coordinator.
+6. when later implementation produces an interface and review is material, Product Interface Designer may review it without becoming the workflow coordinator.
 
 Specific boundaries:
 
