@@ -238,6 +238,8 @@ A scenario fails if the Skill:
 
 **Prompt shape A:** Idea Advisor has defined the outcome/user/task enough to ask a bounded unresolved interface question whose answer can materially change advisory reasoning, validation, feasibility/user-flow understanding, prototype choice, or execution handoff.
 
+**Discovery guard:** metadata/entrypoint wording must not exclude this composition merely because the caller owns advisory reasoning rather than implementation/delivery.
+
 **Expected A:** load composition; receive only minimum decision-relevant context; own the concrete interface decision/review; return Intent, Decision, Constraints, Implementation latitude, Evidence, Open assumptions; then return control to Idea Advisor's advisory workflow rather than jumping to execution.
 
 **Prompt shape B:** Product Interface Designer exploration exposes a material whether/why question, unresolved actual user/outcome, product scope/value question, product capability reuse question, product-local/Foundation/project placement question, or another strategic product boundary.
