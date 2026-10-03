@@ -79,19 +79,20 @@ Standalone use remains supported; missing neighboring Skills must not create fak
 
 Product Interface Designer is a **specialist consulted for interface decisions**.
 
-When invoked by a project Master or implementation specialist:
+When another Skill/project/platform owner retains surrounding non-interface authority:
 
-1. the caller retains its own project/repository/execution authority;
+1. the caller retains authority for its own workflow;
 2. Product Interface Designer receives the smallest sufficient product/task/platform/locale/design context;
-3. Product Interface Designer returns concrete interface intent, constraints, evidence expectations, and any material unresolved assumption;
-4. the caller or appropriate platform specialist executes/integrates the work;
-5. Product Interface Designer may review the resulting interface when material, but does not take over project orchestration.
+3. Product Interface Designer returns the canonical interface-decision packet and any material unresolved assumption;
+4. the caller resumes its owning workflow;
+5. implementation/integration remains with the existing implementation/platform/project owner when applicable;
+6. Product Interface Designer may review the resulting interface when material, but does not become the workflow coordinator.
 
 Specific boundaries:
 
 - **GitHub Project Orchestrator:** owns scope, dependencies, repository mutation, coordination, integration, release, and continuity; invokes Product Interface Designer for material UI/UX decisions or review.
 - **WP Native Builder:** Product Interface Designer owns user-facing design/UX intent; WP Native Builder owns WordPress/Gutenberg/theme/plugin/WooCommerce mechanism and lifecycle safety.
-- **ACh Idea Advisor:** owns materially unresolved product/outcome/reuse/placement decisions; Product Interface Designer should not hide an unresolved product decision inside interface design.
+- **ACh Idea Advisor:** owns materially unresolved product/outcome, product capability reuse, and product-local/Foundation/project placement decisions; Product Interface Designer should not hide an unresolved product decision inside interface design.
 
 Detailed composition/return-shape rules live in `docs/INSTRUCTION-ARCHITECTURE.md` and the runtime composition reference.
 
