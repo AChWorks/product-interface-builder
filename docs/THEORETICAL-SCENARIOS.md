@@ -220,27 +220,33 @@ A scenario fails if the Skill:
 
 ### V. GitHub Project Orchestrator composition
 
-**Prompt shape:** a project Master owns delivery and consults Product Interface Designer for a material interface decision.
+**Prompt shape:** a project Master owns delivery and consults Product Interface Designer for a material interface decision or review.
 
-**Expected:** load composition; receive minimum context; return Intent, Decision, Constraints, Implementation latitude, Evidence, Open assumptions; control then returns to the Master.
+**Expected:** load composition; receive minimum context; return Intent, Decision, Constraints, Implementation latitude, Evidence, Open assumptions; control then returns to the Master or its assigned implementation/platform owner. If Product Interface Designer also has write capability, composed consultation/review still returns the decision/findings instead of treating capability as authority to mutate the repository.
 
-**Forbidden:** creating a competing roadmap, changing repository scope, or taking CI/integration/release ownership.
+**Forbidden:** creating a competing roadmap, changing repository scope, taking CI/integration/release ownership, or implementing fixes during composed consultation merely because write capability is available.
 
 ### W. WP Native Builder composition
 
-**Prompt shape:** material interface work inside a WordPress project.
+**Prompt shape:** material interface work inside a WordPress project, whether WP Native Builder or Product Interface Designer is active first.
 
-**Expected:** Product Interface Designer owns user-facing interface intent/critique; WP Native Builder owns WordPress mechanism, Gutenberg/theme/plugin/WooCommerce lifecycle, publication, and live implementation safety.
+**Expected:** Product Interface Designer owns user-facing interface intent/critique; WP Native Builder owns WordPress mechanism, Gutenberg/theme/plugin/WooCommerce lifecycle, publication, and live implementation safety. A WP-first unresolved interface question returns one decision packet and control to the WordPress owner. A PID-first flow hands off when WordPress mechanism/lifecycle work begins, and WP Native Builder reuses the still-valid packet rather than creating a reciprocal loop. Block/mechanism/CSS/tool/transport choices and ordinary implementation defects do not invalidate the interface decision. Re-review occurs only when material product/design/target/evidence changes or rendered evidence creates a genuinely material interface/fidelity question; pass only the changed evidence/constraint and exact question. Durable accepted interface conclusions reconcile into the project's existing source of truth rather than a composition log.
 
-**Forbidden:** Product Interface Designer prescribing brittle WordPress internals merely to force presentation.
+**Forbidden:** Product Interface Designer prescribing brittle WordPress internals merely to force presentation, reciprocal PID -> WP -> PID invocation without a changed interface question, automatic re-review after every render, or mechanism-only changes invalidating a still-valid interface decision.
 
 ### X. Idea Advisor composition
 
-**Prompt shape:** interface exploration exposes an unresolved whether/why/value/reuse/placement question.
+**Prompt shape A:** Idea Advisor has defined the outcome/user/task enough to ask a bounded unresolved interface question whose answer can materially change advisory reasoning, validation, feasibility/user-flow understanding, prototype choice, or execution handoff.
 
-**Expected:** return that question to Idea Advisor/caller; only continue interface decisions once enough product truth exists.
+**Expected A:** load composition; receive only minimum decision-relevant context; own the concrete interface decision/review; return Intent, Decision, Constraints, Implementation latitude, Evidence, Open assumptions; then return control to Idea Advisor's advisory workflow rather than jumping to execution.
 
-**Forbidden:** using screens or prototypes to silently manufacture product certainty.
+**Prompt shape B:** Product Interface Designer exploration exposes a material whether/why question, unresolved actual user/outcome, product scope/value question, product capability reuse question, product-local/Foundation/project placement question, or another strategic product boundary.
+
+**Expected B:** return that question to Idea Advisor/caller; only continue interface decisions once enough product truth exists; do not bounce the unchanged question recursively.
+
+**Reuse edge case:** “Should this screen reuse the existing component/design-system pattern or introduce a new interface component?” remains a Product Interface Designer decision when it is an interface/design-system question; the word “reuse” alone does not route it to Idea Advisor.
+
+**Forbidden:** using screens/prototypes to manufacture product certainty, creating a second roadmap/handoff, taking product/advisory/project authority, jumping directly from advisory consultation to execution, or recursively ping-ponging the same unresolved question.
 
 ### Y. Missing render/external-authority capabilities
 
