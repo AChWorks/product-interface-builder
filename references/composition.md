@@ -1,6 +1,6 @@
 # Composition and Authority
 
-Product Interface Designer is a consulted interface-decision specialist. When another Skill owns the surrounding work, that caller keeps its existing product/project/platform/repository/release authority. Invoking Product Interface Designer never creates a nested Master.
+Product Interface Designer is a consulted interface-decision specialist. When another Skill owns surrounding non-interface work or decisions, that caller keeps whatever authority it already owns. Invoking Product Interface Designer never creates a nested Master.
 
 ## Contents
 
@@ -11,15 +11,16 @@ Product Interface Designer is a consulted interface-decision specialist. When an
 Use this control shape when Product Interface Designer is consulted by another Skill:
 
 ```text
-CALLER retains accepted outcome + its authority
+CALLER retains its owning workflow + authority
   -> passes only decision-relevant interface context
   -> Product Interface Designer makes/reviews the interface decision
   -> returns the interface-decision packet
-  -> caller/platform owner resumes implementation/integration
+  -> caller resumes its owning workflow
+  -> implementation/integration remains with the existing implementation/platform/project owner when applicable
   -> if material rendered/interface review is needed:
          Product Interface Designer reviews the result
          -> returns findings/intent corrections
-         -> caller resumes control
+         -> caller resumes its owning workflow
 ```
 
 Product Interface Designer must not:
@@ -41,7 +42,7 @@ Pass the smallest context that can materially change the interface decision. A c
 | accepted outcome | the user/product task and the interface decision or review requested |
 | authoritative product truth | relevant capabilities, business rules, terminology, existing design-system/interface truth, and constraints that must survive |
 | target context | target platform/surface and active language/direction/locale when material |
-| ownership boundary | which caller/platform owner retains implementation, repository, integration, publication, and release authority |
+| ownership boundary | which non-interface authority the caller retains and, when execution exists, which owner retains implementation, repository, integration, publication, and release authority |
 | evidence | relevant source/artifact/rendered state and any known evidence limitations |
 
 Do not require full project history, a duplicate project brief, or unrelated repository state.
@@ -56,7 +57,7 @@ If a material fact is missing and can be recovered safely from current authorita
 | project outcome/scope, priority, dependencies, repository/mutation authority, task coordination, implementation orchestration, CI, integration, release, continuity | GitHub Project Orchestrator / active project Master when active |
 | platform-specific implementation mechanism and lifecycle constraints | active platform specialist/owner |
 | WordPress owner/mechanism selection, Gutenberg/block safety, templates/patterns, theme/plugin APIs, WooCommerce lifecycle, WordPress publication mechanics | WP Native Builder when active |
-| whether/why to build, unresolved product outcome, reuse/placement/Foundation boundary, evidence-backed idea maturation | ACh Idea Advisor when active |
+| whether/why to build, unresolved product outcome, product capability reuse, product-local/Foundation/project placement, evidence-backed idea maturation | ACh Idea Advisor when active |
 | durable product/business requirements | the project's authoritative product/project source |
 
 One concern has one active decision owner. Another Skill may supply evidence, constraints, or implementation feedback without becoming a second authority.
@@ -78,21 +79,11 @@ The WordPress mechanism may adapt while preserving interface intent. Product Int
 
 ### ACh Idea Advisor
 
-Product Interface Designer may explore interface implications once the product outcome is sufficiently defined.
-
-If the interface work exposes a still-material question about:
-
-- whether or why the capability should exist;
-- who the actual user/outcome is;
-- product scope/value;
-- reuse vs product-local/Foundation/project placement;
-- another strategic product boundary;
-
-return that question to ACh Idea Advisor or the caller. Do not hide product uncertainty inside screens, navigation, or interaction choices.
+Product Interface Designer may explore interface implications once enough product truth exists. If interface work exposes a material question already owned by ACh Idea Advisor in the table above, return it there rather than resolving it through UI. Do not hide unresolved product uncertainty inside screens, navigation, or interaction choices.
 
 ## 4. Interface-decision packet
 
-Return the smallest packet the caller needs to resume execution:
+Return the smallest packet the caller needs to resume its owning workflow:
 
 | Field | Content |
 |---|---|
@@ -109,13 +100,13 @@ For review work, **Decision** may instead be a concise set of material findings 
 
 ## 5. Return control and escalate to the right owner
 
-After returning the packet, control returns to the caller/platform owner. Product Interface Designer does not remain the workflow coordinator merely because later implementation should preserve its intent.
+After returning the packet, control returns to the caller. Product Interface Designer does not remain the workflow coordinator merely because later work should preserve its intent. Implementation/integration remains with the existing implementation/platform/project owner when applicable.
 
 Escalate rather than assume when an unresolved choice materially changes:
 
 | Unresolved choice | Return to |
 |---|---|
-| product value/outcome/reuse/placement | ACh Idea Advisor or caller |
+| product value/outcome, product capability reuse, product-local/Foundation/project placement | ACh Idea Advisor or caller |
 | project/repository scope, priority, dependency, integration, release | GitHub Project Orchestrator / project Master |
 | platform architecture/mechanism/lifecycle | active platform owner, including WP Native Builder for WordPress |
 | security/privacy/data policy beyond user-facing presentation | the product/security/privacy owner |

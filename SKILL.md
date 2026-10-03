@@ -55,7 +55,7 @@ References are one level deep from this file. Apply routes cumulatively only whe
 | generative/predictive AI materially mediates user-facing content, recommendations, decisions, actions, uncertainty, or feedback/control | [references/ai-mediated.md](references/ai-mediated.md) | Set truthful expectations, preserve correction/override and consequential-action control, and route model/backend/risk-policy decisions to their owners. |
 | simultaneous/multi-user editing, shared-resource state, presence/ownership/locks/history, stale state, or conflict/overwrite choices | [references/collaboration-concurrency.md](references/collaboration-concurrency.md) | Own user-facing shared-state/conflict understanding only; backend concurrency, storage, permissions, and sync algorithms stay with their owners. |
 | resize/multiwindow/restore/foldable/large-screen context or pointer/touch/keyboard/pen transitions materially change interface composition | [references/adaptive-contexts.md](references/adaptive-contexts.md) | Adapt from available space/input/current platform state while preserving task context; retrieve exact target-platform behavior when material. |
-| another project Master or platform specialist owns surrounding execution/integration | [references/composition.md](references/composition.md) | Keep Product Interface Designer bounded to interface decisions and review. |
+| another Skill/project/platform owner retains surrounding non-interface authority relevant to the work | [references/composition.md](references/composition.md) | Keep Product Interface Designer bounded to the active interface decision/review and return control to that owner. |
 
 
 ## 4. Use current authority only when exact behavior matters
@@ -119,9 +119,7 @@ Never present invented product claims, testimonials, customers, metrics, certifi
 
 ## 7. Preserve standalone and composed behavior
 
-This Skill remains useful on its own. When another Skill or project Master is active, keep interface/design ownership bounded rather than taking over project planning, repository authority, platform mechanism selection, integration, or release.
-
-Use [references/composition.md](references/composition.md) when those boundaries matter.
+This Skill remains useful on its own. When composed with another owner, keep interface/design ownership bounded rather than taking over product/advisory/project planning, repository authority, platform mechanism selection, integration, or release. The route table above is the single runtime owner for loading composition guidance.
 
 ## 8. Finish with evidence, not checklist theater
 
