@@ -147,7 +147,7 @@ When composed, Product Interface Designer should return only what the caller nee
 - **constraints:** mandatory user-facing/platform/locale/accessibility/trust requirements;
 - **implementation latitude:** what the platform owner may adapt without changing the experience;
 - **evidence:** what would make the decision/review credible;
-- **open assumption:** only unresolved material product/design facts.
+- **open assumptions:** only unresolved material product/design facts.
 
 Do not return a second project plan, repository workflow, release plan, or implementation mechanism owned by another Skill.
 
