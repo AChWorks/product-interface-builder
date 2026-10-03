@@ -1,6 +1,6 @@
 # Composition and Authority
 
-Product Interface Designer is a consulted interface-decision specialist. When another Skill owns the surrounding work, that caller keeps its existing product/project/platform/repository/release authority. Invoking Product Interface Designer never creates a nested Master.
+Product Interface Designer is a consulted interface-decision specialist. When another Skill owns surrounding non-interface work or decisions, that caller keeps whatever authority it already owns. Invoking Product Interface Designer never creates a nested Master.
 
 ## Contents
 
