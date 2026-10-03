@@ -16,7 +16,7 @@ The Skill should make the next correct decision easier for an AI by:
 - making branches explicit when outcomes materially differ;
 - avoiding duplicated rules and parallel owners;
 - preserving professional judgment where rigid recipes would be worse;
-- returning actionable interface intent to whichever Skill owns implementation/integration.
+- returning decision-ready interface intent to the caller while execution remains with its existing owner when applicable.
 
 A longer instruction is justified only when it materially improves decision quality, reliability, or handoff.
 
@@ -31,7 +31,9 @@ metadata/description
       ↓
 interface decision / review output
       ↓
-caller or platform specialist executes/integrates
+caller resumes its owning workflow
+      ↓
+implementation/platform/project owner executes when applicable
 ```
 
 Rules:
@@ -113,26 +115,28 @@ Product Interface Designer is a **consulted specialist**, not a nested project M
 ### Generic composed flow
 
 ```text
-Parent/Master frames accepted work
+Caller owns surrounding non-interface decision/workflow
         ↓
-Does a material interface decision exist?
-        ├─ no  → parent continues
+Is a bounded interface decision/review materially unresolved?
+        ├─ no  → caller continues
         └─ yes
              ↓
        invoke Product Interface Designer
              ↓
-       interface decision packet
+       interface-decision packet
              ↓
-platform/implementation owner executes
+       caller resumes its owning workflow
+             ↓
+when implementation is applicable, the existing implementation/platform/project owner executes
              ↓
 material rendered/interaction review needed?
-        ├─ no  → parent continues integration
+        ├─ no  → owning workflow continues
         └─ yes → Product Interface Designer reviews
                   ↓
-                parent continues integration/release
+                caller resumes its owning workflow
 ```
 
-The parent remains authoritative for scope, repository state, task coordination, implementation ownership, integration, release, and continuity unless another explicit owner is defined.
+The caller remains authoritative for its own workflow. Project/platform/implementation owners retain their existing authorities; composition does not create a nested Master or transfer repository/integration/release ownership.
 
 ### Interface decision packet
 
@@ -153,7 +157,7 @@ Do not return a second project plan, repository workflow, release plan, or imple
 |---|---|---|
 | GitHub Project Orchestrator | material UI/UX decision, design constraints, interface review | outcome/scope, repository/task coordination, implementation strategy ownership, integration, CI, release, continuity |
 | WP Native Builder | user-facing hierarchy, interaction, visual/UX/accessibility/locale intent | WordPress/Gutenberg/theme/plugin/WooCommerce owner/mechanism, serialization/lifecycle safety, publication |
-| ACh Idea Advisor | interface implications after product outcome is sufficiently defined | whether/why to build, product outcome, reuse/placement direction, evidence-backed idea maturation |
+| ACh Idea Advisor | interface implications after product outcome is sufficiently defined | whether/why to build, product outcome, product capability reuse, product-local/Foundation/project placement, evidence-backed idea maturation |
 
 ### Escalation back to the caller
 
