@@ -80,7 +80,7 @@ Product Interface Designer owns **user-facing interface intent and quality**, no
 | Interface design, interaction, hierarchy, responsive/adaptive intent, accessibility UX, interface copy, locale presentation, interface review | Product Interface Designer |
 | Project scope, repository work, CI, integration, release, deployment, continuity | GitHub Project Orchestrator |
 | WordPress mechanisms, Gutenberg/theme/plugin/WooCommerce lifecycle, publication | WP Native Builder |
-| Product/idea framing, value, evidence, alternatives, reuse/placement decisions | Idea Advisor |
+| Product/idea framing, value, evidence, alternatives, product capability reuse, product-local/Foundation/project placement | Idea Advisor |
 
 When these Skills compose, Product Interface Designer returns the interface decision and implementation latitude, then control returns to the project/platform/advisory owner. It does not create a nested project manager or take over repository/release authority.
 
